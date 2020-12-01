@@ -1,0 +1,299 @@
+{
+	"fields": [
+		{
+			"name": "001@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "-"
+				}
+			]
+		},
+		{
+			"name": "001A",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "9002:18-04-89"
+				}
+			]
+		},
+		{
+			"name": "001B",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "1601:20-04-16"
+				},
+				{
+					"name": "t",
+					"value": "18:33:51.000"
+				}
+			]
+		},
+		{
+			"name": "001D",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "9999:23-04-10"
+				}
+			]
+		},
+		{
+			"name": "001U",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "utf8"
+				}
+			]
+		},
+		{
+			"name": "001X",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "0"
+				}
+			]
+		},
+		{
+			"name": "002@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "Tb1"
+				}
+			]
+		},
+		{
+			"name": "003@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "000001104"
+				}
+			]
+		},
+		{
+			"name": "003U",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "http://d-nb.info/gnd/110-7"
+				}
+			]
+		},
+		{
+			"name": "004B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "kiz"
+				}
+			]
+		},
+		{
+			"name": "007K",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "110-7"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gkd"
+				},
+				{
+					"name": "0",
+					"value": "110-7"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "008A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "f"
+				}
+			]
+		},
+		{
+			"name": "008B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "z"
+				}
+			]
+		},
+		{
+			"name": "029@",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "CNS"
+				},
+				{
+					"name": "4",
+					"value": "abku"
+				}
+			]
+		},
+		{
+			"name": "029@",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "CNS"
+				},
+				{
+					"name": "g",
+					"value": "Congress of Neurological Surgeons"
+				}
+			]
+		},
+		{
+			"name": "029A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Congress of Neurological Surgeons"
+				}
+			]
+		},
+		{
+			"name": "042B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "XD-US"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "e",
+					"value": "DE-1"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "r",
+					"value": "DE-1"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "gkd"
+				},
+				{
+					"name": "i",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "Congress of Neurological Surgeons"
+				},
+				{
+					"name": "0",
+					"value": "110-7"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Homepage"
+				},
+				{
+					"name": "u",
+					"value": "http://www.cns.org"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "LCAuth"
+				}
+			]
+		},
+		{
+			"name": "050H",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Ansetzung für Kongressfolge und veranstaltende Körperschaft"
+				}
+			]
+		},
+		{
+			"name": "060R",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "1951"
+				},
+				{
+					"name": "4",
+					"value": "datb"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "IDS"
+				},
+				{
+					"name": "0",
+					"value": "310206927"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "IDS"
+				},
+				{
+					"name": "0",
+					"value": "320148678"
+				}
+			]
+		}
+	]
+}
