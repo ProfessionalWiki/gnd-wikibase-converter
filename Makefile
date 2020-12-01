@@ -5,13 +5,13 @@ cs: phpstan psalm
 test: phpunit
 
 phpunit:
-	php ./vendor/bin/phpunit -c phpunit.xml.dist
+	php8.0 ./vendor/bin/phpunit -c phpunit.xml.dist
 
 coverage-html:
-	php ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-html=./build/coverage/html
+	php8.0 ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-html=./build/coverage/html
 
 psalm:
-	./vendor/bin/psalm
+	php8.0 ./vendor/bin/psalm
 
 phpstan:
-	./vendor/bin/phpstan analyse -c phpstan.neon --no-progress
+	php8.0 ./vendor/bin/phpstan analyse -c phpstan.neon --no-progress
