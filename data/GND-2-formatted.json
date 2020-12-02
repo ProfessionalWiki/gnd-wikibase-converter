@@ -1,0 +1,246 @@
+{
+	"fields": [
+		{
+			"name": "001@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "-"
+				}
+			]
+		},
+		{
+			"name": "001A",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "9002:18-04-89"
+				}
+			]
+		},
+		{
+			"name": "001B",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "1601:11-11-19"
+				},
+				{
+					"name": "t",
+					"value": "22:41:53.000"
+				}
+			]
+		},
+		{
+			"name": "001D",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "9999:23-04-10"
+				}
+			]
+		},
+		{
+			"name": "001U",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "utf8"
+				}
+			]
+		},
+		{
+			"name": "001X",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "0"
+				}
+			]
+		},
+		{
+			"name": "002@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "Tb1"
+				}
+			]
+		},
+		{
+			"name": "003@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "000001910"
+				}
+			]
+		},
+		{
+			"name": "003U",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "http://d-nb.info/gnd/191-0"
+				}
+			]
+		},
+		{
+			"name": "004B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "piz"
+				}
+			]
+		},
+		{
+			"name": "007K",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "191-0"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gkd"
+				},
+				{
+					"name": "0",
+					"value": "191-0"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "008A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "f"
+				}
+			]
+		},
+		{
+			"name": "008B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "z"
+				}
+			]
+		},
+		{
+			"name": "010E",
+			"subfields": [
+				{
+					"name": "b",
+					"value": "ger"
+				}
+			]
+		},
+		{
+			"name": "029A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Consejo Superior de Investigaciones Científicas"
+				},
+				{
+					"name": "b",
+					"value": "División de Ciencias Matemáticas, Médicas y de la Naturaleza"
+				}
+			]
+		},
+		{
+			"name": "029R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "000364169"
+				},
+				{
+					"name": "8",
+					"value": "Consejo Superior de Investigaciones Científicas"
+				},
+				{
+					"name": "4",
+					"value": "adue"
+				}
+			]
+		},
+		{
+			"name": "042B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "XA-ES"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "e",
+					"value": "DE-1"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "r",
+					"value": "DE-1"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "gkd"
+				},
+				{
+					"name": "i",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "Consejo Superior de Investigaciones Científicas / División de Ciencias Matemáticas, Médicas y de la Naturaleza"
+				},
+				{
+					"name": "0",
+					"value": "191-0"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "IDS"
+				},
+				{
+					"name": "0",
+					"value": "015760186"
+				}
+			]
+		}
+	]
+}

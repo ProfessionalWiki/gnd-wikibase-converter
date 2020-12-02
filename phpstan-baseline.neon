@@ -1,0 +1,7 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Offset '0' does not exist on array\\<string, string\\>&nonEmpty\\.$#"
+			count: 1
+			path: src/Converter.php
+
