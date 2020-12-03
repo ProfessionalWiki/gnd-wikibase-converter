@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <phpunit
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        backupGlobals="false" backupStaticAttributes="false"
-        colors="true" forceCoversAnnotation="true"
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        colors="true"
         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
   <coverage includeUncoveredFiles="true">
     <include>
@@ -10,8 +11,8 @@
     </include>
   </coverage>
   <testsuites>
-    <testsuite name="unit">
-      <directory>tests/Unit</directory>
+    <testsuite name="tests">
+      <directory>tests</directory>
     </testsuite>
   </testsuites>
 </phpunit>

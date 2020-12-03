@@ -1,0 +1,62 @@
+{
+	"003U": {
+		"P1": {
+			"type": "url",
+			"labels": {
+				"de": "GND-URI"
+			},
+
+			"subfields": [ "a" ]
+		}
+	},
+	"007K": {
+		"P2": {
+			"type": "external-id",
+			"labels": {
+				"de": "GND ID"
+			},
+
+			"subfields": [ "0" ],
+			"conditions": [
+				{
+					"subfield": "a",
+					"equalTo": "gnd"
+				}
+			]
+		}
+	},
+	"029A": {
+		"P3": {
+			"type": "string",
+			"labels": {
+				"de": "Bezeichnung"
+			},
+
+			"subfields": [ "*" ]
+		}
+	},
+	"032T": {
+		"P4": {
+			"type": "wikibase-item",
+			"labels": {
+				"de": "Geschlecht"
+			},
+
+			"subfields": [ "a" ],
+			"mapping": {
+				"f": {
+					"id":  "Q1",
+					"labels": {
+						"de": "Frau"
+					}
+				},
+				"m": {
+					"id":  "Q2",
+					"labels": {
+						"de": "Mann"
+					}
+				}
+			}
+		}
+	}
+}

@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": ">=8.0",
-		"symfony/polyfill-php80": "^1.18.1"
+		"wikibase/data-model": "*"
 	},
 	"require-dev": {
 		"ext-json": "*",
