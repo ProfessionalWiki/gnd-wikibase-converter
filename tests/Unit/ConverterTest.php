@@ -2,13 +2,13 @@
 
 declare( strict_types = 1 );
 
-namespace EDTF\Tests\Unit;
+namespace DNB\Tests\Unit;
 
-use GND\WikibaseConverter\Converter;
+use DNB\WikibaseConverter\Converter;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \GND\WikibaseConverter\Converter
+ * @covers \DNB\WikibaseConverter\Converter
  */
 class ConverterTest extends TestCase {
 

@@ -2,7 +2,7 @@
 
 declare( strict_types = 1 );
 
-namespace GND\WikibaseConverter;
+namespace DNB\WikibaseConverter;
 
 class Converter {
 

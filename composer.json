@@ -1,5 +1,5 @@
 {
-	"name": "gnd/wikibase-converter",
+	"name": "dnb/wikibase-converter",
 	"license": "proprietary",
 	"description": "Converts GND PICA into Wikibase items",
 	"authors": [
@@ -23,17 +23,17 @@
 	"require-dev": {
 		"ext-json": "*",
 		"phpunit/phpunit": "^9.4.4",
-		"vimeo/psalm": "^4.2.1",
+		"vimeo/psalm": "^4.3.0",
 		"phpstan/phpstan": "^0.12.58"
 	},
 	"autoload": {
 		"psr-4": {
-			"GND\\WikibaseConverter\\": "src/"
+			"DNB\\WikibaseConverter\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"EDTF\\Tests\\": "tests/"
+			"DNB\\Tests\\": "tests/"
 		}
 	},
 	"extra": {
