@@ -15,22 +15,6 @@ use PHPUnit\Framework\TestCase;
  */
 class ConverterTest extends TestCase {
 
-	public function testGetId() {
-		$this->assertSame(
-			'110-7',
-			$this->getConverter()->getIdFromPica( $this->getGnd1Json() )
-		);
-	}
-
-	private function getConverter(): Converter {
-		return new Converter(
-			( new MappingDeserializer() )->jsonArrayToObject( Data::getMapping029A() )
-		);
-	}
-
-	private function getGnd1Json(): array {
-		return Data::getGndJson( 'GND-1-formatted.json' );
-	}
 
 	public function testSpike() {
 		$valuesPerProperty = $this->getConverter()->picaToValuesPerProperty( new Pica( $this->getGnd1Json() ) );
@@ -43,6 +27,16 @@ class ConverterTest extends TestCase {
 		$this->assertSame(
 			[ 'Congress of Neurological Surgeons' ],
 			$valuesPerProperty->getValuesForProperty( 'P3' )
+		);
+	}
+
+	private function getGnd1Json(): array {
+		return Data::getGndJson( 'GND-1-formatted.json' );
+	}
+
+	private function getConverter(): Converter {
+		return new Converter(
+			( new MappingDeserializer() )->jsonArrayToObject( Data::getMapping029A() )
 		);
 	}
 
