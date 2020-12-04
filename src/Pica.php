@@ -4,6 +4,9 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter;
 
+/**
+ * Pica of a single item
+ */
 class Pica {
 
 	public function __construct(

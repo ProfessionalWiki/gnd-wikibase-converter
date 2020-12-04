@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
  */
 class MappingDeserializerTest extends TestCase {
 
-	public function testFoo() {
+	public function testDeserializesPropertyMapping() {
 		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( Data::getMapping029A() );
 
 		$this->assertEmpty( $mapping->getPropertyMappings( '404' ) );

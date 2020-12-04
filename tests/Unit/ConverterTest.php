@@ -15,8 +15,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ConverterTest extends TestCase {
 
-
-	public function testSpike() {
+	public function testSimpleValue() {
 		$valuesPerProperty = $this->getConverter()->picaToValuesPerProperty( new Pica( $this->getGnd1Json() ) );
 
 		$this->assertSame(
