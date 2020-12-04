@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        php: [ 8.0, nightly ]
+        php: [ 8.0 ]
 
     runs-on: ubuntu-latest
 
