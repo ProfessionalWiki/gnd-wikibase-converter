@@ -18,7 +18,7 @@
 	],
 	"require": {
 		"php": ">=8.0",
-		"wikibase/data-model": "*"
+		"wikibase/data-model": "^9.2.0"
 	},
 	"require-dev": {
 		"ext-json": "*",
