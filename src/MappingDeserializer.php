@@ -14,6 +14,7 @@ class MappingDeserializer {
 				$propertyMappings[$picaField][$propertyId] = new PropertyMapping(
 					propertyId: $propertyId,
 					propertyType: $propertyMapping['type'],
+					subfields: $propertyMapping['subfields'],
 				);
 			}
 		}

@@ -6,6 +6,10 @@ namespace DNB\WikibaseConverter;
 
 class Converter {
 
+	public static function fromArrayMapping( array $mapping ): self {
+		return new self( ( new MappingDeserializer() )->jsonArrayToObject( $mapping ) );
+	}
+
 	public function __construct(
 		private Mapping $mapping
 	) {}

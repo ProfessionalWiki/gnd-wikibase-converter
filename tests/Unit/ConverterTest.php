@@ -4,10 +4,10 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\Tests\Data;
+use DNB\Tests\TestPicaRecords;
 use DNB\WikibaseConverter\Converter;
-use DNB\WikibaseConverter\MappingDeserializer;
 use DNB\WikibaseConverter\PicaRecord;
+use DNB\WikibaseConverter\WikibaseRecord;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -15,28 +15,66 @@ use PHPUnit\Framework\TestCase;
  */
 class ConverterTest extends TestCase {
 
+	public function testEmptyPicaRecordResultsInEmptyWikibaseRecord() {
+		$converter = $this->newConverter();
+
+		$this->assertEquals(
+			new WikibaseRecord(),
+			$converter->picaToWikibase( PicaRecord::newEmpty() )
+		);
+	}
+
+	private function newConverter(): Converter {
+		return Converter::fromArrayMapping( [] );
+	}
+
+	public function testEmptyMappingResultsInEmptyRecord() {
+		$converter = $this->newConverter();
+
+		$this->assertEquals(
+			new WikibaseRecord(),
+			$converter->picaToWikibase( TestPicaRecords::gnd1() )
+		);
+	}
+
 	public function testSimpleValue() {
-		$valuesPerProperty = $this->getConverter()->picaToWikibase( $this->getGnd1Pica() );
+		$converter = Converter::fromArrayMapping( [
+			'P1C4' => [
+				'P1' => [
+					'type' => 'string',
+
+					'subfields' => [ 'b' ]
+				]
+			]
+		] );
+
+		$pica = PicaRecord::withFields( [
+			[
+				'name' => 'P1C4',
+				'subfields' => [
+					[ 'name' => 'a', 'value' => 'wrong' ],
+					[ 'name' => 'b', 'value' => 'right' ],
+					[ 'name' => 'c', 'value' => 'wrongAgain' ],
+				]
+			]
+		] );
+
+		$wikibaseRecord = $converter->picaToWikibase( $pica );
 
 		$this->assertSame(
-			[ 'P3' ],
-			$valuesPerProperty->getPropertyIds()
+			[ 'right' ],
+			$wikibaseRecord->getValuesForProperty( 'P1' )
 		);
 
-		$this->assertSame(
-			[ 'Congress of Neurological Surgeons' ],
-			$valuesPerProperty->getValuesForProperty( 'P3' )
-		);
-	}
-
-	private function getGnd1Pica(): PicaRecord {
-		return new PicaRecord( Data::getGndJson( 'GND-1-formatted.json' ) );
-	}
-
-	private function getConverter(): Converter {
-		return new Converter(
-			( new MappingDeserializer() )->jsonArrayToObject( Data::getMapping029A() )
-		);
+//		$this->assertSame(
+//			[ 'P3' ],
+//			$valuesPerProperty->getPropertyIds()
+//		);
+//
+//		$this->assertSame(
+//			[ 'Congress of Neurological Surgeons' ],
+//			$valuesPerProperty->getValuesForProperty( 'P3' )
+//		);
 	}
 
 }

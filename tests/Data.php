@@ -14,8 +14,4 @@ class Data {
 		return self::getGndJson( 'GND-1-formatted.json' );
 	}
 
-	public static function getMapping029A(): array {
-		return json_decode( Files::getMappingData( '029A-P3.json' ), true );
-	}
-
 }
