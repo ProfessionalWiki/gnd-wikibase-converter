@@ -4,10 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter;
 
-/**
- * Pica of a single item
- */
-class Pica {
+class PicaRecord {
 
 	public function __construct(
 		private array $jsonArray

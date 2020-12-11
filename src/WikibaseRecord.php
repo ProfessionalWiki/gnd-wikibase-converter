@@ -2,9 +2,9 @@
 
 declare( strict_types = 1 );
 
-namespace DNB\WikibaseConverter\Wikibase;
+namespace DNB\WikibaseConverter;
 
-class ValuesPerProperty {
+class WikibaseRecord {
 
 	private array $map = [];
 

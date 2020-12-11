@@ -7,7 +7,7 @@ namespace DNB\Tests\Unit;
 use DNB\Tests\Data;
 use DNB\WikibaseConverter\Converter;
 use DNB\WikibaseConverter\MappingDeserializer;
-use DNB\WikibaseConverter\Pica;
+use DNB\WikibaseConverter\PicaRecord;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
 class ConverterTest extends TestCase {
 
 	public function testSimpleValue() {
-		$valuesPerProperty = $this->getConverter()->picaToValuesPerProperty( new Pica( $this->getGnd1Json() ) );
+		$valuesPerProperty = $this->getConverter()->picaToWikibase( new PicaRecord( $this->getGnd1Json() ) );
 
 		$this->assertSame(
 			[ 'P3' ],
