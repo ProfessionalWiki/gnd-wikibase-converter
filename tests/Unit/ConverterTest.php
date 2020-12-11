@@ -75,7 +75,6 @@ class ConverterTest extends TestCase {
 			'P1C4' => [
 				'P1' => [
 					'type' => 'string',
-
 					'subfields' => [ 'b', 'd' ]
 				]
 			]
@@ -98,6 +97,44 @@ class ConverterTest extends TestCase {
 		$this->assertSame(
 			[ 'right', 'rightAgain' ],
 			$wikibaseRecord->getValuesForProperty( 'P1' )
+		);
+	}
+
+	public function testMultiplePropertiesForOnePicaField() {
+		$converter = Converter::fromArrayMapping( [
+			'P1C4' => [
+				'P1' => [
+					'type' => 'string',
+					'subfields' => [ 'c' ]
+				],
+				'P2' => [
+					'type' => 'string',
+					'subfields' => [ 'a' ]
+				]
+			]
+		] );
+
+		$pica = PicaRecord::withFields( [
+			[
+				'name' => 'P1C4',
+				'subfields' => [
+					[ 'name' => 'a', 'value' => 'aaa' ],
+					[ 'name' => 'b', 'value' => 'bbb' ],
+					[ 'name' => 'c', 'value' => 'ccc' ],
+				]
+			]
+		] );
+
+		$wikibaseRecord = $converter->picaToWikibase( $pica );
+
+		$this->assertSame(
+			[ 'ccc' ],
+			$wikibaseRecord->getValuesForProperty( 'P1' )
+		);
+
+		$this->assertSame(
+			[ 'aaa' ],
+			$wikibaseRecord->getValuesForProperty( 'P2' )
 		);
 	}
 
