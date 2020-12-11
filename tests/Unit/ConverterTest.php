@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
 class ConverterTest extends TestCase {
 
 	public function testSimpleValue() {
-		$valuesPerProperty = $this->getConverter()->picaToWikibase( new PicaRecord( $this->getGnd1Json() ) );
+		$valuesPerProperty = $this->getConverter()->picaToWikibase( $this->getGnd1Pica() );
 
 		$this->assertSame(
 			[ 'P3' ],
@@ -29,8 +29,8 @@ class ConverterTest extends TestCase {
 		);
 	}
 
-	private function getGnd1Json(): array {
-		return Data::getGndJson( 'GND-1-formatted.json' );
+	private function getGnd1Pica(): PicaRecord {
+		return new PicaRecord( Data::getGndJson( 'GND-1-formatted.json' ) );
 	}
 
 	private function getConverter(): Converter {
