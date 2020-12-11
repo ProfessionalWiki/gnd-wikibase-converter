@@ -4,6 +4,8 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter;
 
+use JetBrains\PhpStorm\Pure;
+
 class WikibaseRecord {
 
 	private array $map = [];

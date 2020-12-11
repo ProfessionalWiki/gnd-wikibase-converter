@@ -37,13 +37,46 @@ class ConverterTest extends TestCase {
 		);
 	}
 
-	public function testSimpleValue() {
+	public function testCorrectFieldIsUsed() {
+		$converter = Converter::fromArrayMapping( [
+			'P1C4' => [
+				'P1' => [
+					'type' => 'string',
+					'subfields' => [ 'a' ]
+				]
+			]
+		] );
+
+		$pica = PicaRecord::withFields( [
+			[
+				'name' => 'WRONG1',
+				'subfields' => [ [ 'name' => 'a', 'value' => 'wrong' ] ]
+			],
+			[
+				'name' => 'P1C4',
+				'subfields' => [ [ 'name' => 'a', 'value' => 'right' ] ]
+			],
+			[
+				'name' => 'WRONG2',
+				'subfields' => [ [ 'name' => 'a', 'value' => 'wrongAgain' ] ]
+			],
+		] );
+
+		$wikibaseRecord = $converter->picaToWikibase( $pica );
+
+		$this->assertSame(
+			[ 'right' ],
+			$wikibaseRecord->getValuesForProperty( 'P1' )
+		);
+	}
+
+	public function testCorrectSubfieldsAreUsed() {
 		$converter = Converter::fromArrayMapping( [
 			'P1C4' => [
 				'P1' => [
 					'type' => 'string',
 
-					'subfields' => [ 'b' ]
+					'subfields' => [ 'b', 'd' ]
 				]
 			]
 		] );
@@ -55,6 +88,7 @@ class ConverterTest extends TestCase {
 					[ 'name' => 'a', 'value' => 'wrong' ],
 					[ 'name' => 'b', 'value' => 'right' ],
 					[ 'name' => 'c', 'value' => 'wrongAgain' ],
+					[ 'name' => 'd', 'value' => 'rightAgain' ],
 				]
 			]
 		] );
@@ -62,19 +96,9 @@ class ConverterTest extends TestCase {
 		$wikibaseRecord = $converter->picaToWikibase( $pica );
 
 		$this->assertSame(
-			[ 'right' ],
+			[ 'right', 'rightAgain' ],
 			$wikibaseRecord->getValuesForProperty( 'P1' )
 		);
-
-//		$this->assertSame(
-//			[ 'P3' ],
-//			$valuesPerProperty->getPropertyIds()
-//		);
-//
-//		$this->assertSame(
-//			[ 'Congress of Neurological Surgeons' ],
-//			$valuesPerProperty->getValuesForProperty( 'P3' )
-//		);
 	}
 
 }
