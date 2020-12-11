@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
 class ConverterTest extends TestCase {
 
 	public function testEmptyPicaRecordResultsInEmptyWikibaseRecord() {
-		$converter = $this->newConverter();
+		$converter = $this->newConverterWithEmptyMapping();
 
 		$this->assertEquals(
 			new WikibaseRecord(),
@@ -24,12 +24,12 @@ class ConverterTest extends TestCase {
 		);
 	}
 
-	private function newConverter(): Converter {
+	private function newConverterWithEmptyMapping(): Converter {
 		return Converter::fromArrayMapping( [] );
 	}
 
 	public function testEmptyMappingResultsInEmptyRecord() {
-		$converter = $this->newConverter();
+		$converter = $this->newConverterWithEmptyMapping();
 
 		$this->assertEquals(
 			new WikibaseRecord(),
@@ -62,11 +62,9 @@ class ConverterTest extends TestCase {
 			],
 		] );
 
-		$wikibaseRecord = $converter->picaToWikibase( $pica );
-
 		$this->assertSame(
 			[ 'right' ],
-			$wikibaseRecord->getValuesForProperty( 'P1' )
+			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
 		);
 	}
 
@@ -92,11 +90,9 @@ class ConverterTest extends TestCase {
 			]
 		] );
 
-		$wikibaseRecord = $converter->picaToWikibase( $pica );
-
 		$this->assertSame(
 			[ 'right', 'rightAgain' ],
-			$wikibaseRecord->getValuesForProperty( 'P1' )
+			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
 		);
 	}
 
