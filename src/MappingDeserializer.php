@@ -17,22 +17,29 @@ class MappingDeserializer {
 		$fieldMappings = [];
 
 		foreach ( $json as $picaField => $mappings ) {
-			$propertyMappings = [];
-
-			foreach ( $mappings as $propertyId => $propertyMapping ) {
-				$propertyMappings[] = new PropertyMapping(
-					propertyId: $propertyId,
-					subfields: $propertyMapping['subfields'] ?? [],
-				);
-			}
-
 			$fieldMappings[] = new PicaFieldMapping(
 				name: $picaField,
-				propertyMappings: $propertyMappings
+				propertyMappings: $this->propertyMappingsFromJsonArray( $mappings )
 			);
 		}
 
 		return new PicaFieldMappingList( ...$fieldMappings );
+	}
+
+	/**
+	 * @return PropertyMapping[]
+	 */
+	private function propertyMappingsFromJsonArray( array $mappings ): array {
+		$propertyMappings = [];
+
+		foreach ( $mappings as $propertyId => $propertyMapping ) {
+			$propertyMappings[] = new PropertyMapping(
+				propertyId: $propertyId,
+				subfields: $propertyMapping['subfields'] ?? [],
+			);
+		}
+
+		return $propertyMappings;
 	}
 
 	private function propertyDefinitionsFromJsonArray( array $json ): PropertyDefinitionList {
