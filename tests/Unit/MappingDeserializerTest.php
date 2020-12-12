@@ -4,7 +4,6 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\WikibaseConverter\Mapping;
 use DNB\WikibaseConverter\MappingDeserializer;
 use DNB\WikibaseConverter\PropertyDefinition;
 use DNB\WikibaseConverter\PropertyDefinitionList;
@@ -41,7 +40,7 @@ class MappingDeserializerTest extends TestCase {
 	}
 
 	public function testSimplePropertyDefinition() {
-		$mapping = Mapping::newFromArray( [
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
 			'P1C4' => [
 				'P1' => [
 					'type' => 'string'
@@ -58,7 +57,7 @@ class MappingDeserializerTest extends TestCase {
 	}
 
 	public function testMultiplePropertyDefinitions() {
-		$mapping = Mapping::newFromArray( [
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
 			'P1C4' => [
 				'P1' => [
 					'type' => 'string'
@@ -85,7 +84,7 @@ class MappingDeserializerTest extends TestCase {
 	}
 
 	public function testLabels() {
-		$mapping = Mapping::newFromArray( [
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
 			'P1C4' => [
 				'P1' => [
 					'type' => 'string',
