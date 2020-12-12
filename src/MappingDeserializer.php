@@ -34,7 +34,7 @@ class MappingDeserializer {
 			);
 		}
 
-		return new Mapping( $fieldMappings, new PropertyDefinitionList( ...$properties ) );
+		return new Mapping( new PicaFieldMappingList( ...$fieldMappings ), new PropertyDefinitionList( ...$properties ) );
 	}
 
 }
