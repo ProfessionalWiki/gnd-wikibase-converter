@@ -12,7 +12,19 @@ class PropertyMapping {
 		private /** @readonly */ bool $useCondition = false // TODO
 	) {}
 
-	public function shouldUseSubfieldValue( string $subfieldName ): bool {
+	public function convert( array $subfields ): PropertyWithValues {
+		$propertyWithValues = new PropertyWithValues( $this->propertyId );
+
+		foreach ( $subfields as $subfield ) {
+			if ( $this->shouldUseSubfieldValue( $subfield['name'] ) ) {
+				$propertyWithValues->addValue( $subfield['value'] );
+			}
+		}
+
+		return $propertyWithValues;
+	}
+
+	private function shouldUseSubfieldValue( string $subfieldName ): bool {
 		return in_array( $subfieldName, $this->subfields );
 	}
 

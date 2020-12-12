@@ -8,9 +8,19 @@ class WikibaseRecord {
 
 	private array $map = [];
 
+	public function __construct( PropertyWithValues ...$propertiesWithValues ) {
+		$this->map = $propertiesWithValues;
+	}
+
 	// TODO: use DataModel
-	public function addPropertyValue( string $propertyId, string $value ) {
-		$this->map[$propertyId][] = $value;
+	public function addValuesOfOneProperty( PropertyWithValues $propertyWithValues ) {
+		$this->map[$propertyWithValues->getPropertyId()] = new PropertyWithValues(
+			$propertyWithValues->getPropertyId(),
+			array_merge(
+				$this->getValuesForProperty( $propertyWithValues->getPropertyId() ),
+				$propertyWithValues->getValues()
+			)
+		);
 	}
 
 	/**
@@ -24,7 +34,11 @@ class WikibaseRecord {
 	 * @return string[]
 	 */
 	public function getValuesForProperty( string $propertyId ): array {
-		return $this->map[$propertyId];
+		if ( array_key_exists( $propertyId, $this->map ) ) {
+			return $this->map[$propertyId]->getValues();
+		}
+
+		return [];
 	}
 
 }

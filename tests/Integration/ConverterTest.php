@@ -2,7 +2,7 @@
 
 declare( strict_types = 1 );
 
-namespace DNB\Tests\Unit;
+namespace DNB\Tests\Integration;
 
 use DNB\Tests\TestPicaRecords;
 use DNB\WikibaseConverter\Converter;

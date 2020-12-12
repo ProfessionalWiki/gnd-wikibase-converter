@@ -10,7 +10,7 @@ class PicaFieldMappingList {
 
 	public function __construct( PicaFieldMapping ...$fieldMappings ) {
 		foreach ( $fieldMappings as $mapping ) {
-			$this->fields[$mapping->name] = $mapping;
+			$this->fields[$mapping->getName()] = $mapping;
 		}
 	}
 

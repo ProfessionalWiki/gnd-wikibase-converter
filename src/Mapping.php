@@ -10,10 +10,6 @@ final class Mapping {
 		return new self( new PicaFieldMappingList(), new PropertyDefinitionList() );
 	}
 
-	public static function newFromArray( array $mappingInJsonFormat ): self {
-		return ( new MappingDeserializer() )->jsonArrayToObject( $mappingInJsonFormat );
-	}
-
 	private PicaFieldMappingList $fieldMappings;
 	private PropertyDefinitionList $properties;
 
@@ -22,8 +18,11 @@ final class Mapping {
 		$this->properties = $properties;
 	}
 
-	public function getFieldMapping( string $picaFieldName ): PicaFieldMapping {
-		return $this->fieldMappings->get( $picaFieldName );
+	/**
+	 * @return PropertyMapping[]
+	 */
+	public function getPropertyMappings( string $picaFieldName ): array {
+		return $this->fieldMappings->get( $picaFieldName )->getPropertyMappings();
 	}
 
 	public function getProperties(): PropertyDefinitionList {

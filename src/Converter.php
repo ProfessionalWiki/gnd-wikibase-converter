@@ -15,19 +15,15 @@ class Converter {
 	) {}
 
 	public function picaToWikibase( PicaRecord $pica ): WikibaseRecord {
-		$valuesPerProperty = new WikibaseRecord();
+		$wikibaseRecord = new WikibaseRecord();
 
 		foreach ( $pica->getFields() as $field ) {
-			foreach ( $this->mapping->getFieldMapping( $field['name'] )->propertyMappings as $propertyMapping ) {
-				foreach ( $field['subfields'] as $subfield ) {
-					if ( $propertyMapping->shouldUseSubfieldValue( $subfield['name'] ) ) {
-						$valuesPerProperty->addPropertyValue( $propertyMapping->propertyId, $subfield['value'] );
-					}
-				}
+			foreach ( $this->mapping->getPropertyMappings( $field['name'] ) as $propertyMapping ) {
+				$wikibaseRecord->addValuesOfOneProperty( $propertyMapping->convert( $field['subfields'] ) );
 			}
 		}
 
-		return $valuesPerProperty;
+		return $wikibaseRecord;
 	}
 
 }
