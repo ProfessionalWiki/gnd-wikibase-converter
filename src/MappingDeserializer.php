@@ -7,9 +7,8 @@ namespace DNB\WikibaseConverter;
 class MappingDeserializer {
 
 	public function jsonArrayToObject( array $json ): Mapping {
-		$properties = [];
 		$fieldMappings = [];
-
+		$properties = [];
 
 		foreach ( $json as $picaField => $mappings ) {
 			$propertyMappings = [];
