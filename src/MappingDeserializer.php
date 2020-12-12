@@ -8,11 +8,14 @@ class MappingDeserializer {
 
 	public function jsonArrayToObject( array $json ): Mapping {
 		$properties = [];
-		$propertyMappings = [];
+		$fieldMappings = [];
+
 
 		foreach ( $json as $picaField => $mappings ) {
+			$propertyMappings = [];
+
 			foreach ( $mappings as $propertyId => $propertyMapping ) {
-				$propertyMappings[$picaField][] = new PropertyMapping(
+				$propertyMappings[] = new PropertyMapping(
 					propertyId: $propertyId,
 					subfields: $propertyMapping['subfields'] ?? [],
 				);
@@ -24,14 +27,10 @@ class MappingDeserializer {
 					);
 				}
 			}
-		}
 
-		$fieldMappings = [];
-
-		foreach ( $propertyMappings as $picaField => $mappings ) {
 			$fieldMappings[] = new PicaFieldMapping(
 				name: $picaField,
-				propertyMappings: $mappings
+				propertyMappings: $propertyMappings
 			);
 		}
 
