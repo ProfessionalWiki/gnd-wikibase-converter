@@ -25,14 +25,15 @@ class MappingDeserializerTest extends TestCase {
 		] );
 
 		$this->assertEmpty( $mapping->getFieldMapping( '404' )->propertyMappings );
-		$this->assertCount( 1, $mapping->getFieldMapping( '029A' )->propertyMappings );
 
 		$this->assertEquals(
-			new PropertyMapping(
-				propertyId: 'P3',
-				subfields: [ 'b' ]
-			),
-			$mapping->getFieldMapping( '029A' )->propertyMappings['P3']
+			[
+				new PropertyMapping(
+					propertyId: 'P3',
+					subfields: [ 'b' ]
+				)
+			],
+			$mapping->getFieldMapping( '029A' )->propertyMappings
 		);
 	}
 

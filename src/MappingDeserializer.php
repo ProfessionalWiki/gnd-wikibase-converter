@@ -12,7 +12,7 @@ class MappingDeserializer {
 
 		foreach ( $json as $picaField => $mappings ) {
 			foreach ( $mappings as $propertyId => $propertyMapping ) {
-				$propertyMappings[$picaField][$propertyId] = new PropertyMapping(
+				$propertyMappings[$picaField][] = new PropertyMapping(
 					propertyId: $propertyId,
 					subfields: $propertyMapping['subfields'] ?? [],
 				);
@@ -35,7 +35,10 @@ class MappingDeserializer {
 			);
 		}
 
-		return new Mapping( new PicaFieldMappingList( ...$fieldMappings ), new PropertyDefinitionList( ...$properties ) );
+		return new Mapping(
+			new PicaFieldMappingList( ...$fieldMappings ),
+			new PropertyDefinitionList( ...$properties )
+		);
 	}
 
 }
