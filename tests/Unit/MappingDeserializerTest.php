@@ -19,8 +19,6 @@ class MappingDeserializerTest extends TestCase {
 		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
 			'029A' => [
 				'P3' => [
-					'type' => 'string',
-
 					'subfields' => [ 'b' ]
 				]
 			]
@@ -32,7 +30,6 @@ class MappingDeserializerTest extends TestCase {
 		$this->assertEquals(
 			new PropertyMapping(
 				propertyId: 'P3',
-				propertyType: 'string',
 				subfields: [ 'b' ]
 			),
 			$mapping->getFieldMapping( '029A' )->propertyMappings['P3']

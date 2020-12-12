@@ -41,7 +41,6 @@ class ConverterTest extends TestCase {
 		$converter = Converter::fromArrayMapping( [
 			'P1C4' => [
 				'P1' => [
-					'type' => 'string',
 					'subfields' => [ 'a' ]
 				]
 			]
@@ -72,7 +71,6 @@ class ConverterTest extends TestCase {
 		$converter = Converter::fromArrayMapping( [
 			'P1C4' => [
 				'P1' => [
-					'type' => 'string',
 					'subfields' => [ 'b', 'd' ]
 				]
 			]
@@ -100,11 +98,9 @@ class ConverterTest extends TestCase {
 		$converter = Converter::fromArrayMapping( [
 			'P1C4' => [
 				'P1' => [
-					'type' => 'string',
 					'subfields' => [ 'c' ]
 				],
 				'P2' => [
-					'type' => 'string',
 					'subfields' => [ 'a' ]
 				]
 			]
@@ -138,7 +134,6 @@ class ConverterTest extends TestCase {
 		$converter = Converter::fromArrayMapping( [
 			'P1C4' => [
 				'P1' => [
-					'type' => 'string',
 					'subfields' => [ 'a' ]
 				]
 			]

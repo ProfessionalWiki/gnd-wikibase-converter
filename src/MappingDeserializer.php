@@ -14,14 +14,15 @@ class MappingDeserializer {
 			foreach ( $mappings as $propertyId => $propertyMapping ) {
 				$propertyMappings[$picaField][$propertyId] = new PropertyMapping(
 					propertyId: $propertyId,
-					propertyType: $propertyMapping['type'],
 					subfields: $propertyMapping['subfields'] ?? [],
 				);
 
-				$properties[] = new PropertyDefinition(
-					propertyId: $propertyId,
-					propertyType: $propertyMapping['type'],
-				);
+				if ( array_key_exists( 'type', $propertyMapping ) ) {
+					$properties[] = new PropertyDefinition(
+						propertyId: $propertyId,
+						propertyType: $propertyMapping['type'],
+					);
+				}
 			}
 		}
 

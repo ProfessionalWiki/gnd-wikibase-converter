@@ -8,7 +8,6 @@ class PropertyMapping {
 
 	public function __construct(
 		public /** @readonly */ string $propertyId,
-		public /** @readonly */ string $propertyType,
 		private /** @readonly string[] */ array $subfields,
 	) {}
 
