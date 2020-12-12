@@ -9,7 +9,7 @@ class PropertyMapping {
 	public function __construct(
 		public /** @readonly */ string $propertyId,
 		private /** @readonly string[] */ array $subfields,
-		private /** @readonly */ bool $useCondition = false // TODO
+		private /** @readonly */ bool $useCondition = false, // TODO
 	) {}
 
 	public function convert( array $subfields ): PropertyWithValues {
