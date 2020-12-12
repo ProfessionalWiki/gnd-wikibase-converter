@@ -14,13 +14,15 @@ final class Mapping {
 		return ( new MappingDeserializer() )->jsonArrayToObject( $mappingInJsonFormat );
 	}
 
-	private array $fieldMappings;
+	private array $fieldMappings = [];
 
 	/**
 	 * @param PicaFieldMapping[] $fieldMappings
 	 */
 	public function __construct( array $fieldMappings ) {
-		$this->fieldMappings = $fieldMappings;
+		foreach ( $fieldMappings as $fieldMapping ) {
+			$this->fieldMappings[$fieldMapping->name] = $fieldMapping;
+		}
 	}
 
 	/**

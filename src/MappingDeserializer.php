@@ -22,7 +22,7 @@ class MappingDeserializer {
 		$fieldMappings = [];
 
 		foreach ( $propertyMappings as $picaField => $mappings ) {
-			$fieldMappings[$picaField] = new PicaFieldMapping(
+			$fieldMappings[] = new PicaFieldMapping(
 				name: $picaField,
 				propertyMappings: $mappings
 			);
