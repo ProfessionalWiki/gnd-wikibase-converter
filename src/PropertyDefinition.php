@@ -6,4 +6,9 @@ namespace DNB\WikibaseConverter;
 
 class PropertyDefinition {
 
+	public function __construct(
+		public /** @readonly */ string $propertyId,
+		public /** @readonly */ string $propertyType,
+	) {}
+
 }

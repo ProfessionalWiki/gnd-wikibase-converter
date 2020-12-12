@@ -6,6 +6,10 @@ namespace DNB\WikibaseConverter;
 
 final class Mapping {
 
+	public static function newEmpty(): self {
+		return new self( [] );
+	}
+
 	public static function newFromArray( array $mappingInJsonFormat ): self {
 		return ( new MappingDeserializer() )->jsonArrayToObject( $mappingInJsonFormat );
 	}
@@ -30,7 +34,18 @@ final class Mapping {
 	 * @return PropertyDefinition[]
 	 */
 	public function getPropertyDefinitions(): array {
-		return [];
+		$properties = [];
+
+		foreach ( $this->propertyMappingsPerField as $propertyMappings ) {
+			foreach ( $propertyMappings as $propertyMapping ) {
+				$properties[] = new PropertyDefinition(
+					propertyId: $propertyMapping->propertyId,
+					propertyType: $propertyMapping->propertyType,
+				);
+			}
+		}
+
+		return $properties;
 	}
 
 }
