@@ -59,7 +59,7 @@ class MappingDeserializerTest extends TestCase {
 				new PropertyMapping(
 					propertyId: 'P2',
 					subfields: [ '0' ],
-					useCondition: true
+					useCondition: true // TODO
 				)
 			],
 			$mapping->getPropertyMappings( '007K' )
