@@ -134,4 +134,35 @@ class ConverterTest extends TestCase {
 		);
 	}
 
+	public function testRepeatedPicaFieldsAllGetUsed() {
+		$converter = Converter::fromArrayMapping( [
+			'P1C4' => [
+				'P1' => [
+					'type' => 'string',
+					'subfields' => [ 'a' ]
+				]
+			]
+		] );
+
+		$pica = PicaRecord::withFields( [
+			[
+				'name' => 'P1C4',
+				'subfields' => [
+					[ 'name' => 'a', 'value' => 'first' ],
+				]
+			],
+			[
+				'name' => 'P1C4',
+				'subfields' => [
+					[ 'name' => 'a', 'value' => 'second' ],
+				]
+			]
+		] );
+
+		$this->assertSame(
+			[ 'first', 'second' ],
+			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
+		);
+	}
+
 }
