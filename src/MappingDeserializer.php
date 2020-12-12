@@ -7,8 +7,14 @@ namespace DNB\WikibaseConverter;
 class MappingDeserializer {
 
 	public function jsonArrayToObject( array $json ): Mapping {
+		return new Mapping(
+			$this->fieldMappingsFromJsonArray( $json ),
+			$this->propertyDefinitionsFromJsonArray( $json )
+		);
+	}
+
+	private function fieldMappingsFromJsonArray( array $json ): PicaFieldMappingList {
 		$fieldMappings = [];
-		$properties = [];
 
 		foreach ( $json as $picaField => $mappings ) {
 			$propertyMappings = [];
@@ -18,14 +24,6 @@ class MappingDeserializer {
 					propertyId: $propertyId,
 					subfields: $propertyMapping['subfields'] ?? [],
 				);
-
-				if ( array_key_exists( 'type', $propertyMapping ) ) {
-					$properties[] = new PropertyDefinition(
-						propertyId: $propertyId,
-						propertyType: $propertyMapping['type'],
-						labels: $propertyMapping['labels'] ?? [],
-					);
-				}
 			}
 
 			$fieldMappings[] = new PicaFieldMapping(
@@ -34,10 +32,25 @@ class MappingDeserializer {
 			);
 		}
 
-		return new Mapping(
-			new PicaFieldMappingList( ...$fieldMappings ),
-			new PropertyDefinitionList( ...$properties )
-		);
+		return new PicaFieldMappingList( ...$fieldMappings );
+	}
+
+	private function propertyDefinitionsFromJsonArray( array $json ): PropertyDefinitionList {
+		$properties = [];
+
+		foreach ( $json as $picaField => $mappings ) {
+			foreach ( $mappings as $propertyId => $propertyMapping ) {
+				if ( array_key_exists( 'type', $propertyMapping ) ) {
+					$properties[] = new PropertyDefinition(
+						propertyId: $propertyId,
+						propertyType: $propertyMapping['type'],
+						labels: $propertyMapping['labels'] ?? [],
+					);
+				}
+			}
+		}
+
+		return new PropertyDefinitionList( ...$properties );
 	}
 
 }
