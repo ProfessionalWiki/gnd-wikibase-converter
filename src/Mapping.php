@@ -17,10 +17,6 @@ final class Mapping {
 	private PicaFieldMappingList $fieldMappings;
 	private PropertyDefinitionList $properties;
 
-	/**
-	 * @param PicaFieldMappingList $fieldMappings
-	 * @param PropertyDefinitionList $properties
-	 */
 	public function __construct( PicaFieldMappingList $fieldMappings, PropertyDefinitionList $properties ) {
 		$this->fieldMappings = $fieldMappings;
 		$this->properties = $properties;

@@ -10,12 +10,15 @@ class PicaRecord {
 		return new self( [ 'fields' => [] ] );
 	}
 
+	/**
+	 * @param array{array{name: string, subfields: array{array{name: string, value: string}}}} $fields
+	 */
 	public static function withFields( array $fields ): self {
 		return new self( [ 'fields' => $fields ] );
 	}
 
 	/**
-	 * @param array{array{name: string, subfields: array{array{name: string, value: string}}}} $jsonArray
+	 * @param array{fields: array{array{name: string, subfields: array{array{name: string, value: string}}}}} $jsonArray
 	 */
 	public function __construct(
 		private array $jsonArray

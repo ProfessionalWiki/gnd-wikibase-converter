@@ -1,7 +1,7 @@
-.PHONY: ci cs test phpunit psalm phpstan
+.PHONY: ci cs test phpunit psalm stan
 
-ci: phpstan phpunit psalm
-cs: phpstan psalm
+ci: test cs
+cs: stan
 test: phpunit
 
 phpunit:
@@ -13,5 +13,8 @@ coverage-html:
 psalm:
 	php8.0 ./vendor/bin/psalm
 
-phpstan:
+stan:
 	php8.0 ./vendor/bin/phpstan analyse -c phpstan.neon --no-progress
+
+stan-baseline:
+	php8.0 ./vendor/bin/phpstan analyse -c phpstan.neon --generate-baseline
