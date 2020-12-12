@@ -13,15 +13,11 @@ class TestPicaRecords {
 	}
 
 	private static function getGndJson( string $fileName ): array {
-		return json_decode( Files::getGndData( $fileName ), true );
+		return json_decode( self::getGndData( $fileName ), true );
 	}
 
-	public static function gnd2(): PicaRecord {
-		return new PicaRecord( self::getGndJson( 'GND-2-formatted.json'  ) );
-	}
-
-	public static function gnd5(): PicaRecord {
-		return new PicaRecord( self::getGndJson( 'GND-5-formatted.json'  ) );
+	private static function getGndData( string $fileName ): string {
+		return file_get_contents( __DIR__ . '/../data/gnd/' . $fileName );
 	}
 
 }

@@ -23,6 +23,7 @@ class MappingDeserializer {
 					$properties[] = new PropertyDefinition(
 						propertyId: $propertyId,
 						propertyType: $propertyMapping['type'],
+						labels: $propertyMapping['labels'] ?? [],
 					);
 				}
 			}

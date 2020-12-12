@@ -4,7 +4,10 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
+use DNB\WikibaseConverter\Mapping;
 use DNB\WikibaseConverter\MappingDeserializer;
+use DNB\WikibaseConverter\PropertyDefinition;
+use DNB\WikibaseConverter\PropertyDefinitionList;
 use DNB\WikibaseConverter\PropertyMapping;
 use PHPUnit\Framework\TestCase;
 
@@ -34,6 +37,72 @@ class MappingDeserializerTest extends TestCase {
 				)
 			],
 			$mapping->getFieldMapping( '029A' )->propertyMappings
+		);
+	}
+
+	public function testSimplePropertyDefinition() {
+		$mapping = Mapping::newFromArray( [
+			'P1C4' => [
+				'P1' => [
+					'type' => 'string'
+				],
+			]
+		] );
+
+		$this->assertEquals(
+			new PropertyDefinitionList(
+				new PropertyDefinition( 'P1', 'string' )
+			),
+			$mapping->getProperties()
+		);
+	}
+
+	public function testMultiplePropertyDefinitions() {
+		$mapping = Mapping::newFromArray( [
+			'P1C4' => [
+				'P1' => [
+					'type' => 'string'
+				],
+				'P2' => [
+					'type' => 'string'
+				],
+			],
+			'M0R3' => [
+				'P3' => [
+					'type' => 'string'
+				],
+			]
+		] );
+
+		$this->assertEquals(
+			new PropertyDefinitionList(
+				new PropertyDefinition( 'P1', 'string' ),
+				new PropertyDefinition( 'P2', 'string' ),
+				new PropertyDefinition( 'P3', 'string' ),
+			),
+			$mapping->getProperties()
+		);
+	}
+
+	public function testLabels() {
+		$mapping = Mapping::newFromArray( [
+			'P1C4' => [
+				'P1' => [
+					'type' => 'string',
+					'labels' => [ 'en' => 'English', 'de' => 'German' ]
+				],
+			]
+		] );
+
+		$this->assertEquals(
+			new PropertyDefinitionList(
+				new PropertyDefinition(
+					'P1',
+					'string',
+					labels: [ 'en' => 'English', 'de' => 'German' ]
+				)
+			),
+			$mapping->getProperties()
 		);
 	}
 
