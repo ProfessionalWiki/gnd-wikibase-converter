@@ -19,7 +19,16 @@ class MappingDeserializer {
 			}
 		}
 
-		return new Mapping( $propertyMappings );
+		$fieldMappings = [];
+
+		foreach ( $propertyMappings as $picaField => $mappings ) {
+			$fieldMappings[$picaField] = new PicaFieldMapping(
+				name: $picaField,
+				propertyMappings: $mappings
+			);
+		}
+
+		return new Mapping( $fieldMappings );
 	}
 
 }

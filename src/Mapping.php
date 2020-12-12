@@ -14,20 +14,24 @@ final class Mapping {
 		return ( new MappingDeserializer() )->jsonArrayToObject( $mappingInJsonFormat );
 	}
 
-	private array $propertyMappingsPerField;
+	private array $fieldMappings;
 
 	/**
-	 * @param array<string, PropertyMapping[]> $propertyMappingsPerField
+	 * @param PicaFieldMapping[] $fieldMappings
 	 */
-	public function __construct( array $propertyMappingsPerField ) {
-		$this->propertyMappingsPerField = $propertyMappingsPerField;
+	public function __construct( array $fieldMappings ) {
+		$this->fieldMappings = $fieldMappings;
 	}
 
 	/**
 	 * @return PropertyMapping[]
 	 */
 	public function getPropertyMappings( string $picaFieldName ): array {
-		return $this->propertyMappingsPerField[$picaFieldName] ?? [];
+		if ( array_key_exists( $picaFieldName, $this->fieldMappings ) ) {
+			return $this->fieldMappings[$picaFieldName]->propertyMappings;
+		}
+
+		return [];
 	}
 
 	/**
@@ -36,8 +40,8 @@ final class Mapping {
 	public function getPropertyDefinitions(): array {
 		$properties = [];
 
-		foreach ( $this->propertyMappingsPerField as $propertyMappings ) {
-			foreach ( $propertyMappings as $propertyMapping ) {
+		foreach ( $this->fieldMappings as $fieldMapping ) {
+			foreach ( $fieldMapping->propertyMappings as $propertyMapping ) {
 				$properties[] = new PropertyDefinition(
 					propertyId: $propertyMapping->propertyId,
 					propertyType: $propertyMapping->propertyType,
