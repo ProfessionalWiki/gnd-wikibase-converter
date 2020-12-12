@@ -6,6 +6,10 @@ namespace DNB\WikibaseConverter;
 
 final class Mapping {
 
+	public static function newFromArray( array $mappingInJsonFormat ): self {
+		return ( new MappingDeserializer() )->jsonArrayToObject( $mappingInJsonFormat );
+	}
+
 	private array $propertyMappingsPerField;
 
 	/**
@@ -20,6 +24,13 @@ final class Mapping {
 	 */
 	public function getPropertyMappings( string $picaFieldName ): array {
 		return $this->propertyMappingsPerField[$picaFieldName] ?? [];
+	}
+
+	/**
+	 * @return PropertyDefinition[]
+	 */
+	public function getPropertyDefinitions(): array {
+		return [];
 	}
 
 }
