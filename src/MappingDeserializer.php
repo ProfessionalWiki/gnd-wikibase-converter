@@ -36,6 +36,7 @@ class MappingDeserializer {
 			$propertyMappings[] = new PropertyMapping(
 				propertyId: $propertyId,
 				subfields: $propertyMapping['subfields'] ?? [],
+				useCondition: array_key_exists( 'conditions', $propertyMapping ), // TODO
 			);
 		}
 

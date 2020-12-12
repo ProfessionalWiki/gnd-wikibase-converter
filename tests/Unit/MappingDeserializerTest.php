@@ -17,7 +17,7 @@ use PHPUnit\Framework\TestCase;
  */
 class MappingDeserializerTest extends TestCase {
 
-	public function testDeserializesPropertyMapping() {
+	public function testSimplePropertyMapping() {
 		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
 			'029A' => [
 				'P3' => [
@@ -36,6 +36,33 @@ class MappingDeserializerTest extends TestCase {
 				)
 			],
 			$mapping->getFieldMapping( '029A' )->propertyMappings
+		);
+	}
+
+	public function testPropertyMappingWithCondition() {
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
+			'007K' => [
+				'P2' => [
+					'subfields' => [ '0' ],
+					'conditions' => [
+						[
+							'subfield' => 'a',
+							'equalTo' => 'gnd',
+						]
+					],
+				]
+			]
+		] );
+
+		$this->assertEquals(
+			[
+				new PropertyMapping(
+					propertyId: 'P2',
+					subfields: [ '0' ],
+					useCondition: true
+				)
+			],
+			$mapping->getFieldMapping( '007K' )->propertyMappings
 		);
 	}
 
