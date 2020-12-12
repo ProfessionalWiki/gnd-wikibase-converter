@@ -7,7 +7,7 @@ namespace DNB\WikibaseConverter;
 final class Mapping {
 
 	public static function newEmpty(): self {
-		return new self( [] );
+		return new self( [], new PropertyDefinitionList() );
 	}
 
 	public static function newFromArray( array $mappingInJsonFormat ): self {
@@ -15,14 +15,18 @@ final class Mapping {
 	}
 
 	private array $fieldMappings = [];
+	private PropertyDefinitionList $properties;
 
 	/**
 	 * @param PicaFieldMapping[] $fieldMappings
+	 * @param PropertyDefinitionList $properties
 	 */
-	public function __construct( array $fieldMappings ) {
+	public function __construct( array $fieldMappings, PropertyDefinitionList $properties ) {
 		foreach ( $fieldMappings as $fieldMapping ) {
 			$this->fieldMappings[$fieldMapping->name] = $fieldMapping;
 		}
+
+		$this->properties = $properties;
 	}
 
 	/**
@@ -36,22 +40,8 @@ final class Mapping {
 		return [];
 	}
 
-	/**
-	 * @return PropertyDefinition[]
-	 */
-	public function getPropertyDefinitions(): array {
-		$properties = [];
-
-		foreach ( $this->fieldMappings as $fieldMapping ) {
-			foreach ( $fieldMapping->propertyMappings as $propertyMapping ) {
-				$properties[] = new PropertyDefinition(
-					propertyId: $propertyMapping->propertyId,
-					propertyType: $propertyMapping->propertyType,
-				);
-			}
-		}
-
-		return $properties;
+	public function getProperties(): PropertyDefinitionList {
+		return $this->properties;
 	}
 
 }

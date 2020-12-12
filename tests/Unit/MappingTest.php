@@ -6,6 +6,7 @@ namespace DNB\Tests\Unit;
 
 use DNB\WikibaseConverter\Mapping;
 use DNB\WikibaseConverter\PropertyDefinition;
+use DNB\WikibaseConverter\PropertyDefinitionList;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -17,8 +18,8 @@ class MappingTest extends TestCase {
 		$mapping = Mapping::newEmpty();
 
 		$this->assertEquals(
-			[],
-			$mapping->getPropertyDefinitions()
+			new PropertyDefinitionList(),
+			$mapping->getProperties()
 		);
 	}
 
@@ -32,10 +33,10 @@ class MappingTest extends TestCase {
 		] );
 
 		$this->assertEquals(
-			[
+			new PropertyDefinitionList(
 				new PropertyDefinition( 'P1', 'string' )
-			],
-			$mapping->getPropertyDefinitions()
+			),
+			$mapping->getProperties()
 		);
 	}
 
