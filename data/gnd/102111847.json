@@ -1,0 +1,565 @@
+{
+	"fields": [
+		{
+			"name": "001A",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "0000:23-06-92"
+				}
+			]
+		},
+		{
+			"name": "001B",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "8999:20-05-19"
+				},
+				{
+					"name": "t",
+					"value": "18:21:45.000"
+				}
+			]
+		},
+		{
+			"name": "001D",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "9999:05-04-08"
+				}
+			]
+		},
+		{
+			"name": "001U",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "utf8"
+				}
+			]
+		},
+		{
+			"name": "001X",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "0"
+				}
+			]
+		},
+		{
+			"name": "002@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "Tp1"
+				}
+			]
+		},
+		{
+			"name": "003@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "102111847"
+				}
+			]
+		},
+		{
+			"name": "003U",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "http://d-nb.info/gnd/102111847"
+				}
+			]
+		},
+		{
+			"name": "004B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "piz"
+				}
+			]
+		},
+		{
+			"name": "007K",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "102111847"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "pnd"
+				},
+				{
+					"name": "0",
+					"value": "102111847"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "swd"
+				},
+				{
+					"name": "0",
+					"value": "4592849-6"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "008A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "f"
+				},
+				{
+					"name": "a",
+					"value": "s"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Christian Ludwig"
+				},
+				{
+					"name": "l",
+					"value": "Mecklenburg, Herzog"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Christian Ludewig"
+				},
+				{
+					"name": "l",
+					"value": "Mecklenburg, Herzog"
+				}
+			]
+		},
+		{
+			"name": "028A",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Christian Ludwig"
+				},
+				{
+					"name": "n",
+					"value": "II."
+				},
+				{
+					"name": "l",
+					"value": "Mecklenburg-Schwerin, Herzog"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "123282659"
+				},
+				{
+					"name": "8",
+					"value": "Mecklenburg-Schwerin, Herzog"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Vater"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "102111898"
+				},
+				{
+					"name": "8",
+					"value": "Mecklenburg-Schwerin, Herzog"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Bruder"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "101509758"
+				},
+				{
+					"name": "8",
+					"value": "Mecklenburg-Schwerin, Herzog"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Bruder"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "141996285"
+				},
+				{
+					"name": "8",
+					"value": "Preußen, Königin"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Schwester"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "117670170"
+				},
+				{
+					"name": "8",
+					"value": "Mecklenburg-Schwerin, Herzog"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Sohn"
+				}
+			]
+		},
+		{
+			"name": "032T",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "m"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Adel"
+				},
+				{
+					"name": "4",
+					"value": "obin"
+				}
+			]
+		},
+		{
+			"name": "042A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "16.5p"
+				}
+			]
+		},
+		{
+			"name": "042B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "XA-DE"
+				}
+			]
+		},
+		{
+			"name": "046G",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Christian Ludwig <Mecklenburg-Schwerin, Herzog, II.>: Landes-Grund-Gesetzlicher Erb-Vergl*"
+				}
+			]
+		},
+		{
+			"name": "046G",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Christian Ludwig <Mecklenburg-Schwerin, Herzog, II.>: Landes-Grund-Gesetzlicherr Erb-Verg*"
+				}
+			]
+		},
+		{
+			"name": "046G",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Christian Ludwig <Mecklenburg-Schwerin, Herzog, II.>: Mit Ihro erb-unterthän. Stadt Rosto*. - 1767"
+				}
+			]
+		},
+		{
+			"name": "046G",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Christian Ludwig <Mecklenburg-Schwerin, Herzog, II.>: Accise-Rolle u. Ordnung in dero Res*"
+				}
+			]
+		},
+		{
+			"name": "046G",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Christian Ludwig <Mecklenburg-Schwerin, Herzog, II.>: Accise-Reglement v. 12. April 1749"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "e",
+					"value": "DE-12"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "r",
+					"value": "DE-12"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "pnd"
+				},
+				{
+					"name": "i",
+					"value": "5"
+				},
+				{
+					"name": "a",
+					"value": "Christian Ludwig <Mecklenburg-Schwerin, Herzog, II.>"
+				},
+				{
+					"name": "0",
+					"value": "102111847"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "7"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "12"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "3"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "VD-18"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "NDB/ADB"
+				},
+				{
+					"name": "u",
+					"value": "https://www.deutsche-biographie.de/gnd102111847.html#ndbcontent"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Wikipedia"
+				},
+				{
+					"name": "u",
+					"value": "https://de.wikipedia.org/wiki/Christian_Ludwig_II._(Mecklenburg)"
+				}
+			]
+		},
+		{
+			"name": "050G",
+			"subfields": [
+				{
+					"name": "b",
+					"value": "regierte ab 1747; 1728-1733 Landesadministrator, 1733-1747 kaiserlicher Kommissarius anstelle des vom Kaiser suspendierten Herzogs Karl Leopold von Mecklenburg-Schwerin"
+				}
+			]
+		},
+		{
+			"name": "060R",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "1683"
+				},
+				{
+					"name": "b",
+					"value": "1756"
+				},
+				{
+					"name": "4",
+					"value": "datl"
+				}
+			]
+		},
+		{
+			"name": "060R",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "15.05.1683"
+				},
+				{
+					"name": "b",
+					"value": "30.05.1756"
+				},
+				{
+					"name": "4",
+					"value": "datx"
+				}
+			]
+		},
+		{
+			"name": "065R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040867730"
+				},
+				{
+					"name": "4",
+					"value": "ortg"
+				}
+			]
+		},
+		{
+			"name": "065R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040539504"
+				},
+				{
+					"name": "4",
+					"value": "orts"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "(DE-588)102111847"
+				}
+			]
+		}
+	]
+}

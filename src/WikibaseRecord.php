@@ -4,15 +4,11 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter;
 
-use JetBrains\PhpStorm\Pure;
-
 class WikibaseRecord {
 
 	private array $map = [];
 
-	public function __construct() {
-	}
-
+	// TODO: use DataModel
 	public function addPropertyValue( string $propertyId, string $value ) {
 		$this->map[$propertyId][] = $value;
 	}

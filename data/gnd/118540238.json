@@ -1,0 +1,3679 @@
+{
+	"fields": [
+		{
+			"name": "001A",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "1250:01-07-88"
+				}
+			]
+		},
+		{
+			"name": "001B",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "0292:04-10-19"
+				},
+				{
+					"name": "t",
+					"value": "10:19:38.000"
+				}
+			]
+		},
+		{
+			"name": "001D",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "0292:01-08-19"
+				}
+			]
+		},
+		{
+			"name": "001U",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "utf8"
+				}
+			]
+		},
+		{
+			"name": "001X",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "0"
+				}
+			]
+		},
+		{
+			"name": "002@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "Tpz"
+				}
+			]
+		},
+		{
+			"name": "003@",
+			"subfields": [
+				{
+					"name": "0",
+					"value": "118540238"
+				}
+			]
+		},
+		{
+			"name": "003U",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "http://d-nb.info/gnd/118540238"
+				},
+				{
+					"name": "z",
+					"value": "http://d-nb.info/gnd/185808069"
+				},
+				{
+					"name": "z",
+					"value": "http://d-nb.info/gnd/185848826"
+				},
+				{
+					"name": "z",
+					"value": "http://d-nb.info/gnd/101488358X"
+				},
+				{
+					"name": "z",
+					"value": "http://d-nb.info/gnd/1014927390"
+				},
+				{
+					"name": "z",
+					"value": "http://d-nb.info/gnd/1022736213"
+				},
+				{
+					"name": "z",
+					"value": "http://d-nb.info/gnd/1095607278"
+				},
+				{
+					"name": "z",
+					"value": "http://d-nb.info/gnd/1131918517"
+				}
+			]
+		},
+		{
+			"name": "004B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "piz"
+				}
+			]
+		},
+		{
+			"name": "006Y",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "isni"
+				},
+				{
+					"name": "0",
+					"value": "0000 0001 2099 9104"
+				}
+			]
+		},
+		{
+			"name": "006Y",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "wikidata"
+				},
+				{
+					"name": "0",
+					"value": "Q5879"
+				}
+			]
+		},
+		{
+			"name": "007K",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "118540238"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "1131918517"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "1095607278"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "1022736213"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "1032060956"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "swd"
+				},
+				{
+					"name": "0",
+					"value": "4021455-2"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "1014927390"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "pnd"
+				},
+				{
+					"name": "0",
+					"value": "1014927390"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "101488358X"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "pnd"
+				},
+				{
+					"name": "0",
+					"value": "101488358X"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "185848826"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "pnd"
+				},
+				{
+					"name": "0",
+					"value": "185848826"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "gnd"
+				},
+				{
+					"name": "0",
+					"value": "185808069"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "pnd"
+				},
+				{
+					"name": "0",
+					"value": "185808069"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "pnd"
+				},
+				{
+					"name": "0",
+					"value": "118540238"
+				},
+				{
+					"name": "v",
+					"value": "zg"
+				}
+			]
+		},
+		{
+			"name": "007N",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "pnd"
+				},
+				{
+					"name": "0",
+					"value": "1014123208"
+				}
+			]
+		},
+		{
+			"name": "008A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "s"
+				},
+				{
+					"name": "a",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "f"
+				},
+				{
+					"name": "a",
+					"value": "z"
+				},
+				{
+					"name": "a",
+					"value": "h"
+				},
+				{
+					"name": "a",
+					"value": "l"
+				},
+				{
+					"name": "a",
+					"value": "d"
+				}
+			]
+		},
+		{
+			"name": "008B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "v"
+				},
+				{
+					"name": "a",
+					"value": "w"
+				},
+				{
+					"name": "a",
+					"value": "k"
+				},
+				{
+					"name": "a",
+					"value": "m"
+				},
+				{
+					"name": "a",
+					"value": "e"
+				},
+				{
+					"name": "a",
+					"value": "z"
+				},
+				{
+					"name": "a",
+					"value": "o"
+				}
+			]
+		},
+		{
+			"name": "010E",
+			"subfields": [
+				{
+					"name": "e",
+					"value": "rda"
+				}
+			]
+		},
+		{
+			"name": "022R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "1085150313"
+				},
+				{
+					"name": "4",
+					"value": "rela"
+				}
+			]
+		},
+		{
+			"name": "022R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "1085154025"
+				},
+				{
+					"name": "4",
+					"value": "rela"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				},
+				{
+					"name": "v",
+					"value": "ADB"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johan Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johan Wolphgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johan W."
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Joh. Wolfg."
+				},
+				{
+					"name": "c",
+					"value": "v."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. W."
+				},
+				{
+					"name": "c",
+					"value": "v."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. W."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jan Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jean Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Juan Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Juan Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Juan W."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "João Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iohann Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iohan Wolphgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Ioannes W."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "I. W."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Wolfgango"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Wolfango"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "W."
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Volfgango"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Volfango"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Giov. L."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "G. L."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Von Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Goethius"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Göthe"
+				},
+				{
+					"name": "4",
+					"value": "navo"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann W. êvonë"
+				},
+				{
+					"name": "a",
+					"value": "Göthe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jan Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Göthe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jan Wolfang"
+				},
+				{
+					"name": "a",
+					"value": "Göthe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. W."
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Göthe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Giov. Volfango"
+				},
+				{
+					"name": "a",
+					"value": "Göthe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Göthe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iogann V."
+				},
+				{
+					"name": "a",
+					"value": "Göte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Göte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iohan V."
+				},
+				{
+					"name": "c",
+					"value": "p'on"
+				},
+				{
+					"name": "a",
+					"value": "Goete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iohan Volp'gang"
+				},
+				{
+					"name": "a",
+					"value": "Goet'e"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Goet'e"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Goe te"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gêôt'ê"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jochan Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "G'ote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "V."
+				},
+				{
+					"name": "c",
+					"value": "f."
+				},
+				{
+					"name": "a",
+					"value": "G'ote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "G'ote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. V."
+				},
+				{
+					"name": "a",
+					"value": "Gót"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gót"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "I. V."
+				},
+				{
+					"name": "a",
+					"value": "Go't"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Goithios"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gotenin"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gejteh"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jōhan Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "fon"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Volʹfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johans Volfgangs"
+				},
+				{
+					"name": "a",
+					"value": "Géte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johanas Volfgangas"
+				},
+				{
+					"name": "a",
+					"value": "Gėtė"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jochan Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jogann Vol'fgang"
+				},
+				{
+					"name": "c",
+					"value": "fon"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jogann Vol'fgang êfonë"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jogann-Vol'fgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. V."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J.-V."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iogann W."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "I. W."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iohan Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iogann Vol'fgang"
+				},
+				{
+					"name": "a",
+					"value": "Gëte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gëte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iogann Vol'fgang"
+				},
+				{
+					"name": "a",
+					"value": "Ge͏̈te"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "I. V."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "I.-V."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yôhân Wôlfgang"
+				},
+				{
+					"name": "c",
+					"value": "fôn"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yôhan Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gête"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohann Volfqanq"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yogann Volʹfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Y. W."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Y. W."
+				},
+				{
+					"name": "a",
+					"value": "Gêtê"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Volʹfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "V."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Egan Vol'fgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gēte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gě'ṭe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "G."
+				},
+				{
+					"name": "a",
+					"value": "Gette"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yuehan Wofugang"
+				},
+				{
+					"name": "a",
+					"value": "Gede"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gede"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Ge de"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Ṿolfgang"
+				},
+				{
+					"name": "c",
+					"value": "fon"
+				},
+				{
+					"name": "a",
+					"value": "Geteh"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Wulfgāng"
+				},
+				{
+					"name": "c",
+					"value": "fun"
+				},
+				{
+					"name": "a",
+					"value": "Gūta"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Wulfgāng"
+				},
+				{
+					"name": "c",
+					"value": "fūn"
+				},
+				{
+					"name": "a",
+					"value": "Gūta"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Wulfǧānǧ"
+				},
+				{
+					"name": "c",
+					"value": "fūn"
+				},
+				{
+					"name": "a",
+					"value": "Ǧūta"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gūta"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Ǧīta"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Ǧītā"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Ǧītah"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Ǧītih"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johan Wolphgang"
+				},
+				{
+					"name": "a",
+					"value": "Giote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. W."
+				},
+				{
+					"name": "a",
+					"value": "Giote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jochan Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gǐote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. V."
+				},
+				{
+					"name": "a",
+					"value": "Giote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Fūlfġānḡ"
+				},
+				{
+					"name": "a",
+					"value": "Ġūta"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Fūlfġānḡ"
+				},
+				{
+					"name": "a",
+					"value": "Ġūtah"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Vūlfġanġ"
+				},
+				{
+					"name": "c",
+					"value": "fūn"
+				},
+				{
+					"name": "a",
+					"value": "Ġūtih"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Fūlfġānḡ"
+				},
+				{
+					"name": "a",
+					"value": "Ġūtih"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Welfgang"
+				},
+				{
+					"name": "c",
+					"value": "fon"
+				},
+				{
+					"name": "a",
+					"value": "Goytä"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johān Bholphgãā"
+				},
+				{
+					"name": "a",
+					"value": "Gyote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gyot'e"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gyot'e"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "YŚuhŚan VŚulf·gan·g fŚun"
+				},
+				{
+					"name": "a",
+					"value": "GŚutih"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Giochan Bolphnkannk"
+				},
+				{
+					"name": "c",
+					"value": "phon"
+				},
+				{
+					"name": "a",
+					"value": "Gkaite"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Giochan Bolphnkannk êphonë"
+				},
+				{
+					"name": "a",
+					"value": "Gkaite"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Giochan B."
+				},
+				{
+					"name": "c",
+					"value": "phon"
+				},
+				{
+					"name": "a",
+					"value": "Gkaite"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iōann Mpolphgang"
+				},
+				{
+					"name": "a",
+					"value": "Gkaite"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Gkaite"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Polp'ŭgang"
+				},
+				{
+					"name": "c",
+					"value": "p'on"
+				},
+				{
+					"name": "a",
+					"value": "Koet'e"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Koet'e"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Volfkank"
+				},
+				{
+					"name": "a",
+					"value": "Kêôt'ê"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Kēōthē"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Kote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Jochann Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Kote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. V."
+				},
+				{
+					"name": "a",
+					"value": "Kote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "V."
+				},
+				{
+					"name": "a",
+					"value": "Kote"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann-Vol'fhanh"
+				},
+				{
+					"name": "a",
+					"value": "Hete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "E͏̈han Vol'fhanh"
+				},
+				{
+					"name": "a",
+					"value": "He͏̈te"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "&Euml;han Vol'fhanh"
+				},
+				{
+					"name": "a",
+					"value": "Hëte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iohann Volfqanq"
+				},
+				{
+					"name": "a",
+					"value": "Höte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Yo han Bol peu gang pon Goe te"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Yohan-Bolpeugang-pon-Goete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Yue han Wo fu gang Ge de"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Yuehan-Wofugang-Gede"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gyote"
+				},
+				{
+					"name": "v",
+					"value": "uigur."
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "v."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann W."
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann W."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J. W."
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Wolfgang"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johan Volfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Iogann Volʹfgang"
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J.V."
+				},
+				{
+					"name": "a",
+					"value": "Gete"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "I.V."
+				},
+				{
+					"name": "a",
+					"value": "Goithios"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yohan Vorufugangu Fon"
+				},
+				{
+					"name": "a",
+					"value": "Gēte"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Yūhān Fūlfġānġ fūn"
+				},
+				{
+					"name": "a",
+					"value": "Ġūtih"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "P",
+					"value": "Goythe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J.W."
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "J.W."
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Cyrl"
+				},
+				{
+					"name": "L",
+					"value": "uzb"
+				},
+				{
+					"name": "d",
+					"value": "Йоҳанн Волфганг"
+				},
+				{
+					"name": "a",
+					"value": "Гёте"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Hans"
+				},
+				{
+					"name": "P",
+					"value": "歌德"
+				},
+				{
+					"name": "5",
+					"value": "DE-576"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Hant"
+				},
+				{
+					"name": "P",
+					"value": "約翰・沃爾夫岡・馮・歌德"
+				},
+				{
+					"name": "5",
+					"value": "DE-576"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Hans"
+				},
+				{
+					"name": "P",
+					"value": "约翰・沃尔夫冈・冯・歌德"
+				},
+				{
+					"name": "5",
+					"value": "DE-576"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Jpan"
+				},
+				{
+					"name": "d",
+					"value": "ヨハン・ヴォルフガング・フォン"
+				},
+				{
+					"name": "a",
+					"value": "ゲーテ"
+				},
+				{
+					"name": "5",
+					"value": "DE-576"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Hebr"
+				},
+				{
+					"name": "d",
+					"value": "יוהן וולפגנג פון"
+				},
+				{
+					"name": "a",
+					"value": "גתה"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Hans"
+				},
+				{
+					"name": "P",
+					"value": "歌德"
+				}
+			]
+		},
+		{
+			"name": "028@",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Jpan"
+				},
+				{
+					"name": "d",
+					"value": "ヨハン・ヴォルフガング・フォン"
+				},
+				{
+					"name": "a",
+					"value": "ゲーテ"
+				}
+			]
+		},
+		{
+			"name": "028A",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Wolfgang"
+				},
+				{
+					"name": "c",
+					"value": "von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				}
+			]
+		},
+		{
+			"name": "028P",
+			"subfields": [
+				{
+					"name": "d",
+					"value": "Johann Wolfgang von"
+				},
+				{
+					"name": "a",
+					"value": "Goethe"
+				},
+				{
+					"name": "S",
+					"value": "DLC"
+				},
+				{
+					"name": "0",
+					"value": "n 79003362"
+				},
+				{
+					"name": "2",
+					"value": "naf"
+				},
+				{
+					"name": "v",
+					"value": "1749-1832"
+				}
+			]
+		},
+		{
+			"name": "028P",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Arab"
+				},
+				{
+					"name": "L",
+					"value": "uig"
+				},
+				{
+					"name": "d",
+					"value": "يوھان ۋولڧگاڭ"
+				},
+				{
+					"name": "a",
+					"value": "گيوتې"
+				}
+			]
+		},
+		{
+			"name": "028P",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Kore"
+				},
+				{
+					"name": "d",
+					"value": "요한 볼프강 폰"
+				},
+				{
+					"name": "a",
+					"value": "괴테"
+				},
+				{
+					"name": "5",
+					"value": "DE-576"
+				}
+			]
+		},
+		{
+			"name": "028P",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Hans"
+				},
+				{
+					"name": "d",
+					"value": "约翰·沃尔夫冈·"
+				},
+				{
+					"name": "a",
+					"value": "歌德"
+				}
+			]
+		},
+		{
+			"name": "028P",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Arab"
+				},
+				{
+					"name": "d",
+					"value": "یوهان ولفگانگ"
+				},
+				{
+					"name": "c",
+					"value": "فون"
+				},
+				{
+					"name": "a",
+					"value": "گوته"
+				}
+			]
+		},
+		{
+			"name": "028P",
+			"subfields": [
+				{
+					"name": "T",
+					"value": "01"
+				},
+				{
+					"name": "U",
+					"value": "Cyrl"
+				},
+				{
+					"name": "L",
+					"value": "uzb"
+				},
+				{
+					"name": "d",
+					"value": "Йоҳанн Волфганг"
+				},
+				{
+					"name": "a",
+					"value": "Гёте"
+				},
+				{
+					"name": "v",
+					"value": "Vorlage"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118695940"
+				},
+				{
+					"name": "8",
+					"value": "GoetheJohann Caspar"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Vater"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118540246"
+				},
+				{
+					"name": "8",
+					"value": "GoetheKatharina Elisabeth"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Mutter"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "11871791X"
+				},
+				{
+					"name": "8",
+					"value": "GoetheCornelia"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Schwester"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118795163"
+				},
+				{
+					"name": "8",
+					"value": "SchlosserJohann Georg"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Schwager"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118628011"
+				},
+				{
+					"name": "8",
+					"value": "GoetheChristianevon"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Ehefrau"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "11854022X"
+				},
+				{
+					"name": "8",
+					"value": "GoetheAugustvon"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Sohn"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118540254"
+				},
+				{
+					"name": "8",
+					"value": "GoetheOttilievon"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Schwiegertochter"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "11687256X"
+				},
+				{
+					"name": "8",
+					"value": "MelberJohanna Maria"
+				},
+				{
+					"name": "4",
+					"value": "bezf"
+				},
+				{
+					"name": "v",
+					"value": "Tante"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118617222"
+				},
+				{
+					"name": "8",
+					"value": "SteinCharlottevon"
+				},
+				{
+					"name": "4",
+					"value": "beza"
+				},
+				{
+					"name": "v",
+					"value": "Freundin"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118633252"
+				},
+				{
+					"name": "8",
+					"value": "WillemerMariannevon"
+				},
+				{
+					"name": "4",
+					"value": "beza"
+				},
+				{
+					"name": "v",
+					"value": "Freundin"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118638076"
+				},
+				{
+					"name": "8",
+					"value": "BuffCharlotte"
+				},
+				{
+					"name": "4",
+					"value": "beza"
+				},
+				{
+					"name": "v",
+					"value": "Freundin"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "119277387"
+				},
+				{
+					"name": "8",
+					"value": "HerzliebMinna"
+				},
+				{
+					"name": "4",
+					"value": "beza"
+				},
+				{
+					"name": "v",
+					"value": "Freundin"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118727907"
+				},
+				{
+					"name": "8",
+					"value": "LevetzowUlrikevon"
+				},
+				{
+					"name": "4",
+					"value": "beza"
+				},
+				{
+					"name": "v",
+					"value": "letzte Freundin 1821-1823 (»Marienbader Elegie«)"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "11856014X"
+				},
+				{
+					"name": "8",
+					"value": "Sachsen-Weimar-Eisenach, Großherzog"
+				},
+				{
+					"name": "4",
+					"value": "bezb"
+				}
+			]
+		},
+		{
+			"name": "028R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "118607626"
+				},
+				{
+					"name": "8",
+					"value": "SchillerFriedrich"
+				},
+				{
+					"name": "4",
+					"value": "beza"
+				}
+			]
+		},
+		{
+			"name": "032T",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "m"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040533093"
+				},
+				{
+					"name": "4",
+					"value": "berc"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "041763106"
+				},
+				{
+					"name": "4",
+					"value": "beru"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040465179"
+				},
+				{
+					"name": "4",
+					"value": "beru"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040290506"
+				},
+				{
+					"name": "4",
+					"value": "beru"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "04041423X"
+				},
+				{
+					"name": "4",
+					"value": "beru"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "041850440"
+				},
+				{
+					"name": "4",
+					"value": "beru"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040372154"
+				},
+				{
+					"name": "4",
+					"value": "beru"
+				}
+			]
+		},
+		{
+			"name": "041R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "042003458"
+				},
+				{
+					"name": "4",
+					"value": "beru"
+				}
+			]
+		},
+		{
+			"name": "042A",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "12.2p"
+				},
+				{
+					"name": "a",
+					"value": "16.5p"
+				},
+				{
+					"name": "a",
+					"value": "15.1p"
+				},
+				{
+					"name": "a",
+					"value": "13.4p"
+				},
+				{
+					"name": "a",
+					"value": "7.14p"
+				},
+				{
+					"name": "a",
+					"value": "18p"
+				}
+			]
+		},
+		{
+			"name": "042B",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "XA-DE"
+				}
+			]
+		},
+		{
+			"name": "042C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "ger"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "e",
+					"value": "DE-101"
+				}
+			]
+		},
+		{
+			"name": "047A/03",
+			"subfields": [
+				{
+					"name": "r",
+					"value": "DE-101"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "pnd"
+				},
+				{
+					"name": "i",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "Goethe, Johann Wolfgang /von"
+				},
+				{
+					"name": "0",
+					"value": "118540238"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "pnd"
+				},
+				{
+					"name": "i",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "Goethe, Johann W. /von"
+				},
+				{
+					"name": "0",
+					"value": "185808069"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "pnd"
+				},
+				{
+					"name": "i",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "Goethe, Johann W."
+				},
+				{
+					"name": "0",
+					"value": "185848826"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "pnd"
+				},
+				{
+					"name": "i",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "Goethe, Johann Wolfgang"
+				},
+				{
+					"name": "0",
+					"value": "101488358X"
+				}
+			]
+		},
+		{
+			"name": "047C",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "pnd"
+				},
+				{
+					"name": "i",
+					"value": "a"
+				},
+				{
+					"name": "a",
+					"value": "Goethe, Johann Wolfgang von"
+				},
+				{
+					"name": "0",
+					"value": "1014927390"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Bearbeitungssperre (Top500) - Änderungswünsche an DNB"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "NDSBIO"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "VD-17"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "7"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "12"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "384"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "SWB"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "OENAK"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Buchbesitz: HAAB Weimar"
+				}
+			]
+		},
+		{
+			"name": "050C",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Quelle: DNB-Normdaten (Info DNB: Deutschland (XA-DE) Sprache(n) Deutsch (ger) Geografischer Bezug Geburtsort: Frankfurt am Main Sterbeort: Weimar Beruf(e) Schriftsteller Publizist Politiker Jurist Naturwissenschaftler Theaterintendant Maler Zeichner)"
+				}
+			]
+		},
+		{
+			"name": "050D",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Laut dem Buch '\"Nachtwachen\" von Bonaventura alias J. W. v. Goethe' von Lothar Baus ist Goethe möglicher Verf. der \"Nachtwachen\"."
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "ADB"
+				},
+				{
+					"name": "b",
+					"value": "Stand: 31.08.2015"
+				},
+				{
+					"name": "u",
+					"value": "http://www.deutsche-biographie.de/ppn118540238.html?anchor=adb"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Wikipedia"
+				},
+				{
+					"name": "b",
+					"value": "Stand: 31.08.2015"
+				},
+				{
+					"name": "u",
+					"value": "https://de.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "M"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "B 1986"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "LCAuth"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Kosch Lit."
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "DbA"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Provenienzmerkmal"
+				},
+				{
+					"name": "b",
+					"value": "Exlibris"
+				}
+			]
+		},
+		{
+			"name": "050E",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "Provenienzmerkmal"
+				},
+				{
+					"name": "b",
+					"value": "Autogramm"
+				}
+			]
+		},
+		{
+			"name": "050G",
+			"subfields": [
+				{
+					"name": "b",
+					"value": "Staatsmann, Geheimrat"
+				}
+			]
+		},
+		{
+			"name": "060R",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "28.08.1749"
+				},
+				{
+					"name": "b",
+					"value": "22.03.1832"
+				},
+				{
+					"name": "4",
+					"value": "datx"
+				}
+			]
+		},
+		{
+			"name": "060R",
+			"subfields": [
+				{
+					"name": "a",
+					"value": "1749"
+				},
+				{
+					"name": "b",
+					"value": "1832"
+				},
+				{
+					"name": "4",
+					"value": "datl"
+				}
+			]
+		},
+		{
+			"name": "065R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040181189"
+				},
+				{
+					"name": "4",
+					"value": "ortg"
+				}
+			]
+		},
+		{
+			"name": "065R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040651053"
+				},
+				{
+					"name": "4",
+					"value": "orts"
+				}
+			]
+		},
+		{
+			"name": "065R",
+			"subfields": [
+				{
+					"name": "9",
+					"value": "040651053"
+				},
+				{
+					"name": "4",
+					"value": "ortw"
+				}
+			]
+		},
+		{
+			"name": "070A/02",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "DE-Wi17FP"
+				},
+				{
+					"name": "0",
+					"value": "CCBAA3CEF5654B98AD772651F9023DE6"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "DE-101d"
+				},
+				{
+					"name": "0",
+					"value": "pnd:118540238"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "IDS"
+				},
+				{
+					"name": "0",
+					"value": "110067908"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "IDS"
+				},
+				{
+					"name": "0",
+					"value": "120055814"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "IDS"
+				},
+				{
+					"name": "0",
+					"value": "130059035"
+				}
+			]
+		},
+		{
+			"name": "070A/03",
+			"subfields": [
+				{
+					"name": "S",
+					"value": "IDS"
+				},
+				{
+					"name": "0",
+					"value": "150010660"
+				}
+			]
+		}
+	]
+}
