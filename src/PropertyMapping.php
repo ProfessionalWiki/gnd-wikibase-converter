@@ -9,7 +9,7 @@ class PropertyMapping {
 	public function __construct(
 		public /** @readonly */ string $propertyId,
 		private /** @readonly string[] */ array $subfields,
-		private /** @readonly */ bool $useCondition = false // TODO
+		private /** @readonly */ ?SubfieldCondition $condition = null
 	) {}
 
 	public function convert( array $subfields ): PropertyWithValues {
@@ -25,7 +25,7 @@ class PropertyMapping {
 	}
 
 	private function shouldUseSubfieldValue( string $subfieldName ): bool {
-		return !$this->useCondition && in_array( $subfieldName, $this->subfields ); // TODO
+		return $this->condition === null && in_array( $subfieldName, $this->subfields );
 	}
 
 }

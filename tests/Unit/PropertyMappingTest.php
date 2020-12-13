@@ -6,6 +6,7 @@ namespace DNB\Tests\Unit;
 
 use DNB\WikibaseConverter\PropertyMapping;
 use DNB\WikibaseConverter\PropertyWithValues;
+use DNB\WikibaseConverter\SubfieldCondition;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -54,15 +55,8 @@ class PropertyMappingTest extends TestCase {
 		$mapping = new PropertyMapping(
 			propertyId: 'P1',
 			subfields: [ '0' ],
-			useCondition: true // TODO
+			condition: new SubfieldCondition( 'a', 'gnd' )
 		);
-
-//		'conditions' => [
-//			[
-//				'subfield' => 'a',
-//				'equalTo' => 'gnd',
-//			]
-//		],
 
 		$subfields = [
 			[ 'name' => 'a', 'value' => 'not gnd' ],

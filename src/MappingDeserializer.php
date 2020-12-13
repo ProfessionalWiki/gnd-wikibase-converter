@@ -36,11 +36,20 @@ class MappingDeserializer {
 			$propertyMappings[] = new PropertyMapping(
 				propertyId: $propertyId,
 				subfields: $propertyMapping['subfields'] ?? [],
-				useCondition: array_key_exists( 'conditions', $propertyMapping ), // TODO
+				condition: $this->getSubfieldConditionFromPropertyMappingArray( $propertyMapping )
 			);
 		}
 
 		return $propertyMappings;
+	}
+
+	private function getSubfieldConditionFromPropertyMappingArray( array $propertyMapping ): ?SubfieldCondition {
+		if ( array_key_exists( 'conditions', $propertyMapping ) && array_key_exists( 0, $propertyMapping['conditions'] ) ) {
+			$conditionArray = $propertyMapping['conditions'][0];
+			return new SubfieldCondition( $conditionArray['subfield'], $conditionArray['equalTo'] );
+		}
+
+		return null;
 	}
 
 	private function propertyDefinitionsFromJsonArray( array $json ): PropertyDefinitionList {
