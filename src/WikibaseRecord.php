@@ -6,13 +6,12 @@ namespace DNB\WikibaseConverter;
 
 class WikibaseRecord {
 
-	private array $map = [];
+	private array $map;
 
 	public function __construct( PropertyWithValues ...$propertiesWithValues ) {
 		$this->map = $propertiesWithValues;
 	}
 
-	// TODO: use DataModel
 	public function addValuesOfOneProperty( PropertyWithValues $propertyWithValues ) {
 		$this->map[$propertyWithValues->getPropertyId()] = new PropertyWithValues(
 			$propertyWithValues->getPropertyId(),
