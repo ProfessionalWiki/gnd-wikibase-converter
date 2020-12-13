@@ -93,4 +93,25 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
+	public function testEqualityConditionWithoutMatchingSubfield() {
+		$mapping = new PropertyMapping(
+			propertyId: 'P1',
+			subfields: [ '0' ],
+			condition: new SubfieldCondition( 'does not exist', 'gnd' )
+		);
+
+		$subfields = [
+			[ 'name' => 'a', 'value' => 'gnd' ],
+			[ 'name' => '0', 'value' => '42' ],
+		];
+
+		$this->assertEquals(
+			new PropertyWithValues(
+				'P1',
+				[]
+			),
+			$mapping->convert( $subfields )
+		);
+	}
+
 }

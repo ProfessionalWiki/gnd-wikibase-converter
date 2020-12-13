@@ -30,7 +30,11 @@ class PropertyMapping {
 		if ( $this->condition instanceof SubfieldCondition ) {
 			$subfieldMap = $this->getSubfieldsAsMap( $subfields );
 
-			return $subfieldMap[$this->condition->subfieldName()] === $this->condition->subfieldValue();
+			if ( array_key_exists( $this->condition->subfieldName(), $subfieldMap ) ) {
+				return $subfieldMap[$this->condition->subfieldName()] === $this->condition->subfieldValue();
+			}
+
+			return false;
 		}
 
 		return true;
