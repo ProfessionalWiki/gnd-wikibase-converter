@@ -14,11 +14,11 @@ class SubfieldCondition {
 		$this->subfieldValue = $subfieldValue;
 	}
 
-	public function name(): string {
+	public function subfieldName(): string {
 		return $this->subfieldName;
 	}
 
-	public function value(): string {
+	public function subfieldValue(): string {
 		return $this->subfieldValue;
 	}
 

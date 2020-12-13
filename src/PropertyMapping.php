@@ -15,17 +15,35 @@ class PropertyMapping {
 	public function convert( array $subfields ): PropertyWithValues {
 		$propertyWithValues = new PropertyWithValues( $this->propertyId );
 
-		foreach ( $subfields as $subfield ) {
-			if ( $this->shouldUseSubfieldValue( $subfield['name'] ) ) {
-				$propertyWithValues->addValue( $subfield['value'] );
+		if ( $this->conditionMatches( $subfields ) ) {
+			foreach ( $subfields as $subfield ) {
+				if ( in_array( $subfield['name'], $this->subfields ) ) {
+					$propertyWithValues->addValue( $subfield['value'] );
+				}
 			}
 		}
 
 		return $propertyWithValues;
 	}
 
-	private function shouldUseSubfieldValue( string $subfieldName ): bool {
-		return $this->condition === null && in_array( $subfieldName, $this->subfields );
+	private function conditionMatches( array $subfields ): bool {
+		if ( $this->condition instanceof SubfieldCondition ) {
+			$subfieldMap = $this->getSubfieldsAsMap( $subfields );
+
+			return $subfieldMap[$this->condition->subfieldName()] === $this->condition->subfieldValue();
+		}
+
+		return true;
+	}
+
+	private function getSubfieldsAsMap( array $subfields ): array {
+		$map = [];
+
+		foreach ( $subfields as $subfield ) {
+			$map[$subfield['name']] = $subfield['value'];
+		}
+
+		return $map;
 	}
 
 }

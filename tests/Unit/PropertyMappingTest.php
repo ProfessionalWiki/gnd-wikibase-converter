@@ -72,6 +72,25 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
-	// TODO: test when equlity does match
+	public function testEqualityConditionMatches() {
+		$mapping = new PropertyMapping(
+			propertyId: 'P1',
+			subfields: [ '0' ],
+			condition: new SubfieldCondition( 'a', 'gnd' )
+		);
+
+		$subfields = [
+			[ 'name' => 'a', 'value' => 'gnd' ],
+			[ 'name' => '0', 'value' => '42' ],
+		];
+
+		$this->assertEquals(
+			new PropertyWithValues(
+				'P1',
+				[ '42' ]
+			),
+			$mapping->convert( $subfields )
+		);
+	}
 
 }
