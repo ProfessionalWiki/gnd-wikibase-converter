@@ -4,6 +4,9 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter;
 
+/**
+ * Information to construct a single Wikibase Item from.
+ */
 class WikibaseRecord {
 
 	private array $map;

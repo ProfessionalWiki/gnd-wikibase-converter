@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \DNB\WikibaseConverter\PropertyMapping
+ * @covers \DNB\WikibaseConverter\SubfieldCondition
  */
 class PropertyMappingTest extends TestCase {
 
