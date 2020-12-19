@@ -133,4 +133,27 @@ class MappingDeserializerTest extends TestCase {
 		);
 	}
 
+	public function testValueMapping() {
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
+			'P1C4' => [
+				'P1' => [
+					'subfields' => [ '0' ],
+					'valueMap' => [
+						'a' => [ 'id' => 'Q1', 'labels' => [ 'en' => 'AAA' ] ],
+						'b' => [ 'id' => 'Q2', 'labels' => [ 'en' => 'BBB' ] ],
+					]
+				],
+			]
+		] );
+
+		$this->assertEquals(
+			new PropertyMapping(
+				propertyId: 'P1',
+				subfields: [ '0' ],
+				valueMap: [ 'a' => 'Q1', 'b' => 'Q2' ]
+			),
+			$mapping->getPropertyMappings( 'P1C4' )[0]
+		);
+	}
+
 }

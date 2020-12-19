@@ -48,7 +48,7 @@
 
 			"subfields": [ "0" ],
 
-			"mapping": {
+			"valueMap": {
 				"1": {
 					"id":  "Q1",
 					"labels": {
@@ -156,7 +156,7 @@
 
 			"subfields": [ "0" ],
 
-			"mapping": {
+			"valueMap": {
 				"b": {
 					"id":  "Q10",
 					"labels": {
@@ -241,7 +241,7 @@
 			"type": "wikibase-item",
 
 			"subfields": [ "a" ],
-			"mapping": {
+			"valueMap": {
 				"f": {
 					"id":  "Q20",
 					"labels": {
