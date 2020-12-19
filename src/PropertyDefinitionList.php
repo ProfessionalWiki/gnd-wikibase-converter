@@ -14,6 +14,10 @@ class PropertyDefinitionList {
 		}
 	}
 
+	public function asArray(): array {
+		return $this->definitions;
+	}
+
 //	public function get( string $id ): PropertyDefinition {
 //		return $this->definitions[$id];
 //	}

@@ -5,8 +5,6 @@ declare( strict_types = 1 );
 namespace DNB\Tests\Unit;
 
 use DNB\WikibaseConverter\MappingDeserializer;
-use DNB\WikibaseConverter\PropertyDefinition;
-use DNB\WikibaseConverter\PropertyDefinitionList;
 use DNB\WikibaseConverter\PropertyMapping;
 use DNB\WikibaseConverter\SubfieldCondition;
 use PHPUnit\Framework\TestCase;
