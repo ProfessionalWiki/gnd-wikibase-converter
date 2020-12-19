@@ -14,6 +14,10 @@ class PropertyDefinitionList {
 		}
 	}
 
+	/**
+	 * @return PropertyDefinition[]
+	 * @psalm-return array<string, PropertyDefinition>
+	 */
 	public function asArray(): array {
 		return $this->definitions;
 	}
