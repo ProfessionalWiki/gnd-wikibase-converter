@@ -1,20 +1,22 @@
 {
 	"003U": {
 		"P1": {
-			"type": "url",
 			"labels": {
 				"de": "GND-URI"
 			},
+
+			"type": "url",
 
 			"subfields": [ "a" ]
 		}
 	},
 	"007K": {
 		"P2": {
-			"type": "external-id",
 			"labels": {
 				"de": "GND ID"
 			},
+
+			"type": "external-id",
 
 			"subfields": [ "0" ],
 			"conditions": [
@@ -27,31 +29,227 @@
 	},
 	"029A": {
 		"P3": {
-			"type": "string",
 			"labels": {
 				"de": "Bezeichnung"
 			},
 
+			"type": "string",
+
 			"subfields": [ "*" ]
+		}
+	},
+	"002@": {
+		"P5": {
+			"labels": {
+				"de": "Katalogisierungslevel"
+			},
+
+			"type": "wikibase-item",
+
+			"subfields": [ "0" ],
+
+			"mapping": {
+				"1": {
+					"id":  "Q1",
+					"labels": {
+						"de": "1"
+					},
+					"aliases": {
+						"de": [ "Verbundredaktion" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				},
+				"2": {
+					"id":  "Q2",
+					"labels": {
+						"de": "2"
+					},
+					"aliases": {
+						"de": [ "lokale Redaktion" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				},
+				"3": {
+					"id":  "Q3",
+					"labels": {
+						"de": "3"
+					},
+					"aliases": {
+						"de": [ "geschultes Personal" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				},
+				"4": {
+					"id":  "Q4",
+					"labels": {
+						"de": "4"
+					},
+					"aliases": {
+						"de": [ "ungeschultes Personal" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				},
+				"5": {
+					"id":  "Q5",
+					"labels": {
+						"de": "5"
+					},
+					"aliases": {
+						"de": [ "andere Anwender" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				},
+				"6": {
+					"id":  "Q6",
+					"labels": {
+						"de": "6"
+					},
+					"aliases": {
+						"de": [ "Altdaten, nicht redaktionell bearbeitet" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				},
+				"7": {
+					"id":  "Q7",
+					"labels": {
+						"de": "7"
+					},
+					"aliases": {
+						"de": [ "maschinell eingespielt" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				},
+				"z": {
+					"id":  "Q8",
+					"labels": {
+						"de": "z"
+					},
+					"aliases": {
+						"de": [ "für eine weitere Bearbeitung gesperrt" ]
+					},
+					"descriptions": {
+						"de": "Katalogisierungslevel"
+					}
+				}
+			}
+		},
+		"P6": {
+			"labels": {
+				"de": "Entitätentyp"
+			},
+
+			"type": "wikibase-item",
+
+			"subfields": [ "0" ],
+
+			"mapping": {
+				"b": {
+					"id":  "Q10",
+					"labels": {
+						"de": "Körperschaft"
+					},
+					"aliases": {
+						"de": [ "b" ]
+					},
+					"descriptions": {
+						"de": "Entitätentyp"
+					}
+				},
+				"f": {
+					"id":  "Q11",
+					"labels": {
+						"de": "Konferenz"
+					},
+					"aliases": {
+						"de": [ "f" ]
+					},
+					"descriptions": {
+						"de": "Entitätentyp"
+					}
+				},
+				"g": {
+					"id":  "Q12",
+					"labels": {
+						"de": "Geografikum"
+					},
+					"aliases": {
+						"de": [ "g" ]
+					},
+					"descriptions": {
+						"de": "Entitätentyp"
+					}
+				},
+				"p": {
+					"id":  "Q13",
+					"labels": {
+						"de": "Person"
+					},
+					"aliases": {
+						"de": [ "p" ]
+					},
+					"descriptions": {
+						"de": "Entitätentyp"
+					}
+				},
+				"s": {
+					"id":  "Q14",
+					"labels": {
+						"de": "Sachbegriff"
+					},
+					"aliases": {
+						"de": [ "s" ]
+					},
+					"descriptions": {
+						"de": "Entitätentyp"
+					}
+				},
+				"u": {
+					"id":  "Q15",
+					"labels": {
+						"de": "Werk"
+					},
+					"aliases": {
+						"de": [ "u" ]
+					},
+					"descriptions": {
+						"de": "Entitätentyp"
+					}
+				}
+			}
 		}
 	},
 	"032T": {
 		"P4": {
-			"type": "wikibase-item",
 			"labels": {
 				"de": "Geschlecht"
 			},
 
+			"type": "wikibase-item",
+
 			"subfields": [ "a" ],
 			"mapping": {
 				"f": {
-					"id":  "Q1",
+					"id":  "Q20",
 					"labels": {
 						"de": "Frau"
 					}
 				},
 				"m": {
-					"id":  "Q2",
+					"id":  "Q21",
 					"labels": {
 						"de": "Mann"
 					}
