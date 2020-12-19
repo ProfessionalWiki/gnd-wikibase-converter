@@ -9,7 +9,8 @@ class PropertyMapping {
 	public function __construct(
 		private /** @readonly */ string $propertyId,
 		private /** @readonly string[] */ array $subfields,
-		private /** @readonly */ ?SubfieldCondition $condition = null
+		private /** @readonly */ ?SubfieldCondition $condition = null,
+		private /** @readonly string[] */ array $valueMap = []
 	) {}
 
 	public function convert( array $subfields ): PropertyWithValues {
@@ -17,8 +18,10 @@ class PropertyMapping {
 
 		if ( $this->conditionMatches( $subfields ) ) {
 			foreach ( $subfields as $subfield ) {
-				if ( in_array( $subfield['name'], $this->subfields ) ) {
-					$propertyWithValues->addValue( $subfield['value'] );
+				$valueToAddOrNull = $this->getSubfieldValue( $subfield );
+
+				if ( $valueToAddOrNull !== null ) {
+					$propertyWithValues->addValue( $valueToAddOrNull );
 				}
 			}
 		}
@@ -38,6 +41,22 @@ class PropertyMapping {
 		}
 
 		return true;
+	}
+
+	private function getSubfieldValue( array $subfield ): ?string {
+		if ( !in_array( $subfield['name'], $this->subfields ) ) {
+			return null;
+		}
+
+		if ( $this->valueMap === [] ) {
+			return $subfield['value'];
+		}
+
+		if ( array_key_exists( $subfield['value'], $this->valueMap ) ) {
+			return $this->valueMap[$subfield['value']];
+		}
+
+		return null;
 	}
 
 	private function getSubfieldsAsMap( array $subfields ): array {

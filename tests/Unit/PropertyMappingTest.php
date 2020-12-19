@@ -115,4 +115,29 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
+	public function testValueMapping() {
+		$mapping = new PropertyMapping(
+			propertyId: 'P1',
+			subfields: [ '0' ],
+			valueMap: [
+				'a' => 'AAA',
+				'b' => 'BBB'
+			]
+		);
+
+		$subfields = [
+			[ 'name' => '0', 'value' => 'a' ],
+			[ 'name' => '0', 'value' => 'should be skipped' ],
+			[ 'name' => '0', 'value' => 'b' ],
+		];
+
+		$this->assertEquals(
+			new PropertyWithValues(
+				'P1',
+				[ 'AAA', 'BBB' ]
+			),
+			$mapping->convert( $subfields )
+		);
+	}
+
 }
