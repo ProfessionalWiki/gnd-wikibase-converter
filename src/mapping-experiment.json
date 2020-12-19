@@ -1,0 +1,46 @@
+{
+	"032T": [
+		{
+			"labels": {
+				"de": "Geschlecht"
+			},
+
+			"id": "P4",
+			"type": "wikibase-item",
+
+			"condition": {
+				"subfield": "a",
+				"equalTo": "gnd"
+			},
+
+			"mainValue": {
+				"subfield": "a",
+				"valueMap": {
+					"f": {
+						"id":  "Q20",
+						"labels": {
+							"de": "Frau"
+						}
+					},
+					"m": {
+						"id":  "Q21",
+						"labels": {
+							"de": "Mann"
+						}
+					}
+				}
+			},
+
+			"qualifiers": {
+				"a": {
+					"labels": {
+						"de": "Vorname"
+					},
+
+					"id": "P50",
+					"type": "string"
+				}
+			}
+		}
+	]
+}
