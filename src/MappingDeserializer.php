@@ -8,8 +8,7 @@ class MappingDeserializer {
 
 	public function jsonArrayToObject( array $json ): Mapping {
 		return new Mapping(
-			$this->fieldMappingsFromJsonArray( $json ),
-			$this->propertyDefinitionsFromJsonArray( $json )
+			$this->fieldMappingsFromJsonArray( $json )
 		);
 	}
 
@@ -69,24 +68,6 @@ class MappingDeserializer {
 		}
 
 		return $valueMap;
-	}
-
-	private function propertyDefinitionsFromJsonArray( array $json ): PropertyDefinitionList {
-		$properties = [];
-
-		foreach ( $json as $picaField => $mappings ) {
-			foreach ( $mappings as $propertyId => $propertyMapping ) {
-				if ( array_key_exists( 'type', $propertyMapping ) ) {
-					$properties[] = new PropertyDefinition(
-						propertyId: $propertyId,
-						propertyType: $propertyMapping['type'],
-						labels: $propertyMapping['labels'] ?? [],
-					);
-				}
-			}
-		}
-
-		return new PropertyDefinitionList( ...$properties );
 	}
 
 }
