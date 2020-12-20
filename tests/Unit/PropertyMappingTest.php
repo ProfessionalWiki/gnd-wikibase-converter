@@ -140,24 +140,31 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
-	public function testPositionParameter() {
+	/**
+	 * @dataProvider positionParameterProvider
+	 */
+	public function testPositionParameter( string $value, int $position, string $expected ) {
 		$mapping = new PropertyMapping(
 			propertyId: 'P1',
 			subfields: [ '0' ],
-			position: 2
+			position: $position
 		);
 
 		$subfields = [
-			[ 'name' => '0', 'value' => 'abc' ],
+			[ 'name' => '0', 'value' => $value ],
 		];
 
 		$this->assertEquals(
 			new PropertyWithValues(
 				'P1',
-				[ 'b' ]
+				[ $expected ]
 			),
 			$mapping->convert( $subfields )
 		);
+	}
+
+	public function positionParameterProvider(): iterable {
+		yield 'value is extracted' => [ 'abc', 2, 'b' ];
 	}
 
 }
