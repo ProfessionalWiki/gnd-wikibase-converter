@@ -34,26 +34,10 @@ class PropertyMapping {
 
 	private function conditionMatches( array $subfields ): bool {
 		if ( $this->condition instanceof SubfieldCondition ) {
-			$subfieldMap = $this->getSubfieldsAsMap( $subfields );
-
-			if ( array_key_exists( $this->condition->subfieldName(), $subfieldMap ) ) {
-				return $subfieldMap[$this->condition->subfieldName()] === $this->condition->subfieldValue();
-			}
-
-			return false;
+			return $this->condition->matches( $subfields );
 		}
 
 		return true;
-	}
-
-	private function getSubfieldsAsMap( array $subfields ): array {
-		$map = [];
-
-		foreach ( $subfields as $subfield ) {
-			$map[$subfield['name']] = $subfield['value'];
-		}
-
-		return $map;
 	}
 
 	private function getSubfieldValue( string $subfieldValue ): ?string {
