@@ -57,8 +57,30 @@ class PropertyMapping {
 	}
 
 	private function getSubfieldValue( string $subfieldValue ): ?string {
-		$subfieldValue = $this->extractFromSubfieldValue( $subfieldValue );
+		if ( $this->positionIsOutOfBounds( $subfieldValue ) ) {
+			return null;
+		}
 
+		return $this->getMappedValue( $this->extractFromSubfieldValue( $subfieldValue ) );
+	}
+
+	private function positionIsOutOfBounds( string $subfieldValue ): bool {
+		if ( $this->position === null ) {
+			return false;
+		}
+
+		return $this->position < 1 || $this->position > strlen( $subfieldValue );
+	}
+
+	private function extractFromSubfieldValue( string $subfieldValue ): string {
+		if ( $this->position === null ) {
+			return $subfieldValue;
+		}
+
+		return substr( $subfieldValue, $this->position -1, 1 );
+	}
+
+	private function getMappedValue( string $subfieldValue ): ?string {
 		if ( $this->valueMap === [] ) {
 			return $subfieldValue;
 		}
@@ -68,14 +90,6 @@ class PropertyMapping {
 		}
 
 		return null;
-	}
-
-	private function extractFromSubfieldValue( string $subfieldValue ): string {
-		if ( $this->position === null ) {
-			return $subfieldValue;
-		}
-
-		return substr( $subfieldValue, $this->position -1, 1 );
 	}
 
 }

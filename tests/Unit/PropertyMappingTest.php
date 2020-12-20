@@ -143,7 +143,7 @@ class PropertyMappingTest extends TestCase {
 	/**
 	 * @dataProvider positionParameterProvider
 	 */
-	public function testPositionParameter( string $value, int $position, string $expected ) {
+	public function testPositionParameter( string $value, int $position, array $expected ) {
 		$mapping = new PropertyMapping(
 			propertyId: 'P1',
 			subfields: [ '0' ],
@@ -157,14 +157,18 @@ class PropertyMappingTest extends TestCase {
 		$this->assertEquals(
 			new PropertyWithValues(
 				'P1',
-				[ $expected ]
+				$expected
 			),
 			$mapping->convert( $subfields )
 		);
 	}
 
 	public function positionParameterProvider(): iterable {
-		yield 'value is extracted' => [ 'abc', 2, 'b' ];
+		yield 'value is extracted' => [ 'abc', 2, [ 'b' ] ];
+		yield 'value is extracted at start of string' => [ 'abc', 1, [ 'a' ] ];
+		yield 'value is extracted at end of string' => [ 'abc', 3, [ 'c' ] ];
+		yield 'position too low' => [ 'abc', 0, [] ];
+		yield 'position too high' => [ 'abc', 4, [] ];
 	}
 
 }
