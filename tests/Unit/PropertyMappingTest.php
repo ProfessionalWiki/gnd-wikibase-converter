@@ -140,4 +140,24 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
+	public function testPositionParameter() {
+		$mapping = new PropertyMapping(
+			propertyId: 'P1',
+			subfields: [ '0' ],
+			position: 2
+		);
+
+		$subfields = [
+			[ 'name' => '0', 'value' => 'abc' ],
+		];
+
+		$this->assertEquals(
+			new PropertyWithValues(
+				'P1',
+				[ 'b' ]
+			),
+			$mapping->convert( $subfields )
+		);
+	}
+
 }

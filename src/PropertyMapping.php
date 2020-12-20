@@ -9,6 +9,7 @@ class PropertyMapping {
 	public function __construct(
 		private /** @readonly */ string $propertyId,
 		private /** @readonly string[] */ array $subfields,
+		private /** @readonly */ ?int $position = null,
 		private /** @readonly */ ?SubfieldCondition $condition = null,
 		private /** @readonly string[] */ array $valueMap = []
 	) {}
@@ -18,10 +19,12 @@ class PropertyMapping {
 
 		if ( $this->conditionMatches( $subfields ) ) {
 			foreach ( $subfields as $subfield ) {
-				$valueToAddOrNull = $this->getSubfieldValue( $subfield );
+				if ( in_array( $subfield['name'], $this->subfields ) ) {
+					$valueToAddOrNull = $this->getSubfieldValue( $subfield['value'] );
 
-				if ( $valueToAddOrNull !== null ) {
-					$propertyWithValues->addValue( $valueToAddOrNull );
+					if ( $valueToAddOrNull !== null ) {
+						$propertyWithValues->addValue( $valueToAddOrNull );
+					}
 				}
 			}
 		}
@@ -43,22 +46,6 @@ class PropertyMapping {
 		return true;
 	}
 
-	private function getSubfieldValue( array $subfield ): ?string {
-		if ( !in_array( $subfield['name'], $this->subfields ) ) {
-			return null;
-		}
-
-		if ( $this->valueMap === [] ) {
-			return $subfield['value'];
-		}
-
-		if ( array_key_exists( $subfield['value'], $this->valueMap ) ) {
-			return $this->valueMap[$subfield['value']];
-		}
-
-		return null;
-	}
-
 	private function getSubfieldsAsMap( array $subfields ): array {
 		$map = [];
 
@@ -67,6 +54,28 @@ class PropertyMapping {
 		}
 
 		return $map;
+	}
+
+	private function getSubfieldValue( string $subfieldValue ): ?string {
+		$subfieldValue = $this->extractFromSubfieldValue( $subfieldValue );
+
+		if ( $this->valueMap === [] ) {
+			return $subfieldValue;
+		}
+
+		if ( array_key_exists( $subfieldValue, $this->valueMap ) ) {
+			return $this->valueMap[$subfieldValue];
+		}
+
+		return null;
+	}
+
+	private function extractFromSubfieldValue( string $subfieldValue ): string {
+		if ( $this->position === null ) {
+			return $subfieldValue;
+		}
+
+		return substr( $subfieldValue, $this->position -1, 1 );
 	}
 
 }
