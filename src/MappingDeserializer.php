@@ -35,6 +35,7 @@ class MappingDeserializer {
 			$propertyMappings[] = new PropertyMapping(
 				propertyId: $propertyId,
 				subfields: $propertyMapping['subfields'] ?? [],
+				position: $propertyMapping['position'] ?? null,
 				condition: $this->getSubfieldConditionFromPropertyMappingArray( $propertyMapping ),
 				valueMap: $this->getValueMapFromPropertyMappingArray( $propertyMapping )
 			);

@@ -88,4 +88,24 @@ class MappingDeserializerTest extends TestCase {
 		);
 	}
 
+	public function testPosition() {
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
+			'P1C4' => [
+				'P1' => [
+					'subfields' => [ '0' ],
+					'position' => 42
+				],
+			]
+		] );
+
+		$this->assertEquals(
+			new PropertyMapping(
+				propertyId: 'P1',
+				subfields: [ '0' ],
+				position: 42
+			),
+			$mapping->getPropertyMappings( 'P1C4' )[0]
+		);
+	}
+
 }
