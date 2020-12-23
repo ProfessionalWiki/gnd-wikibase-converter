@@ -18,3 +18,6 @@ stan:
 
 stan-baseline:
 	php8.0 ./vendor/bin/phpstan analyse -c phpstan.neon --generate-baseline
+
+rector-dry-run:
+	php8.0 vendor/bin/rector process --dry-run
