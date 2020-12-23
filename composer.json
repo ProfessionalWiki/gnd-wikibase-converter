@@ -17,8 +17,7 @@
 		}
 	],
 	"require": {
-		"php": ">=8.0",
-		"wikibase/data-model": "^9.2.0"
+		"php": ">=8.0"
 	},
 	"require-dev": {
 		"ext-json": "*",
