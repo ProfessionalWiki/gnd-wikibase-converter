@@ -30,8 +30,8 @@ class MappingDeserializerTest extends TestCase {
 		$this->assertEquals(
 			[
 				new PropertyMapping(
-					propertyId: 'P3',
-					subfields: [ 'b' ]
+					'P3',
+					[ 'b' ]
 				)
 			],
 			$mapping->getPropertyMappings( '029A' )
@@ -56,9 +56,10 @@ class MappingDeserializerTest extends TestCase {
 		$this->assertEquals(
 			[
 				new PropertyMapping(
-					propertyId: 'P2',
-					subfields: [ '0' ],
-					condition: new SubfieldCondition( 'a', 'gnd' )
+					'P2',
+					[ '0' ],
+					null,
+					new SubfieldCondition( 'a', 'gnd' )
 				)
 			],
 			$mapping->getPropertyMappings( '007K' )
@@ -80,9 +81,11 @@ class MappingDeserializerTest extends TestCase {
 
 		$this->assertEquals(
 			new PropertyMapping(
-				propertyId: 'P1',
-				subfields: [ '0' ],
-				valueMap: [ 'a' => 'Q1', 'b' => 'Q2' ]
+				'P1',
+				[ '0' ],
+				null,
+				null,
+				[ 'a' => 'Q1', 'b' => 'Q2' ]
 			),
 			$mapping->getPropertyMappings( 'P1C4' )[0]
 		);
@@ -100,9 +103,9 @@ class MappingDeserializerTest extends TestCase {
 
 		$this->assertEquals(
 			new PropertyMapping(
-				propertyId: 'P1',
-				subfields: [ '0' ],
-				position: 42
+				'P1',
+				[ '0' ],
+				42
 			),
 			$mapping->getPropertyMappings( 'P1C4' )[0]
 		);

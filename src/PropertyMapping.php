@@ -6,13 +6,25 @@ namespace DNB\WikibaseConverter;
 
 class PropertyMapping {
 
+	private string $propertyId;
+	private array $subfields;
+	private ?int $position = null;
+	private ?SubfieldCondition $condition = null;
+	private array $valueMap = [];
+
 	public function __construct(
-		private /** @readonly */ string $propertyId,
-		private /** @readonly string[] */ array $subfields,
-		private /** @readonly */ ?int $position = null,
-		private /** @readonly */ ?SubfieldCondition $condition = null,
-		private /** @readonly string[] */ array $valueMap = []
-	) {}
+		/** @readonly */ string $propertyId,
+		/** @readonly string[] */ array $subfields,
+		/** @readonly */ ?int $position = null,
+		/** @readonly */ ?SubfieldCondition $condition = null,
+		/** @readonly string[] */ array $valueMap = []
+	) {
+		$this->valueMap = $valueMap;
+		$this->condition = $condition;
+		$this->position = $position;
+		$this->subfields = $subfields;
+		$this->propertyId = $propertyId;
+	}
 
 	public function convert( array $subfields ): PropertyWithValues {
 		$propertyWithValues = new PropertyWithValues( $this->propertyId );

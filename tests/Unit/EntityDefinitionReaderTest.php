@@ -67,7 +67,7 @@ class EntityDefinitionReaderTest extends TestCase {
 				new PropertyDefinition(
 					'P1',
 					'string',
-					labels: [ 'en' => 'English', 'de' => 'German' ]
+					[ 'en' => 'English', 'de' => 'German' ]
 				)
 			),
 			$this->propertiesFromJson( [

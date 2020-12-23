@@ -13,9 +13,9 @@ class EntityDefinitionReader {
 			foreach ( $mappings as $propertyId => $propertyMapping ) {
 				if ( array_key_exists( 'type', $propertyMapping ) ) {
 					$properties[] = new PropertyDefinition(
-						propertyId: $propertyId,
-						propertyType: $propertyMapping['type'],
-						labels: $propertyMapping['labels'] ?? [],
+						$propertyId,
+						$propertyMapping['type'],
+						$propertyMapping['labels'] ?? [],
 					);
 				}
 			}

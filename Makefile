@@ -5,19 +5,19 @@ cs: stan
 test: phpunit
 
 phpunit:
-	php8.0 ./vendor/bin/phpunit -c phpunit.xml.dist
+	php ./vendor/bin/phpunit -c phpunit.xml.dist
 
 coverage-html:
-	php8.0 ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-html=./build/coverage/html
+	php ./vendor/bin/phpunit -c phpunit.xml.dist --coverage-html=./build/coverage/html
 
 psalm:
-	php8.0 ./vendor/bin/psalm
+	php ./vendor/bin/psalm
 
 stan:
-	php8.0 ./vendor/bin/phpstan analyse -c phpstan.neon --no-progress
+	php ./vendor/bin/phpstan analyse -c phpstan.neon --no-progress
 
 stan-baseline:
-	php8.0 ./vendor/bin/phpstan analyse -c phpstan.neon --generate-baseline
+	php ./vendor/bin/phpstan analyse -c phpstan.neon --generate-baseline
 
 rector-dry-run:
-	php8.0 vendor/bin/rector process --dry-run
+	php ./vendor/bin/rector process --dry-run

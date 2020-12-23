@@ -6,10 +6,18 @@ namespace DNB\WikibaseConverter;
 
 class PropertyDefinition {
 
+	public string $propertyId;
+	public string $propertyType;
+	public array $labels = [];
+
 	public function __construct(
-		public /** @readonly */ string $propertyId,
-		public /** @readonly */ string $propertyType,
-		public /** @readonly string[] */ array $labels = [],
-	) {}
+		/** @readonly */ string $propertyId,
+		/** @readonly */ string $propertyType,
+		/** @readonly string[] */ array $labels = []
+	) {
+		$this->propertyId = $propertyId;
+		$this->propertyType = $propertyType;
+		$this->labels = $labels;
+	}
 
 }

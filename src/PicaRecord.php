@@ -6,6 +6,8 @@ namespace DNB\WikibaseConverter;
 
 class PicaRecord {
 
+	private array $jsonArray;
+
 	public static function newEmpty(): self {
 		return new self( [ 'fields' => [] ] );
 	}
@@ -20,9 +22,9 @@ class PicaRecord {
 	/**
 	 * @param array{fields: array{array{name: string, subfields: array{array{name: string, value: string}}}}} $jsonArray
 	 */
-	public function __construct(
-		private array $jsonArray
-	) {}
+	public function __construct( array $jsonArray ) {
+		$this->jsonArray = $jsonArray;
+	}
 
 	/**
 	 * @return array{array{name: string, subfields: array{array{name: string, value: string}}}}

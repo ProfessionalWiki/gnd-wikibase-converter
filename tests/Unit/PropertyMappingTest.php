@@ -17,8 +17,8 @@ class PropertyMappingTest extends TestCase {
 
 	public function testNoSubfieldsLeadsToNoValues() {
 		$mapping = new PropertyMapping(
-			propertyId: 'P1',
-			subfields: [ 'a' ],
+			'P1',
+			[ 'a' ],
 		);
 
 		$this->assertEquals(
@@ -32,8 +32,8 @@ class PropertyMappingTest extends TestCase {
 
 	public function testOnySpecifiedSubfieldsAreUsed() {
 		$mapping = new PropertyMapping(
-			propertyId: 'P1',
-			subfields: [ 'b' ],
+			'P1',
+			[ 'b' ],
 		);
 
 		$subfields = [
@@ -54,9 +54,10 @@ class PropertyMappingTest extends TestCase {
 
 	public function testEqualityConditionDoesNotMatch() {
 		$mapping = new PropertyMapping(
-			propertyId: 'P1',
-			subfields: [ '0' ],
-			condition: new SubfieldCondition( 'a', 'gnd' )
+			'P1',
+			[ '0' ],
+			null,
+			new SubfieldCondition( 'a', 'gnd' )
 		);
 
 		$subfields = [
@@ -75,9 +76,10 @@ class PropertyMappingTest extends TestCase {
 
 	public function testEqualityConditionMatches() {
 		$mapping = new PropertyMapping(
-			propertyId: 'P1',
-			subfields: [ '0' ],
-			condition: new SubfieldCondition( 'a', 'gnd' )
+			'P1',
+			[ '0' ],
+			null,
+			new SubfieldCondition( 'a', 'gnd' )
 		);
 
 		$subfields = [
@@ -96,9 +98,11 @@ class PropertyMappingTest extends TestCase {
 
 	public function testValueMapping() {
 		$mapping = new PropertyMapping(
-			propertyId: 'P1',
-			subfields: [ '0' ],
-			valueMap: [
+			'P1',
+			[ '0' ],
+			null,
+			null,
+			[
 				'a' => 'AAA',
 				'b' => 'BBB'
 			]
@@ -124,9 +128,9 @@ class PropertyMappingTest extends TestCase {
 	 */
 	public function testPositionParameter( string $value, int $position, array $expected ) {
 		$mapping = new PropertyMapping(
-			propertyId: 'P1',
-			subfields: [ '0' ],
-			position: $position
+			'P1',
+			[ '0' ],
+			$position
 		);
 
 		$subfields = [

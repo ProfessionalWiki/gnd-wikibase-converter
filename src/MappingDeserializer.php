@@ -17,8 +17,8 @@ class MappingDeserializer {
 
 		foreach ( $json as $picaField => $mappings ) {
 			$fieldMappings[] = new PicaFieldMapping(
-				name: $picaField,
-				propertyMappings: $this->propertyMappingsFromJsonArray( $mappings )
+				$picaField,
+				$this->propertyMappingsFromJsonArray( $mappings )
 			);
 		}
 
@@ -33,11 +33,11 @@ class MappingDeserializer {
 
 		foreach ( $mappings as $propertyId => $propertyMapping ) {
 			$propertyMappings[] = new PropertyMapping(
-				propertyId: $propertyId,
-				subfields: $propertyMapping['subfields'] ?? [],
-				position: $propertyMapping['position'] ?? null,
-				condition: $this->getSubfieldConditionFromPropertyMappingArray( $propertyMapping ),
-				valueMap: $this->getValueMapFromPropertyMappingArray( $propertyMapping )
+				$propertyId,
+				$propertyMapping['subfields'] ?? [],
+				$propertyMapping['position'] ?? null,
+				$this->getSubfieldConditionFromPropertyMappingArray( $propertyMapping ),
+				$this->getValueMapFromPropertyMappingArray( $propertyMapping )
 			);
 		}
 

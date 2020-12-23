@@ -6,13 +6,15 @@ namespace DNB\WikibaseConverter;
 
 class Converter {
 
+	private Mapping $mapping;
+
 	public static function fromArrayMapping( array $mapping ): self {
 		return new self( ( new MappingDeserializer() )->jsonArrayToObject( $mapping ) );
 	}
 
-	public function __construct(
-		private Mapping $mapping
-	) {}
+	public function __construct( Mapping $mapping ) {
+		$this->mapping = $mapping;
+	}
 
 	public function picaToWikibase( PicaRecord $pica ): WikibaseRecord {
 		$wikibaseRecord = new WikibaseRecord();
