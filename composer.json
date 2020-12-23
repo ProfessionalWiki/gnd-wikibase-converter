@@ -21,6 +21,7 @@
 	},
 	"require-dev": {
 		"ext-json": "*",
+		"rector/rector": "^0.8.56",
 		"phpunit/phpunit": "^9.4.4",
 		"vimeo/psalm": "^4.3.0",
 		"phpstan/phpstan": "^0.12.58"
