@@ -4,6 +4,9 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
+/**
+ * @internal
+ */
 class PropertyDefinitionList {
 
 	private array $definitions = [];

@@ -4,6 +4,9 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
+/**
+ * @internal
+ */
 class EntityDefinitionReader {
 
 	public function propertyDefinitionsFromJsonArray( array $json ): PropertyDefinitionList {

@@ -6,6 +6,9 @@ namespace DNB\WikibaseConverter\PackagePrivate;
 
 use DNB\WikibaseConverter\PropertyWithValues;
 
+/**
+ * @internal
+ */
 class PropertyMapping {
 
 	private string $propertyId;

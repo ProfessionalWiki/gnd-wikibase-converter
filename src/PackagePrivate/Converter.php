@@ -6,6 +6,9 @@ namespace DNB\WikibaseConverter\PackagePrivate;
 
 use DNB\WikibaseConverter\WikibaseRecord;
 
+/**
+ * @internal
+ */
 class Converter {
 
 	private Mapping $mapping;
