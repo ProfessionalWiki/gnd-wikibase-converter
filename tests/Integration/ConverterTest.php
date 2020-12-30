@@ -5,13 +5,13 @@ declare( strict_types = 1 );
 namespace DNB\Tests\Integration;
 
 use DNB\Tests\TestPicaRecords;
-use DNB\WikibaseConverter\Converter;
-use DNB\WikibaseConverter\PicaRecord;
+use DNB\WikibaseConverter\PackagePrivate\Converter;
+use DNB\WikibaseConverter\PackagePrivate\PicaRecord;
 use DNB\WikibaseConverter\WikibaseRecord;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DNB\WikibaseConverter\Converter
+ * @covers \DNB\WikibaseConverter\PackagePrivate\Converter
  */
 class ConverterTest extends TestCase {
 

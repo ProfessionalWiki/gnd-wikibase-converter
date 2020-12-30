@@ -2,7 +2,7 @@
 
 declare( strict_types = 1 );
 
-namespace DNB\WikibaseConverter;
+namespace DNB\WikibaseConverter\PackagePrivate;
 
 class PicaFieldMappingList {
 

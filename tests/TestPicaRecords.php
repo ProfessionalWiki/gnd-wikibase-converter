@@ -4,7 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests;
 
-use DNB\WikibaseConverter\PicaRecord;
+use DNB\WikibaseConverter\PackagePrivate\PicaRecord;
 
 class TestPicaRecords {
 

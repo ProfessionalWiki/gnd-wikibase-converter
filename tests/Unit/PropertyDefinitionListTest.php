@@ -4,8 +4,8 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\WikibaseConverter\PropertyDefinition;
-use DNB\WikibaseConverter\PropertyDefinitionList;
+use DNB\WikibaseConverter\PackagePrivate\PropertyDefinition;
+use DNB\WikibaseConverter\PackagePrivate\PropertyDefinitionList;
 use PHPUnit\Framework\TestCase;
 
 class PropertyDefinitionListTest extends TestCase {

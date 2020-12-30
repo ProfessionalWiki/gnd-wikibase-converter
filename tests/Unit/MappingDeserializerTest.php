@@ -4,15 +4,15 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\WikibaseConverter\MappingDeserializer;
-use DNB\WikibaseConverter\PropertyMapping;
-use DNB\WikibaseConverter\SubfieldCondition;
+use DNB\WikibaseConverter\PackagePrivate\MappingDeserializer;
+use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
+use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DNB\WikibaseConverter\MappingDeserializer
- * @covers \DNB\WikibaseConverter\Mapping
- * @covers \DNB\WikibaseConverter\PropertyMapping
+ * @covers \DNB\WikibaseConverter\PackagePrivate\MappingDeserializer
+ * @covers \DNB\WikibaseConverter\PackagePrivate\Mapping
+ * @covers \DNB\WikibaseConverter\PackagePrivate\PropertyMapping
  */
 class MappingDeserializerTest extends TestCase {
 

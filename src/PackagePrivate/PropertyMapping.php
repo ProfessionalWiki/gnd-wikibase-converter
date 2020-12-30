@@ -2,7 +2,9 @@
 
 declare( strict_types = 1 );
 
-namespace DNB\WikibaseConverter;
+namespace DNB\WikibaseConverter\PackagePrivate;
+
+use DNB\WikibaseConverter\PropertyWithValues;
 
 class PropertyMapping {
 

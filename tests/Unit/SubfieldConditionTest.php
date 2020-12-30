@@ -4,11 +4,11 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\WikibaseConverter\SubfieldCondition;
+use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DNB\WikibaseConverter\SubfieldCondition
+ * @covers \DNB\WikibaseConverter\PackagePrivate\SubfieldCondition
  */
 class SubfieldConditionTest extends TestCase {
 

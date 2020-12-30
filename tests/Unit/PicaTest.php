@@ -4,20 +4,20 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\Tests\Data;
-use DNB\WikibaseConverter\PicaRecord;
+use DNB\Tests\TestPicaJson;
+use DNB\WikibaseConverter\PackagePrivate\PicaRecord;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DNB\WikibaseConverter\PicaRecord
+ * @covers \DNB\WikibaseConverter\PackagePrivate\PicaRecord
  */
 class PicaTest extends TestCase {
 
 	public function testGetFields() {
-		$pica = new PicaRecord( Data::getGnd1Json() );
+		$pica = new PicaRecord( TestPicaJson::getGnd1Json() );
 
 		$this->assertEquals(
-			Data::getGnd1Json()['fields'],
+			TestPicaJson::getGnd1Json()['fields'],
 			$pica->getFields()
 		);
 	}

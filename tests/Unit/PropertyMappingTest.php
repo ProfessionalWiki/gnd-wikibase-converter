@@ -4,14 +4,14 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\WikibaseConverter\PropertyMapping;
+use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
+use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PropertyWithValues;
-use DNB\WikibaseConverter\SubfieldCondition;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DNB\WikibaseConverter\PropertyMapping
- * @covers \DNB\WikibaseConverter\SubfieldCondition
+ * @covers \DNB\WikibaseConverter\PackagePrivate\PropertyMapping
+ * @covers \DNB\WikibaseConverter\PackagePrivate\SubfieldCondition
  */
 class PropertyMappingTest extends TestCase {
 

@@ -4,15 +4,15 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\WikibaseConverter\EntityDefinitionReader;
-use DNB\WikibaseConverter\PropertyDefinition;
-use DNB\WikibaseConverter\PropertyDefinitionList;
+use DNB\WikibaseConverter\PackagePrivate\EntityDefinitionReader;
+use DNB\WikibaseConverter\PackagePrivate\PropertyDefinition;
+use DNB\WikibaseConverter\PackagePrivate\PropertyDefinitionList;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \DNB\WikibaseConverter\EntityDefinitionReader
- * @covers \DNB\WikibaseConverter\PropertyDefinitionList
- * @covers \DNB\WikibaseConverter\PropertyDefinition
+ * @covers \DNB\WikibaseConverter\PackagePrivate\EntityDefinitionReader
+ * @covers \DNB\WikibaseConverter\PackagePrivate\PropertyDefinitionList
+ * @covers \DNB\WikibaseConverter\PackagePrivate\PropertyDefinition
  */
 class EntityDefinitionReaderTest extends TestCase {
 
