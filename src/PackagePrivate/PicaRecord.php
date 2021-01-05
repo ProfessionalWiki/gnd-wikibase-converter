@@ -4,6 +4,8 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
+use DNB\WikibaseConverter\InvalidPica;
+
 /**
  * @internal
  */
@@ -26,6 +28,14 @@ class PicaRecord {
 	 * @param array{fields: array{array{name: string, subfields: array{array{name: string, value: string}}}}} $jsonArray
 	 */
 	public function __construct( array $jsonArray ) {
+		if ( !array_key_exists( 'fields', $jsonArray ) ) {
+			throw new InvalidPica( 'fields key missing' );
+		}
+
+		if ( !is_array( $jsonArray['fields'] ) ) {
+			throw new InvalidPica( 'fields is nto an array' );
+		}
+
 		$this->jsonArray = $jsonArray;
 	}
 

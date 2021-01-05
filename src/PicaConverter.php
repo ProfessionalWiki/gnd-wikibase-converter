@@ -34,8 +34,17 @@ class PicaConverter {
 		return file_get_contents( __DIR__ . '/mapping.json' );
 	}
 
+	/**
+	 * @throws InvalidPica
+	 */
 	public function picaJsonToWikibaseRecord( string $json ): WikibaseRecord {
-		return $this->getConverter()->picaToWikibase( new PicaRecord( json_decode( $json, true ) ) );
+		$jsonArray = json_decode( $json, true );
+
+		if ( !is_array( $jsonArray ) ) {
+			throw new InvalidPica( 'Invalid JSON' );
+		}
+
+		return $this->getConverter()->picaToWikibase( new PicaRecord( $jsonArray ) );
 	}
 
 }

@@ -5,6 +5,7 @@ declare( strict_types = 1 );
 namespace DNB\Tests\Integration;
 
 use DNB\Tests\TestPicaJson;
+use DNB\WikibaseConverter\InvalidPica;
 use DNB\WikibaseConverter\PicaConverter;
 use PHPUnit\Framework\TestCase;
 
@@ -13,10 +14,8 @@ use PHPUnit\Framework\TestCase;
  */
 class PicaConverterTest extends TestCase {
 
-	public function testCreatesWikibaseRecord() {
-		$converter = new PicaConverter();
-
-		$wikibaseRecord = $converter->picaJsonToWikibaseRecord( TestPicaJson::gnd5string() );
+	public function testCreatesWikibaseRecord(): void {
+		$wikibaseRecord = $this->newConverter()->picaJsonToWikibaseRecord( TestPicaJson::gnd5string() );
 
 		$this->assertSame(
 			[ 'http://d-nb.info/gnd/275-6' ],
@@ -24,14 +23,36 @@ class PicaConverterTest extends TestCase {
 		);
 	}
 
-	public function testSmoke() {
-		$converter = new PicaConverter();
+	private function newConverter(): PicaConverter {
+		return new PicaConverter();
+	}
+
+	public function testSmoke(): void {
+		$converter = $this->newConverter();
 
 		foreach ( TestPicaJson::gndStrings() as $jsonString ) {
 			$wikibaseRecord = $converter->picaJsonToWikibaseRecord( $jsonString );
 
 			$this->assertNotEmpty( $wikibaseRecord->getPropertyIds() );
 		}
+	}
+
+	/**
+	 * @dataProvider invalidPicaProvider
+	 */
+	public function testInvalidPicaCausesException( string $line ): void {
+		$converter = $this->newConverter();
+
+		$this->expectException( InvalidPica::class );
+		$converter->picaJsonToWikibaseRecord( $line );
+	}
+
+	public function invalidPicaProvider(): \Generator {
+		yield 'json syntax error' => [ 'not json' ];
+		yield 'fields key missing' => [ '{}' ];
+		yield 'fields not an array' => [ '{"fields": "not an array"}' ];
+		yield 'empty string' => [ '' ];
+		yield 'non-map json' => [ '42' ];
 	}
 
 }
