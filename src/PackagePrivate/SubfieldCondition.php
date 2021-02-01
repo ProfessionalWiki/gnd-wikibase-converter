@@ -10,9 +10,9 @@ namespace DNB\WikibaseConverter\PackagePrivate;
 class SubfieldCondition {
 
 	private string $subfieldName;
-	private string $subfieldValue;
+	private ?string $subfieldValue;
 
-	public function __construct( string $subfieldName, string $subfieldValue ) {
+	public function __construct( string $subfieldName, ?string $subfieldValue ) {
 		$this->subfieldName = $subfieldName;
 		$this->subfieldValue = $subfieldValue;
 	}

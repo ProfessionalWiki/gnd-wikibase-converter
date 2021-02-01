@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  */
 class SubfieldConditionTest extends TestCase {
 
-	public function testEqualityConditionMatches() {
+	public function testConditionMatches(): void {
 		$condition = new SubfieldCondition( 'a', 'gnd' );
 
 		$subfields = [
@@ -23,7 +23,7 @@ class SubfieldConditionTest extends TestCase {
 		$this->assertTrue( $condition->matches( $subfields ) );
 	}
 
-	public function testEqualityConditionDoesNotMatch() {
+	public function testConditionDoesNotMatch(): void {
 		$condition = new SubfieldCondition( 'a', 'gnd' );
 
 		$subfields = [
@@ -34,7 +34,7 @@ class SubfieldConditionTest extends TestCase {
 		$this->assertFalse( $condition->matches( $subfields ) );
 	}
 
-	public function testEqualityConditionWithoutMatchingSubfield() {
+	public function testDoesNotMatchWhenSubfieldIsMissing(): void {
 		$condition = new SubfieldCondition( 'does not exist', 'gnd' );
 
 		$subfields = [
@@ -43,6 +43,27 @@ class SubfieldConditionTest extends TestCase {
 		];
 
 		$this->assertFalse( $condition->matches( $subfields ) );
+	}
+
+	public function testNullValueDoesNotMatchWhenSubfieldIsPresent(): void {
+		$condition = new SubfieldCondition( 'a', null );
+
+		$subfields = [
+			[ 'name' => 'a', 'value' => 'gnd' ],
+			[ 'name' => 'b', 'value' => 'gnd' ],
+		];
+
+		$this->assertFalse( $condition->matches( $subfields ) );
+	}
+
+	public function testNullValueMatchesWhenSubfieldIsMissing(): void {
+		$condition = new SubfieldCondition( 'a', null );
+
+		$subfields = [
+			[ 'name' => 'b', 'value' => 'gnd' ],
+		];
+
+		$this->assertTrue( $condition->matches( $subfields ) );
 	}
 
 }
