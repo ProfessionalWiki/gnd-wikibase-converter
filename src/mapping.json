@@ -1,10 +1,6 @@
 {
 	"003U": {
 		"P1": {
-			"labels": {
-				"de": "GND-URI"
-			},
-
 			"type": "url",
 
 			"subfields": [ "a" ]
@@ -12,10 +8,6 @@
 	},
 	"007K": {
 		"P2": {
-			"labels": {
-				"de": "GND ID"
-			},
-
 			"type": "external-id",
 
 			"subfields": [ "0" ],
@@ -29,10 +21,6 @@
 	},
 	"029A": {
 		"P3": {
-			"labels": {
-				"de": "Bezeichnung"
-			},
-
 			"type": "string",
 
 			"subfields": [ "*" ]
@@ -40,10 +28,6 @@
 	},
 	"002@": {
 		"P5": {
-			"labels": {
-				"de": "Katalogisierungslevel"
-			},
-
 			"type": "wikibase-item",
 
 			"subfields": [ "0" ],
@@ -149,10 +133,6 @@
 			}
 		},
 		"P6": {
-			"labels": {
-				"de": "Entitätentyp"
-			},
-
 			"type": "wikibase-item",
 
 			"subfields": [ "0" ],
@@ -235,10 +215,6 @@
 	},
 	"032T": {
 		"P4": {
-			"labels": {
-				"de": "Geschlecht"
-			},
-
 			"type": "wikibase-item",
 
 			"subfields": [ "a" ],
