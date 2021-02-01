@@ -40,7 +40,7 @@ class MappingDeserializer {
 				$propertyMapping['subfields'] ?? [],
 				$propertyMapping['position'] ?? null,
 				$this->getSubfieldConditionFromPropertyMappingArray( $propertyMapping ),
-				$this->getValueMapFromPropertyMappingArray( $propertyMapping )
+				$propertyMapping['valueMap'] ?? []
 			);
 		}
 
@@ -54,24 +54,6 @@ class MappingDeserializer {
 		}
 
 		return null;
-	}
-
-	private function getValueMapFromPropertyMappingArray( array $propertyMapping ): array {
-		if ( array_key_exists( 'valueMap', $propertyMapping ) ) {
-			return $this->jsonValueMapToMap( $propertyMapping['valueMap'] );
-		}
-
-		return [];
-	}
-
-	private function jsonValueMapToMap( array $jsonValueMap ): array {
-		$valueMap = [];
-
-		foreach ( $jsonValueMap as $picaValue => $wikibaseValue ) {
-			$valueMap[$picaValue] = $wikibaseValue['id'];
-		}
-
-		return $valueMap;
 	}
 
 }

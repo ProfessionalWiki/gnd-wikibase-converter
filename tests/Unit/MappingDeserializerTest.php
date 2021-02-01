@@ -72,8 +72,8 @@ class MappingDeserializerTest extends TestCase {
 				'P1' => [
 					'subfields' => [ '0' ],
 					'valueMap' => [
-						'a' => [ 'id' => 'Q1', 'labels' => [ 'en' => 'AAA' ] ],
-						'b' => [ 'id' => 'Q2', 'labels' => [ 'en' => 'BBB' ] ],
+						'a' => 'Q1',
+						'b' => 'Q2',
 					]
 				],
 			]
