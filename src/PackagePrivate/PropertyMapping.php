@@ -13,9 +13,9 @@ class PropertyMapping {
 
 	private string $propertyId;
 	private array $subfields;
-	private ?int $position = null;
-	private ?SubfieldCondition $condition = null;
-	private array $valueMap = [];
+	private ?int $position;
+	private ?SubfieldCondition $condition;
+	private array $valueMap;
 
 	public function __construct(
 		/** @readonly */ string $propertyId,
