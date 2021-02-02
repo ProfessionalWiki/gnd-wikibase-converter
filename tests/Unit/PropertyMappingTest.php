@@ -96,7 +96,7 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
-	public function testValueMapping(): void {
+	public function testValueMappingReturnsMappedValue(): void {
 		$mapping = new PropertyMapping(
 			'P1',
 			'x',
@@ -118,6 +118,31 @@ class PropertyMappingTest extends TestCase {
 			new PropertyWithValues(
 				'P1',
 				[ 'BBB' ]
+			),
+			$mapping->convert( Subfields::newFromMap( $subfields ) )
+		);
+	}
+
+	public function testValueMappingDoesNotReturnValueWhenThereIsNoMapping(): void {
+		$mapping = new PropertyMapping(
+			'P1',
+			'x',
+			null,
+			null,
+			[
+				'foo' => 'bar'
+			]
+		);
+
+		$subfields = [
+			'x' => 'b',
+			'z' => '42',
+		];
+
+		$this->assertEquals(
+			new PropertyWithValues(
+				'P1',
+				[]
 			),
 			$mapping->convert( Subfields::newFromMap( $subfields ) )
 		);

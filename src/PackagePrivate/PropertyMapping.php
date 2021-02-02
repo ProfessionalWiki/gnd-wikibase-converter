@@ -42,7 +42,11 @@ class PropertyMapping {
 			$valueToAddOrNull = $this->valueSource->valueFromSubfields( $subfields );
 
 			if ( $valueToAddOrNull !== null ) {
-				$propertyWithValues->addValue( $this->getMappedValue( $valueToAddOrNull ) );
+				$mappedValueOrNull = $this->getMappedValue( $valueToAddOrNull );
+
+				if ( $mappedValueOrNull !== null ) {
+					$propertyWithValues->addValue( $mappedValueOrNull );
+				}
 			}
 		}
 
