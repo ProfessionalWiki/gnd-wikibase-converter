@@ -43,17 +43,15 @@ class Converter {
 	 * TODO: move to PicaRecord
 	 *
 	 * @param array{array{name: string, value: string}} $subfields
-	 *
-	 * @return array<string, string>
 	 */
-	private function getSubfieldsAsMap( array $subfields ): array {
+	private function getSubfieldsAsMap( array $subfields ): Subfields {
 		$map = [];
 
 		foreach ( $subfields as $subfield ) {
 			$map[$subfield['name']] = $subfield['value'];
 		}
 
-		return $map;
+		return Subfields::newFromMap( $map );
 	}
 
 }

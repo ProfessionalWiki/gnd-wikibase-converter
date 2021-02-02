@@ -6,6 +6,7 @@ namespace DNB\Tests\Unit;
 
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
+use DNB\WikibaseConverter\PackagePrivate\Subfields;
 use DNB\WikibaseConverter\PropertyWithValues;
 use PHPUnit\Framework\TestCase;
 
@@ -26,7 +27,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[]
 			),
-			$mapping->convert( [] )
+			$mapping->convert( Subfields::newFromMap( [] ) )
 		);
 	}
 
@@ -47,7 +48,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[ 'BBB' ]
 			),
-			$mapping->convert( $subfields )
+			$mapping->convert( Subfields::newFromMap( $subfields ) )
 		);
 	}
 
@@ -69,7 +70,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[]
 			),
-			$mapping->convert( $subfields )
+			$mapping->convert( Subfields::newFromMap( $subfields ) )
 		);
 	}
 
@@ -91,7 +92,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[ '42' ]
 			),
-			$mapping->convert( $subfields )
+			$mapping->convert( Subfields::newFromMap( $subfields ) )
 		);
 	}
 
@@ -118,14 +119,14 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[ 'BBB' ]
 			),
-			$mapping->convert( $subfields )
+			$mapping->convert( Subfields::newFromMap( $subfields ) )
 		);
 	}
 
 	/**
 	 * @dataProvider positionParameterProvider
 	 */
-	public function testPositionParameter( string $value, int $position, array $expected ) {
+	public function testPositionParameter( string $value, int $position, array $expected ): void {
 		$mapping = new PropertyMapping(
 			'P1',
 			'x',
@@ -137,7 +138,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				$expected
 			),
-			$mapping->convert( [ 'x' => $value ] )
+			$mapping->convert( Subfields::newFromMap( [ 'x' => $value ] ) )
 		);
 	}
 

@@ -36,14 +36,11 @@ class PropertyMapping {
 		$this->position = $position;
 	}
 
-	/**
-	 * @param array<string, string> $subfieldsAsMap
-	 */
-	public function convert( array $subfieldsAsMap ): PropertyWithValues {
+	public function convert( Subfields $subfields ): PropertyWithValues {
 		$propertyWithValues = new PropertyWithValues( $this->propertyId );
 
-		if ( $this->conditionMatches( $subfieldsAsMap ) ) {
-			foreach ( $subfieldsAsMap as $subfieldName => $subfieldValue ) {
+		if ( $this->conditionMatches( $subfields ) ) {
+			foreach ( $subfields->map as $subfieldName => $subfieldValue ) {
 				if ( $subfieldName === $this->subfield ) {
 					$valueToAddOrNull = $this->getSubfieldValue( $subfieldValue );
 
@@ -57,9 +54,9 @@ class PropertyMapping {
 		return $propertyWithValues;
 	}
 
-	private function conditionMatches( array $subfieldsAsMap ): bool {
+	private function conditionMatches( Subfields $subfields ): bool {
 		if ( $this->condition instanceof SubfieldCondition ) {
-			return $this->condition->matches( $subfieldsAsMap );
+			return $this->condition->matches( $subfields );
 		}
 
 		return true;

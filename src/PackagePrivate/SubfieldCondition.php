@@ -17,11 +17,8 @@ class SubfieldCondition {
 		$this->subfieldValue = $subfieldValue;
 	}
 
-	/**
-	 * @param array<string, string> $subfieldsAsMap
-	 */
-	public function matches( array $subfieldsAsMap ): bool {
-		return $this->subfieldValue === ( $subfieldsAsMap[$this->subfieldName] ?? null );
+	public function matches( Subfields $subfields ): bool {
+		return $this->subfieldValue === ( $subfields->map[$this->subfieldName] ?? null );
 	}
 
 }
