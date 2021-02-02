@@ -1,26 +1,36 @@
 {
-	"032T": [
-		{
-			"id": "P4",
+	"P4": {
+		"field": "032T",
 
-			"condition": {
-				"subfield": "a",
-				"equalTo": "gnd"
-			},
+		"condition": {
+			"subfield": "a",
+			"equalTo": "gnd"
+		},
 
-			"mainValue": {
-				"subfield": "a",
-				"valueMap": {
-					"f": "Q20",
-					"m": "Q21"
-				}
-			},
+		"position": 3,
 
-			"qualifiers": {
-				"a": {
-					"id": "P50"
-				}
-			}
+		"subfield": {
+			"P": "$",
+			"a": "$",
+			"d": ", $",
+			"c": " $",
+			"n": " $",
+			"l": ", $",
+			"g": ", $"
+		},
+
+		"valueMap": {
+			"f": "Q20",
+			"m": "Q21"
+		},
+
+		"qualifiers": {
+			"P50": "b",
+			"P51": "c"
 		}
-	]
+	},
+	"P5": {
+		"field": "032T",
+		"subfield": "a"
+	}
 }
