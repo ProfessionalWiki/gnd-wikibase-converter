@@ -39,6 +39,13 @@ class Converter {
 		return $wikibaseRecord;
 	}
 
+	/**
+	 * TODO: move to PicaRecord
+	 *
+	 * @param array{array{name: string, value: string}} $subfields
+	 *
+	 * @return array<string, string>
+	 */
 	private function getSubfieldsAsMap( array $subfields ): array {
 		$map = [];
 
