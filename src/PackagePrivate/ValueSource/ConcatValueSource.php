@@ -11,14 +11,14 @@ class ConcatValueSource implements ValueSource {
 	private array $segments;
 
 	/**
-	 * @param array<int, string> $segments
+	 * @param array<string, string> $segments
 	 */
 	public function __construct( array $segments ) {
 		$this->segments = $segments;
 	}
 
 	public function valueFromSubfields( Subfields $subfields ): ?string {
-
+		return null;
 	}
 
 }
