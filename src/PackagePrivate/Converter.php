@@ -25,12 +25,28 @@ class Converter {
 		$wikibaseRecord = new WikibaseRecord();
 
 		foreach ( $pica->getFields() as $field ) {
-			foreach ( $this->mapping->getPropertyMappings( $field['name'] ) as $propertyMapping ) {
-				$wikibaseRecord->addValuesOfOneProperty( $propertyMapping->convert( $field['subfields'] ) );
+			$propertyMappings = $this->mapping->getPropertyMappings( $field['name'] );
+
+			if ( $propertyMappings !== [] ) {
+				$subfieldsAsMap = $this->getSubfieldsAsMap( $field['subfields'] );
+
+				foreach ( $propertyMappings as $propertyMapping ) {
+					$wikibaseRecord->addValuesOfOneProperty( $propertyMapping->convert( $subfieldsAsMap ) );
+				}
 			}
 		}
 
 		return $wikibaseRecord;
+	}
+
+	private function getSubfieldsAsMap( array $subfields ): array {
+		$map = [];
+
+		foreach ( $subfields as $subfield ) {
+			$map[$subfield['name']] = $subfield['value'];
+		}
+
+		return $map;
 	}
 
 }

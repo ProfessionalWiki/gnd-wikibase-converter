@@ -16,8 +16,8 @@ class SubfieldConditionTest extends TestCase {
 		$condition = new SubfieldCondition( 'a', 'gnd' );
 
 		$subfields = [
-			[ 'name' => 'a', 'value' => 'gnd' ],
-			[ 'name' => '0', 'value' => '42' ],
+			'a' => 'gnd',
+			'z' => '42',
 		];
 
 		$this->assertTrue( $condition->matches( $subfields ) );
@@ -27,8 +27,8 @@ class SubfieldConditionTest extends TestCase {
 		$condition = new SubfieldCondition( 'a', 'gnd' );
 
 		$subfields = [
-			[ 'name' => 'a', 'value' => 'not gnd' ],
-			[ 'name' => '0', 'value' => '42' ],
+			'a' => 'not gnd',
+			'z' => '42',
 		];
 
 		$this->assertFalse( $condition->matches( $subfields ) );
@@ -38,8 +38,8 @@ class SubfieldConditionTest extends TestCase {
 		$condition = new SubfieldCondition( 'does not exist', 'gnd' );
 
 		$subfields = [
-			[ 'name' => 'a', 'value' => 'gnd' ],
-			[ 'name' => '0', 'value' => '42' ],
+			'a' => 'gnd',
+			'z' => '42',
 		];
 
 		$this->assertFalse( $condition->matches( $subfields ) );
@@ -49,8 +49,8 @@ class SubfieldConditionTest extends TestCase {
 		$condition = new SubfieldCondition( 'a', null );
 
 		$subfields = [
-			[ 'name' => 'a', 'value' => 'gnd' ],
-			[ 'name' => 'b', 'value' => 'gnd' ],
+			'a' => 'gnd',
+			'b' => 'gnd',
 		];
 
 		$this->assertFalse( $condition->matches( $subfields ) );
@@ -60,7 +60,7 @@ class SubfieldConditionTest extends TestCase {
 		$condition = new SubfieldCondition( 'a', null );
 
 		$subfields = [
-			[ 'name' => 'b', 'value' => 'gnd' ],
+			'b' => 'gnd',
 		];
 
 		$this->assertTrue( $condition->matches( $subfields ) );

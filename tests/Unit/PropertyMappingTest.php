@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  */
 class PropertyMappingTest extends TestCase {
 
-	public function testNoSubfieldsLeadsToNoValues() {
+	public function testNoSubfieldsLeadsToNoValues(): void {
 		$mapping = new PropertyMapping(
 			'P1',
 			'a',
@@ -30,39 +30,38 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
-	public function testOnySpecifiedSubfieldsAreUsed() {
+	public function testOnySpecifiedSubfieldIsUsed(): void {
 		$mapping = new PropertyMapping(
 			'P1',
 			'b',
 		);
 
 		$subfields = [
-			[ 'name' => 'a', 'value' => 'AAA' ],
-			[ 'name' => 'b', 'value' => 'BBB' ],
-			[ 'name' => 'c', 'value' => 'CCC' ],
-			[ 'name' => 'b', 'value' => 'B2' ],
+			'a' => 'AAA',
+			'b' => 'BBB',
+			'c' => 'CCC',
 		];
 
 		$this->assertEquals(
 			new PropertyWithValues(
 				'P1',
-				[ 'BBB', 'B2' ]
+				[ 'BBB' ]
 			),
 			$mapping->convert( $subfields )
 		);
 	}
 
-	public function testEqualityConditionDoesNotMatch() {
+	public function testEqualityConditionDoesNotMatch(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'0',
+			'x',
 			null,
 			new SubfieldCondition( 'a', 'gnd' )
 		);
 
 		$subfields = [
-			[ 'name' => 'a', 'value' => 'not gnd' ],
-			[ 'name' => '0', 'value' => '42' ],
+			'a' => 'not gnd',
+			'x' => '42',
 		];
 
 		$this->assertEquals(
@@ -74,17 +73,17 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
-	public function testEqualityConditionMatches() {
+	public function testEqualityConditionMatches(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'0',
+			'x',
 			null,
 			new SubfieldCondition( 'a', 'gnd' )
 		);
 
 		$subfields = [
-			[ 'name' => 'a', 'value' => 'gnd' ],
-			[ 'name' => '0', 'value' => '42' ],
+			'a' => 'gnd',
+			'x' => '42',
 		];
 
 		$this->assertEquals(
@@ -96,28 +95,28 @@ class PropertyMappingTest extends TestCase {
 		);
 	}
 
-	public function testValueMapping() {
+	public function testValueMapping(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'0',
+			'x',
 			null,
 			null,
 			[
 				'a' => 'AAA',
-				'b' => 'BBB'
+				'b' => 'BBB',
+				'c' => 'CCC',
 			]
 		);
 
 		$subfields = [
-			[ 'name' => '0', 'value' => 'a' ],
-			[ 'name' => '0', 'value' => 'should be skipped' ],
-			[ 'name' => '0', 'value' => 'b' ],
+			'x' => 'b',
+			'z' => '42',
 		];
 
 		$this->assertEquals(
 			new PropertyWithValues(
 				'P1',
-				[ 'AAA', 'BBB' ]
+				[ 'BBB' ]
 			),
 			$mapping->convert( $subfields )
 		);
@@ -129,20 +128,16 @@ class PropertyMappingTest extends TestCase {
 	public function testPositionParameter( string $value, int $position, array $expected ) {
 		$mapping = new PropertyMapping(
 			'P1',
-			'0',
+			'x',
 			$position
 		);
-
-		$subfields = [
-			[ 'name' => '0', 'value' => $value ],
-		];
 
 		$this->assertEquals(
 			new PropertyWithValues(
 				'P1',
 				$expected
 			),
-			$mapping->convert( $subfields )
+			$mapping->convert( [ 'x' => $value ] )
 		);
 	}
 

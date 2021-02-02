@@ -17,22 +17,11 @@ class SubfieldCondition {
 		$this->subfieldValue = $subfieldValue;
 	}
 
-	public function matches( array $subfields ): bool {
-		return $this->subfieldValue === $this->getSubfieldValueOrNull( $subfields );
-	}
-
-	private function getSubfieldValueOrNull( array $subfields ): ?string {
-		return $this->getSubfieldsAsMap( $subfields )[$this->subfieldName] ?? null;
-	}
-
-	private function getSubfieldsAsMap( array $subfields ): array {
-		$map = [];
-
-		foreach ( $subfields as $subfield ) {
-			$map[$subfield['name']] = $subfield['value'];
-		}
-
-		return $map;
+	/**
+	 * @param array<string, string> $subfieldsAsMap
+	 */
+	public function matches( array $subfieldsAsMap ): bool {
+		return $this->subfieldValue === ( $subfieldsAsMap[$this->subfieldName] ?? null );
 	}
 
 }

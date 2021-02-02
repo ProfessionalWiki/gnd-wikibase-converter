@@ -12,34 +12,40 @@ use DNB\WikibaseConverter\PropertyWithValues;
 class PropertyMapping {
 
 	private string $propertyId;
-	private array $subfields;
+	private string $subfield;
 	private ?int $position;
 	private ?SubfieldCondition $condition;
 
 	/** @var array<string, string> */
 	private array $valueMap;
 
+	/**
+	 * @param array<string, string> $valueMap
+	 */
 	public function __construct(
 		/** @readonly */ string $propertyId,
 		/** @readonly */ string $subfield,
 		/** @readonly */ ?int $position = null,
 		/** @readonly */ ?SubfieldCondition $condition = null,
-		/** @readonly string[] */ array $valueMap = []
+		/** @readonly */ array $valueMap = []
 	) {
 		$this->propertyId = $propertyId;
-		$this->subfields = (array)$subfield;
+		$this->subfield = $subfield;
 		$this->valueMap = $valueMap;
 		$this->condition = $condition;
 		$this->position = $position;
 	}
 
-	public function convert( array $subfields ): PropertyWithValues {
+	/**
+	 * @param array<string, string> $subfieldsAsMap
+	 */
+	public function convert( array $subfieldsAsMap ): PropertyWithValues {
 		$propertyWithValues = new PropertyWithValues( $this->propertyId );
 
-		if ( $this->conditionMatches( $subfields ) ) {
-			foreach ( $subfields as $subfield ) {
-				if ( in_array( $subfield['name'], $this->subfields ) ) {
-					$valueToAddOrNull = $this->getSubfieldValue( $subfield['value'] );
+		if ( $this->conditionMatches( $subfieldsAsMap ) ) {
+			foreach ( $subfieldsAsMap as $subfieldName => $subfieldValue ) {
+				if ( $subfieldName === $this->subfield ) {
+					$valueToAddOrNull = $this->getSubfieldValue( $subfieldValue );
 
 					if ( $valueToAddOrNull !== null ) {
 						$propertyWithValues->addValue( $valueToAddOrNull );
@@ -51,9 +57,9 @@ class PropertyMapping {
 		return $propertyWithValues;
 	}
 
-	private function conditionMatches( array $subfields ): bool {
+	private function conditionMatches( array $subfieldsAsMap ): bool {
 		if ( $this->condition instanceof SubfieldCondition ) {
-			return $this->condition->matches( $subfields );
+			return $this->condition->matches( $subfieldsAsMap );
 		}
 
 		return true;
