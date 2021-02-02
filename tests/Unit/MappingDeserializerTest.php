@@ -7,6 +7,7 @@ namespace DNB\Tests\Unit;
 use DNB\WikibaseConverter\PackagePrivate\MappingDeserializer;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
+use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -30,7 +31,7 @@ class MappingDeserializerTest extends TestCase {
 			[
 				new PropertyMapping(
 					'P3',
-					'b'
+					new SingleSubfieldSource( 'b' )
 				)
 			],
 			$mapping->getPropertyMappings( '029A' )
@@ -53,8 +54,7 @@ class MappingDeserializerTest extends TestCase {
 			[
 				new PropertyMapping(
 					'P2',
-					'0',
-					null,
+					new SingleSubfieldSource( '0' ),
 					new SubfieldCondition( 'a', 'gnd' )
 				)
 			],
@@ -77,8 +77,7 @@ class MappingDeserializerTest extends TestCase {
 		$this->assertEquals(
 			new PropertyMapping(
 				'P1',
-				'0',
-				null,
+				new SingleSubfieldSource( '0' ),
 				null,
 				[ 'a' => 'Q1', 'b' => 'Q2' ]
 			),
@@ -98,8 +97,7 @@ class MappingDeserializerTest extends TestCase {
 		$this->assertEquals(
 			new PropertyMapping(
 				'P1',
-				'0',
-				42
+				new SingleSubfieldSource( '0', 42 )
 			),
 			$mapping->getPropertyMappings( 'P1C4' )[0]
 		);

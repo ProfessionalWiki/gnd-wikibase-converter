@@ -7,6 +7,7 @@ namespace DNB\Tests\Unit;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PackagePrivate\Subfields;
+use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
 use DNB\WikibaseConverter\PropertyWithValues;
 use PHPUnit\Framework\TestCase;
 
@@ -19,7 +20,7 @@ class PropertyMappingTest extends TestCase {
 	public function testNoSubfieldsLeadsToNoValues(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'a',
+			new SingleSubfieldSource( 'a' )
 		);
 
 		$this->assertEquals(
@@ -34,7 +35,7 @@ class PropertyMappingTest extends TestCase {
 	public function testOnySpecifiedSubfieldIsUsed(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'b',
+			new SingleSubfieldSource( 'b' )
 		);
 
 		$subfields = [
@@ -55,8 +56,7 @@ class PropertyMappingTest extends TestCase {
 	public function testEqualityConditionDoesNotMatch(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'x',
-			null,
+			new SingleSubfieldSource( 'x' ),
 			new SubfieldCondition( 'a', 'gnd' )
 		);
 
@@ -77,8 +77,7 @@ class PropertyMappingTest extends TestCase {
 	public function testEqualityConditionMatches(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'x',
-			null,
+			new SingleSubfieldSource( 'x' ),
 			new SubfieldCondition( 'a', 'gnd' )
 		);
 
@@ -99,8 +98,7 @@ class PropertyMappingTest extends TestCase {
 	public function testValueMappingReturnsMappedValue(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'x',
-			null,
+			new SingleSubfieldSource( 'x' ),
 			null,
 			[
 				'a' => 'AAA',
@@ -126,8 +124,7 @@ class PropertyMappingTest extends TestCase {
 	public function testValueMappingDoesNotReturnValueWhenThereIsNoMapping(): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'x',
-			null,
+			new SingleSubfieldSource( 'x' ),
 			null,
 			[
 				'foo' => 'bar'
@@ -154,8 +151,7 @@ class PropertyMappingTest extends TestCase {
 	public function testPositionParameter( string $value, int $position, array $expected ): void {
 		$mapping = new PropertyMapping(
 			'P1',
-			'x',
-			$position
+			new SingleSubfieldSource( 'x', $position )
 		);
 
 		$this->assertEquals(

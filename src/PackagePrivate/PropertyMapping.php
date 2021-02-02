@@ -4,7 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
-use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
+use DNB\WikibaseConverter\PackagePrivate\ValueSource\ValueSource;
 use DNB\WikibaseConverter\PropertyWithValues;
 
 /**
@@ -13,7 +13,7 @@ use DNB\WikibaseConverter\PropertyWithValues;
 class PropertyMapping {
 
 	private string $propertyId;
-	private SingleSubfieldSource $valueSource;
+	private ValueSource $valueSource;
 	private ?SubfieldCondition $condition;
 
 	/** @var array<string, string> */
@@ -23,14 +23,13 @@ class PropertyMapping {
 	 * @param array<string, string> $valueMap
 	 */
 	public function __construct(
-		/** @readonly */ string $propertyId,
-		/** @readonly */ string $subfield,
-		/** @readonly */ ?int $position = null,
-		/** @readonly */ ?SubfieldCondition $condition = null,
-		/** @readonly */ array $valueMap = []
+		string $propertyId,
+		ValueSource $valueSource,
+		?SubfieldCondition $condition = null,
+		array $valueMap = []
 	) {
 		$this->propertyId = $propertyId;
-		$this->valueSource = new SingleSubfieldSource( $subfield, $position );
+		$this->valueSource = $valueSource;
 		$this->condition = $condition;
 		$this->valueMap = $valueMap;
 	}

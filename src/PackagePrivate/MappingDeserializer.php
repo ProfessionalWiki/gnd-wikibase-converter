@@ -4,6 +4,8 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
+use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
+
 /**
  * @internal
  */
@@ -25,8 +27,10 @@ class MappingDeserializer {
 	private function propertyMappingFromJsonArray( string $propertyId, array $propertyJson ): PropertyMapping {
 		return new PropertyMapping(
 			$propertyId,
-			$propertyJson['subfield'],
-			$propertyJson['position'] ?? null,
+			new SingleSubfieldSource(
+				$propertyJson['subfield'],
+				array_key_exists( 'position', $propertyJson ) ? (int)$propertyJson['position'] : null
+			),
 			$this->getSubfieldConditionFromPropertyMappingArray( $propertyJson ),
 			$propertyJson['valueMap'] ?? []
 		);
