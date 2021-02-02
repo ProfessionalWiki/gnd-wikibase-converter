@@ -10,47 +10,34 @@ namespace DNB\WikibaseConverter\PackagePrivate;
 class MappingDeserializer {
 
 	public function jsonArrayToObject( array $json ): Mapping {
-		return new Mapping(
-			$this->fieldMappingsFromJsonArray( $json )
+		$mapping = new Mapping();
+
+		foreach ( $json as $propertyId => $propertyJson ) {
+			$mapping->addPropertyMapping(
+				$propertyJson['field'],
+				$this->propertyMappingFromJsonArray( $propertyId, $propertyJson )
+			);
+		}
+
+		return $mapping;
+	}
+
+	private function propertyMappingFromJsonArray( string $propertyId, array $propertyJson ): PropertyMapping {
+		return new PropertyMapping(
+			$propertyId,
+			$propertyJson['subfield'],
+			$propertyJson['position'] ?? null,
+			$this->getSubfieldConditionFromPropertyMappingArray( $propertyJson ),
+			$propertyJson['valueMap'] ?? []
 		);
 	}
 
-	private function fieldMappingsFromJsonArray( array $json ): PicaFieldMappingList {
-		$fieldMappings = [];
-
-		foreach ( $json as $picaField => $mappings ) {
-			$fieldMappings[] = new PicaFieldMapping(
-				$picaField,
-				$this->propertyMappingsFromJsonArray( $mappings )
-			);
-		}
-
-		return new PicaFieldMappingList( ...$fieldMappings );
-	}
-
-	/**
-	 * @return PropertyMapping[]
-	 */
-	private function propertyMappingsFromJsonArray( array $mappings ): array {
-		$propertyMappings = [];
-
-		foreach ( $mappings as $propertyId => $propertyMapping ) {
-			$propertyMappings[] = new PropertyMapping(
-				$propertyId,
-				$propertyMapping['subfields'] ?? [],
-				$propertyMapping['position'] ?? null,
-				$this->getSubfieldConditionFromPropertyMappingArray( $propertyMapping ),
-				$propertyMapping['valueMap'] ?? []
-			);
-		}
-
-		return $propertyMappings;
-	}
-
 	private function getSubfieldConditionFromPropertyMappingArray( array $propertyMapping ): ?SubfieldCondition {
-		if ( array_key_exists( 'conditions', $propertyMapping ) && array_key_exists( 0, $propertyMapping['conditions'] ) ) {
-			$conditionArray = $propertyMapping['conditions'][0];
-			return new SubfieldCondition( $conditionArray['subfield'], $conditionArray['equalTo'] );
+		if ( array_key_exists( 'condition', $propertyMapping ) ) {
+			return new SubfieldCondition(
+				$propertyMapping['condition']['subfield'],
+				$propertyMapping['condition']['equalTo']
+			);
 		}
 
 		return null;

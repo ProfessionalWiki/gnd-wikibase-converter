@@ -9,17 +9,20 @@ namespace DNB\WikibaseConverter\PackagePrivate;
  */
 final class Mapping {
 
-	private PicaFieldMappingList $fieldMappings;
+	/**
+	 * @var array<string, PropertyMapping[]>
+	 */
+	private array $propertyMappingsPerField = [];
 
-	public function __construct( PicaFieldMappingList $fieldMappings ) {
-		$this->fieldMappings = $fieldMappings;
+	public function addPropertyMapping( string $picaFieldName, PropertyMapping $propertyMapping ): void {
+		$this->propertyMappingsPerField[$picaFieldName][] = $propertyMapping;
 	}
 
 	/**
 	 * @return PropertyMapping[]
 	 */
 	public function getPropertyMappings( string $picaFieldName ): array {
-		return $this->fieldMappings->get( $picaFieldName )->getPropertyMappings();
+		return $this->propertyMappingsPerField[$picaFieldName] ?? [];
 	}
 
 }

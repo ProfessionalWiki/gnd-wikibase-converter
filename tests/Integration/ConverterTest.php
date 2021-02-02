@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  */
 class ConverterTest extends TestCase {
 
-	public function testEmptyPicaRecordResultsInEmptyWikibaseRecord() {
+	public function testEmptyPicaRecordResultsInEmptyWikibaseRecord(): void {
 		$converter = $this->newConverterWithEmptyMapping();
 
 		$this->assertEquals(
@@ -28,7 +28,7 @@ class ConverterTest extends TestCase {
 		return Converter::fromArrayMapping( [] );
 	}
 
-	public function testEmptyMappingResultsInEmptyRecord() {
+	public function testEmptyMappingResultsInEmptyRecord(): void {
 		$converter = $this->newConverterWithEmptyMapping();
 
 		$this->assertEquals(
@@ -37,12 +37,11 @@ class ConverterTest extends TestCase {
 		);
 	}
 
-	public function testCorrectFieldIsUsed() {
+	public function testCorrectFieldIsUsed(): void {
 		$converter = Converter::fromArrayMapping( [
-			'P1C4' => [
-				'P1' => [
-					'subfields' => [ 'a' ]
-				]
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => 'a'
 			]
 		] );
 
@@ -67,42 +66,42 @@ class ConverterTest extends TestCase {
 		);
 	}
 
-	public function testCorrectSubfieldsAreUsed() {
+//	public function testCorrectSubfieldsAreUsed(): void {
+//		$converter = Converter::fromArrayMapping( [
+//			'P1C4' => [
+//				'P1' => [
+//					'subfields' => [ 'b', 'd' ]
+//				]
+//			]
+//		] );
+//
+//		$pica = PicaRecord::withFields( [
+//			[
+//				'name' => 'P1C4',
+//				'subfields' => [
+//					[ 'name' => 'a', 'value' => 'wrong' ],
+//					[ 'name' => 'b', 'value' => 'right' ],
+//					[ 'name' => 'c', 'value' => 'wrongAgain' ],
+//					[ 'name' => 'd', 'value' => 'rightAgain' ],
+//				]
+//			]
+//		] );
+//
+//		$this->assertSame(
+//			[ 'right', 'rightAgain' ],
+//			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
+//		);
+//	}
+
+	public function testMultiplePropertiesForOnePicaField(): void {
 		$converter = Converter::fromArrayMapping( [
-			'P1C4' => [
-				'P1' => [
-					'subfields' => [ 'b', 'd' ]
-				]
-			]
-		] );
-
-		$pica = PicaRecord::withFields( [
-			[
-				'name' => 'P1C4',
-				'subfields' => [
-					[ 'name' => 'a', 'value' => 'wrong' ],
-					[ 'name' => 'b', 'value' => 'right' ],
-					[ 'name' => 'c', 'value' => 'wrongAgain' ],
-					[ 'name' => 'd', 'value' => 'rightAgain' ],
-				]
-			]
-		] );
-
-		$this->assertSame(
-			[ 'right', 'rightAgain' ],
-			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
-		);
-	}
-
-	public function testMultiplePropertiesForOnePicaField() {
-		$converter = Converter::fromArrayMapping( [
-			'P1C4' => [
-				'P1' => [
-					'subfields' => [ 'c' ]
-				],
-				'P2' => [
-					'subfields' => [ 'a' ]
-				]
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => 'c'
+			],
+			'P2' => [
+				'field' => 'P1C4',
+				'subfield' => 'a'
 			]
 		] );
 
@@ -130,12 +129,11 @@ class ConverterTest extends TestCase {
 		);
 	}
 
-	public function testRepeatedPicaFieldsAllGetUsed() {
+	public function testRepeatedPicaFieldsAllGetUsed(): void {
 		$converter = Converter::fromArrayMapping( [
-			'P1C4' => [
-				'P1' => [
-					'subfields' => [ 'a' ]
-				]
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => 'a'
 			]
 		] );
 

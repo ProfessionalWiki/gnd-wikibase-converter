@@ -19,16 +19,16 @@ class PropertyMapping {
 
 	public function __construct(
 		/** @readonly */ string $propertyId,
-		/** @readonly string[] */ array $subfields,
+		/** @readonly */ string $subfield,
 		/** @readonly */ ?int $position = null,
 		/** @readonly */ ?SubfieldCondition $condition = null,
 		/** @readonly string[] */ array $valueMap = []
 	) {
+		$this->propertyId = $propertyId;
+		$this->subfields = (array)$subfield;
 		$this->valueMap = $valueMap;
 		$this->condition = $condition;
 		$this->position = $position;
-		$this->subfields = $subfields;
-		$this->propertyId = $propertyId;
 	}
 
 	public function convert( array $subfields ): PropertyWithValues {

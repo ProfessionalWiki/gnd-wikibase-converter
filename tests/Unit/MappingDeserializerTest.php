@@ -16,12 +16,11 @@ use PHPUnit\Framework\TestCase;
  */
 class MappingDeserializerTest extends TestCase {
 
-	public function testSimplePropertyMapping() {
+	public function testSimplePropertyMapping(): void {
 		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
-			'029A' => [
-				'P3' => [
-					'subfields' => [ 'b' ]
-				]
+			'P3' => [
+				'field' => '029A',
+				'subfield' => 'b'
 			]
 		] );
 
@@ -31,25 +30,22 @@ class MappingDeserializerTest extends TestCase {
 			[
 				new PropertyMapping(
 					'P3',
-					[ 'b' ]
+					'b'
 				)
 			],
 			$mapping->getPropertyMappings( '029A' )
 		);
 	}
 
-	public function testPropertyMappingWithCondition() {
+	public function testPropertyMappingWithCondition(): void {
 		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
-			'007K' => [
-				'P2' => [
-					'subfields' => [ '0' ],
-					'conditions' => [
-						[
-							'subfield' => 'a',
-							'equalTo' => 'gnd',
-						]
-					],
-				]
+			'P2' => [
+				'field' => '007K',
+				'subfield' => '0',
+				'condition' => [
+					'subfield' => 'a',
+					'equalTo' => 'gnd',
+				],
 			]
 		] );
 
@@ -57,7 +53,7 @@ class MappingDeserializerTest extends TestCase {
 			[
 				new PropertyMapping(
 					'P2',
-					[ '0' ],
+					'0',
 					null,
 					new SubfieldCondition( 'a', 'gnd' )
 				)
@@ -66,23 +62,22 @@ class MappingDeserializerTest extends TestCase {
 		);
 	}
 
-	public function testValueMapping() {
+	public function testValueMapping(): void {
 		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
-			'P1C4' => [
-				'P1' => [
-					'subfields' => [ '0' ],
-					'valueMap' => [
-						'a' => 'Q1',
-						'b' => 'Q2',
-					]
-				],
-			]
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => '0',
+				'valueMap' => [
+					'a' => 'Q1',
+					'b' => 'Q2',
+				]
+			],
 		] );
 
 		$this->assertEquals(
 			new PropertyMapping(
 				'P1',
-				[ '0' ],
+				'0',
 				null,
 				null,
 				[ 'a' => 'Q1', 'b' => 'Q2' ]
@@ -91,20 +86,19 @@ class MappingDeserializerTest extends TestCase {
 		);
 	}
 
-	public function testPosition() {
+	public function testPosition(): void {
 		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
-			'P1C4' => [
-				'P1' => [
-					'subfields' => [ '0' ],
-					'position' => 42
-				],
-			]
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => '0',
+				'position' => 42
+			],
 		] );
 
 		$this->assertEquals(
 			new PropertyMapping(
 				'P1',
-				[ '0' ],
+				'0',
 				42
 			),
 			$mapping->getPropertyMappings( 'P1C4' )[0]

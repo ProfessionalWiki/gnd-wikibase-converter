@@ -1,56 +1,55 @@
 {
-	"003U": {
-		"P1": {
-			"subfields": [ "a" ]
-		}
+	"P1": {
+		"field": "003U",
+		"subfield": "a"
 	},
-	"007K": {
-		"P2": {
-			"subfields": [ "0" ],
-			"conditions": [
-				{
-					"subfield": "a",
-					"equalTo": "gnd"
-				}
-			]
-		}
-	},
-	"032T": {
-		"P4": {
-			"subfields": [ "a" ],
-			"valueMap": {
-				"f": "Q20",
-				"m": "Q21"
-			}
-		}
-	},
-	"002@": {
-		"P5": {
-			"subfields": [ "0" ],
-			"position": 3,
 
-			"valueMap": {
-				"1": "Q1",
-				"2": "Q2",
-				"3": "Q3",
-				"4": "Q4",
-				"5": "Q5",
-				"6": "Q6",
-				"7": "Q7",
-				"z": "Q8"
-			}
-		},
-		"P6": {
-			"subfields": [ "0" ],
+	"P2": {
+		"field": "007K",
+		"subfield": "0",
+		"condition": {
+			"subfield": "a",
+			"equalTo": "gnd"
+		}
+	},
 
-			"valueMap": {
-				"b": "Q10",
-				"f": "Q11",
-				"g": "Q12",
-				"p": "Q13",
-				"s": "Q14",
-				"u": "Q15"
-			}
+	"P4": {
+		"field": "032T",
+		"subfield": "a",
+		"valueMap": {
+			"f": "Q20",
+			"m": "Q21"
+		}
+	},
+
+	"P5": {
+		"field": "002@",
+		"subfield": "0",
+		"position": 2,
+		"valueMap": {
+			"b": "Q10",
+			"f": "Q11",
+			"g": "Q12",
+			"p": "Q13",
+			"s": "Q14",
+			"u": "Q15"
+		}
+	},
+
+	"P6": {
+		"field": "002@",
+		"subfield": "0",
+		"position": 3,
+		"valueMap": {
+			"1": "Q1",
+			"2": "Q2",
+			"3": "Q3",
+			"4": "Q4",
+			"5": "Q5",
+			"6": "Q6",
+			"7": "Q7",
+			"z": "Q8"
 		}
 	}
+
 }
