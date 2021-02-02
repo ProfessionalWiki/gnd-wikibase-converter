@@ -28,7 +28,7 @@ class Converter {
 			$propertyMappings = $this->mapping->getPropertyMappings( $field['name'] );
 
 			if ( $propertyMappings !== [] ) {
-				$subfieldsAsMap = $this->getSubfieldsAsMap( $field['subfields'] );
+				$subfieldsAsMap = $pica->getSubfieldsFromField( $field );
 
 				foreach ( $propertyMappings as $propertyMapping ) {
 					$wikibaseRecord->addValuesOfOneProperty( $propertyMapping->convert( $subfieldsAsMap ) );
@@ -37,21 +37,6 @@ class Converter {
 		}
 
 		return $wikibaseRecord;
-	}
-
-	/**
-	 * TODO: move to PicaRecord
-	 *
-	 * @param array{array{name: string, value: string}} $subfields
-	 */
-	private function getSubfieldsAsMap( array $subfields ): Subfields {
-		$map = [];
-
-		foreach ( $subfields as $subfield ) {
-			$map[$subfield['name']] = $subfield['value'];
-		}
-
-		return Subfields::newFromMap( $map );
 	}
 
 }

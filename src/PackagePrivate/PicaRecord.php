@@ -46,4 +46,17 @@ class PicaRecord {
 		return $this->jsonArray['fields'];
 	}
 
+	/**
+	 * @param array{name: string, subfields: array{array{name: string, value: string}}} $field
+	 */
+	public function getSubfieldsFromField( array $field ): Subfields {
+		$map = [];
+
+		foreach ( $field['subfields'] as $subfield ) {
+			$map[$subfield['name']] = $subfield['value'];
+		}
+
+		return Subfields::newFromMap( $map );
+	}
+
 }
