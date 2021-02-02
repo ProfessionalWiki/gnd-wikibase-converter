@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
+use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
 use DNB\WikibaseConverter\PropertyWithValues;
 
 /**
@@ -12,8 +13,7 @@ use DNB\WikibaseConverter\PropertyWithValues;
 class PropertyMapping {
 
 	private string $propertyId;
-	private string $subfield;
-	private ?int $position;
+	private SingleSubfieldSource $valueSource;
 	private ?SubfieldCondition $condition;
 
 	/** @var array<string, string> */
@@ -30,24 +30,19 @@ class PropertyMapping {
 		/** @readonly */ array $valueMap = []
 	) {
 		$this->propertyId = $propertyId;
-		$this->subfield = $subfield;
-		$this->valueMap = $valueMap;
+		$this->valueSource = new SingleSubfieldSource( $subfield, $position );
 		$this->condition = $condition;
-		$this->position = $position;
+		$this->valueMap = $valueMap;
 	}
 
 	public function convert( Subfields $subfields ): PropertyWithValues {
 		$propertyWithValues = new PropertyWithValues( $this->propertyId );
 
 		if ( $this->conditionMatches( $subfields ) ) {
-			foreach ( $subfields->map as $subfieldName => $subfieldValue ) {
-				if ( $subfieldName === $this->subfield ) {
-					$valueToAddOrNull = $this->getSubfieldValue( $subfieldValue );
+			$valueToAddOrNull = $this->valueSource->valueFromSubfields( $subfields );
 
-					if ( $valueToAddOrNull !== null ) {
-						$propertyWithValues->addValue( $valueToAddOrNull );
-					}
-				}
+			if ( $valueToAddOrNull !== null ) {
+				$propertyWithValues->addValue( $this->getMappedValue( $valueToAddOrNull ) );
 			}
 		}
 
@@ -60,30 +55,6 @@ class PropertyMapping {
 		}
 
 		return true;
-	}
-
-	private function getSubfieldValue( string $subfieldValue ): ?string {
-		if ( $this->positionIsOutOfBounds( $subfieldValue ) ) {
-			return null;
-		}
-
-		return $this->getMappedValue( $this->extractFromSubfieldValue( $subfieldValue ) );
-	}
-
-	private function positionIsOutOfBounds( string $subfieldValue ): bool {
-		if ( $this->position === null ) {
-			return false;
-		}
-
-		return $this->position < 1 || $this->position > strlen( $subfieldValue );
-	}
-
-	private function extractFromSubfieldValue( string $subfieldValue ): string {
-		if ( $this->position === null ) {
-			return $subfieldValue;
-		}
-
-		return substr( $subfieldValue, $this->position -1, 1 );
 	}
 
 	private function getMappedValue( string $subfieldValue ): ?string {
