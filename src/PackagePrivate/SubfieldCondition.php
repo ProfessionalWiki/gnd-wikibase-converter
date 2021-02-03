@@ -18,7 +18,8 @@ class SubfieldCondition {
 	}
 
 	public function matches( Subfields $subfields ): bool {
-		return $this->subfieldValue === ( $subfields->map[$this->subfieldName] ?? null );
+		return $this->subfieldValue
+			=== ( array_key_exists( $this->subfieldName, $subfields->map ) ? $subfields->map[$this->subfieldName][0] : null );
 	}
 
 }

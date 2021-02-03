@@ -27,7 +27,7 @@ class ConcatValueSourceTest extends TestCase {
 	 * @param array<string, string> $subfields
 	 */
 	private function getConcatenatedValue( array $concatSpec, array $subfields ): ?string {
-		return ( new ConcatValueSource( $concatSpec ) )->valueFromSubfields( Subfields::newFromMap( $subfields ) );
+		return ( new ConcatValueSource( $concatSpec ) )->valueFromSubfields( Subfields::fromSingleValueMap( $subfields ) );
 	}
 
 	public function testConcatReturnsAllValuesWhenAllArePresent(): void {
@@ -60,6 +60,23 @@ class ConcatValueSourceTest extends TestCase {
 					'c' => 'baz',
 				]
 			)
+		);
+	}
+
+	public function testConcatRepeatsRepeatedSubfields(): void {
+		$concatSpec = [
+			'a' => 'a: $, ',
+			'b' => 'b: $, ',
+		];
+
+		$subfields = [
+			'a' => [ 'one', 'two' ],
+			'b' => [ 'tree', 'four' ],
+		];
+
+		$this->assertSame(
+			'a: one, a: two, b: tree, b: four, ',
+			( new ConcatValueSource( $concatSpec ) )->valueFromSubfields( new Subfields( $subfields ) )
 		);
 	}
 

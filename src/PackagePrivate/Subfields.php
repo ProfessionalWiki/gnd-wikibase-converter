@@ -7,21 +7,27 @@ namespace DNB\WikibaseConverter\PackagePrivate;
 class Subfields {
 
 	/**
-	 * @param array<string, string> $subfields
-	 */
-	public static function newFromMap( array $subfields ): self {
-		return new self( $subfields );
-	}
-
-	/**
-	 * @var array<string, string>
+	 * @var array<string, array<int, string>>
 	 */
 	public array $map;
 
 	/**
-	 * @param array<string, string> $map
+	 * @param array<string, string> $subfields
 	 */
-	private function __construct( array $map ) {
+	public static function fromSingleValueMap( array $subfields ): self {
+		$map = [];
+
+		foreach ( $subfields as $name => $value ) {
+			$map[$name] = [ $value ];
+		}
+
+		return new self( $map );
+	}
+
+	/**
+	 * @param array<string, array<int, string>> $map
+	 */
+	public function __construct( array $map ) {
 		$this->map = $map;
 	}
 

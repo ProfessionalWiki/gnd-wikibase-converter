@@ -21,7 +21,7 @@ class SingleSubfieldSource implements ValueSource {
 			return null;
 		}
 
-		return $this->extractFromSubfieldValue( $subfields->map[$this->subfieldName] );
+		return $this->extractFromSubfieldValue( $subfields->map[$this->subfieldName][0] );
 	}
 
 	private function extractFromSubfieldValue( string $subfieldValue ): ?string {

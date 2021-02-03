@@ -25,7 +25,9 @@ class ConcatValueSource implements ValueSource {
 
 		foreach ( $this->concatSpec as $subfieldName => $format ) {
 			if ( array_key_exists( $subfieldName, $subfields->map ) ) {
-				$segments[] = str_replace( '$',  $subfields->map[$subfieldName], $format );
+				foreach ( $subfields->map[$subfieldName] as $subfieldValue ) {
+					$segments[] = str_replace( '$',  $subfieldValue, $format );
+				}
 			}
 		}
 

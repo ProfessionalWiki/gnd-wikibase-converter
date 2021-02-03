@@ -53,10 +53,10 @@ class PicaRecord {
 		$map = [];
 
 		foreach ( $field['subfields'] as $subfield ) {
-			$map[$subfield['name']] = $subfield['value'];
+			$map[$subfield['name']][] = $subfield['value'];
 		}
 
-		return Subfields::newFromMap( $map );
+		return new Subfields( $map );
 	}
 
 }

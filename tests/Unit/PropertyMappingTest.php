@@ -28,7 +28,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[]
 			),
-			$mapping->convert( Subfields::newFromMap( [] ) )
+			$mapping->convert( Subfields::fromSingleValueMap( [] ) )
 		);
 	}
 
@@ -49,7 +49,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[ 'BBB' ]
 			),
-			$mapping->convert( Subfields::newFromMap( $subfields ) )
+			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
 
@@ -70,7 +70,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[]
 			),
-			$mapping->convert( Subfields::newFromMap( $subfields ) )
+			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
 
@@ -91,7 +91,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[ '42' ]
 			),
-			$mapping->convert( Subfields::newFromMap( $subfields ) )
+			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
 
@@ -117,7 +117,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[ 'BBB' ]
 			),
-			$mapping->convert( Subfields::newFromMap( $subfields ) )
+			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
 
@@ -141,7 +141,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				[]
 			),
-			$mapping->convert( Subfields::newFromMap( $subfields ) )
+			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
 
@@ -159,7 +159,7 @@ class PropertyMappingTest extends TestCase {
 				'P1',
 				$expected
 			),
-			$mapping->convert( Subfields::newFromMap( [ 'x' => $value ] ) )
+			$mapping->convert( Subfields::fromSingleValueMap( [ 'x' => $value ] ) )
 		);
 	}
 

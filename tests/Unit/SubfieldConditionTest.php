@@ -16,7 +16,7 @@ class SubfieldConditionTest extends TestCase {
 	public function testConditionMatches(): void {
 		$condition = new SubfieldCondition( 'a', 'gnd' );
 
-		$subfields = Subfields::newFromMap( [
+		$subfields = Subfields::fromSingleValueMap( [
 			'a' => 'gnd',
 			'z' => '42',
 		] );
@@ -27,7 +27,7 @@ class SubfieldConditionTest extends TestCase {
 	public function testConditionDoesNotMatch(): void {
 		$condition = new SubfieldCondition( 'a', 'gnd' );
 
-		$subfields = Subfields::newFromMap( [
+		$subfields = Subfields::fromSingleValueMap( [
 			'a' => 'not gnd',
 			'z' => '42',
 		] );
@@ -38,7 +38,7 @@ class SubfieldConditionTest extends TestCase {
 	public function testDoesNotMatchWhenSubfieldIsMissing(): void {
 		$condition = new SubfieldCondition( 'does not exist', 'gnd' );
 
-		$subfields = Subfields::newFromMap( [
+		$subfields = Subfields::fromSingleValueMap( [
 			'a' => 'gnd',
 			'z' => '42',
 		] );
@@ -49,7 +49,7 @@ class SubfieldConditionTest extends TestCase {
 	public function testNullValueDoesNotMatchWhenSubfieldIsPresent(): void {
 		$condition = new SubfieldCondition( 'a', null );
 
-		$subfields = Subfields::newFromMap( [
+		$subfields = Subfields::fromSingleValueMap( [
 			'a' => 'gnd',
 			'b' => 'gnd',
 		] );
@@ -60,7 +60,7 @@ class SubfieldConditionTest extends TestCase {
 	public function testNullValueMatchesWhenSubfieldIsMissing(): void {
 		$condition = new SubfieldCondition( 'a', null );
 
-		$subfields = Subfields::newFromMap( [
+		$subfields = Subfields::fromSingleValueMap( [
 			'b' => 'gnd',
 		] );
 
