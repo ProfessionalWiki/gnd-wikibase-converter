@@ -12,6 +12,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \DNB\WikibaseConverter\PackagePrivate\Converter
+ * @covers \DNB\WikibaseConverter\PackagePrivate\MappingDeserializer
  */
 class ConverterTest extends TestCase {
 
@@ -154,6 +155,38 @@ class ConverterTest extends TestCase {
 
 		$this->assertSame(
 			[ 'first', 'second' ],
+			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
+		);
+	}
+
+	public function testMultiValueConcatenation(): void {
+		$converter = Converter::fromArrayMapping( [
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => [
+					'N' => 'N: $, ',
+					'Y' => 'Y: $, ',
+					'A' => 'A: $, ',
+					'n' => 'n: $, ',
+				]
+			]
+		] );
+
+		$pica = PicaRecord::withFields( [
+			[
+				'name' => 'P1C4',
+				'subfields' => [
+					[ 'name' => 'Y', 'value' => 'y1' ],
+					[ 'name' => 'N', 'value' => 'N1' ],
+					[ 'name' => 'n', 'value' => 'n1' ],
+					[ 'name' => 'A', 'value' => 'A1' ],
+					[ 'name' => 'N', 'value' => 'N2' ],
+				]
+			]
+		] );
+
+		$this->assertSame(
+			[ 'N: N1, N: N2, Y: y1, A: A1, n: n1, ' ],
 			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
 		);
 	}

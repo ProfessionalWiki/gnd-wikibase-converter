@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
+use DNB\WikibaseConverter\InvalidMapping;
 use DNB\WikibaseConverter\PackagePrivate\MappingDeserializer;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
@@ -101,6 +102,20 @@ class MappingDeserializerTest extends TestCase {
 			),
 			$mapping->getPropertyMappings( 'P1C4' )[0]
 		);
+	}
+
+	public function testPositionPlusConcatMapResultsInException(): void {
+		$this->expectException( InvalidMapping::class );
+
+		( new MappingDeserializer() )->jsonArrayToObject( [
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => [
+					'a' => '$'
+				],
+				'position' => 42
+			],
+		] );
 	}
 
 }
