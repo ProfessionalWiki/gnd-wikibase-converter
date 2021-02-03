@@ -1,5 +1,14 @@
 {
-	"P4": {
+	"P1": {
+		"_": "Optional entry that does not change the mapping but can make it more readable for editors",
+
+		"field": "032T",
+		"subfield": "a"
+	},
+
+	"P2": {
+		"_": "Example with everything that can be specified. This combination does not make sense.",
+
 		"field": "032T",
 
 		"condition": {
@@ -29,8 +38,31 @@
 			"P51": "c"
 		}
 	},
-	"P5": {
+
+	"P3": {
+		"_": "Example of specifying that a field should not exist",
+
 		"field": "032T",
-		"subfield": "a"
-	}
+		"subfield": "a",
+		"condition": {
+			"subfield": "a",
+			"equalTo": null
+		}
+	},
+
+	"P4": [
+		{
+			"_": "Example of mapping multiple PICA fields to one property",
+
+			"field": "001X",
+			"subfield": "a"
+		},
+		{
+			"_": "Example of mapping multiple PICA fields to one property",
+
+			"field": "002X",
+			"subfield": "a"
+		}
+	]
+
 }

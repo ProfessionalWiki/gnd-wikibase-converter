@@ -37,6 +37,7 @@
 	},
 
 	"P6": {
+		"_": "Varianter Name",
 		"field": "002@",
 		"subfield": "0",
 		"position": 3,
@@ -53,7 +54,8 @@
 	},
 
 	"P28": {
-		"field": "028A",
+		"_": "Varianter Name",
+		"field": "028@",
 		"subfield": {
 			"P": "$",
 			"a": "$",
@@ -70,6 +72,28 @@
 			"P53": "P",
 			"P54": "v"
 		}
-	}
+	},
+
+	"P29": [
+		{
+			"_": "Früherer Name",
+			"field": "028@",
+			"subfield": {
+			},
+			"condition": {
+				"subfield": "4",
+				"equalTo": "nafr"
+			}
+		},
+		{
+			"field": "029@",
+			"subfield": {
+			},
+			"condition": {
+				"subfield": "4",
+				"equalTo": "nafr"
+			}
+		}
+	]
 
 }
