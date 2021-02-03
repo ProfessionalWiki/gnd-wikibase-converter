@@ -15,11 +15,11 @@ use PHPUnit\Framework\TestCase;
 class PicaConverterTest extends TestCase {
 
 	public function testCreatesWikibaseRecord(): void {
-		$wikibaseRecord = $this->newConverter()->picaJsonToWikibaseRecord( TestPicaJson::gnd5string() );
+		$wikibaseRecord = $this->newConverter()->picaJsonToGndItem( TestPicaJson::gnd5string() );
 
 		$this->assertSame(
 			[ 'http://d-nb.info/gnd/275-6' ],
-			$wikibaseRecord->getValuesForProperty( 'P1' )
+			$wikibaseRecord->getMainValuesForProperty( 'P1' )
 		);
 	}
 
@@ -31,7 +31,7 @@ class PicaConverterTest extends TestCase {
 		$converter = $this->newConverter();
 
 		foreach ( TestPicaJson::gndStrings() as $jsonString ) {
-			$wikibaseRecord = $converter->picaJsonToWikibaseRecord( $jsonString );
+			$wikibaseRecord = $converter->picaJsonToGndItem( $jsonString );
 
 			$this->assertNotEmpty( $wikibaseRecord->getPropertyIds() );
 		}
@@ -44,7 +44,7 @@ class PicaConverterTest extends TestCase {
 		$converter = $this->newConverter();
 
 		$this->expectException( InvalidPica::class );
-		$converter->picaJsonToWikibaseRecord( $line );
+		$converter->picaJsonToGndItem( $line );
 	}
 
 	public function invalidPicaProvider(): \Generator {

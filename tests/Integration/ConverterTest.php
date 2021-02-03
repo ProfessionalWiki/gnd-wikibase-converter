@@ -7,7 +7,7 @@ namespace DNB\Tests\Integration;
 use DNB\Tests\TestPicaRecords;
 use DNB\WikibaseConverter\PackagePrivate\Converter;
 use DNB\WikibaseConverter\PackagePrivate\PicaRecord;
-use DNB\WikibaseConverter\WikibaseRecord;
+use DNB\WikibaseConverter\GndItem;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -20,7 +20,7 @@ class ConverterTest extends TestCase {
 		$converter = $this->newConverterWithEmptyMapping();
 
 		$this->assertEquals(
-			new WikibaseRecord(),
+			new GndItem(),
 			$converter->picaToWikibase( PicaRecord::newEmpty() )
 		);
 	}
@@ -33,7 +33,7 @@ class ConverterTest extends TestCase {
 		$converter = $this->newConverterWithEmptyMapping();
 
 		$this->assertEquals(
-			new WikibaseRecord(),
+			new GndItem(),
 			$converter->picaToWikibase( TestPicaRecords::gnd1() )
 		);
 	}
@@ -63,7 +63,7 @@ class ConverterTest extends TestCase {
 
 		$this->assertSame(
 			[ 'right' ],
-			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
+			$converter->picaToWikibase( $pica )->getMainValuesForProperty( 'P1' )
 		);
 	}
 
@@ -121,12 +121,12 @@ class ConverterTest extends TestCase {
 
 		$this->assertSame(
 			[ 'ccc' ],
-			$wikibaseRecord->getValuesForProperty( 'P1' )
+			$wikibaseRecord->getMainValuesForProperty( 'P1' )
 		);
 
 		$this->assertSame(
 			[ 'aaa' ],
-			$wikibaseRecord->getValuesForProperty( 'P2' )
+			$wikibaseRecord->getMainValuesForProperty( 'P2' )
 		);
 	}
 
@@ -155,7 +155,7 @@ class ConverterTest extends TestCase {
 
 		$this->assertSame(
 			[ 'first', 'second' ],
-			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
+			$converter->picaToWikibase( $pica )->getMainValuesForProperty( 'P1' )
 		);
 	}
 
@@ -187,7 +187,7 @@ class ConverterTest extends TestCase {
 
 		$this->assertSame(
 			[ 'N: N1, N: N2, Y: y1, A: A1, n: n1, ' ],
-			$converter->picaToWikibase( $pica )->getValuesForProperty( 'P1' )
+			$converter->picaToWikibase( $pica )->getMainValuesForProperty( 'P1' )
 		);
 	}
 

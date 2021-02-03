@@ -8,7 +8,7 @@ use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PackagePrivate\Subfields;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
-use DNB\WikibaseConverter\PropertyWithValues;
+use DNB\WikibaseConverter\GndStatement;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -24,10 +24,7 @@ class PropertyMappingTest extends TestCase {
 		);
 
 		$this->assertEquals(
-			new PropertyWithValues(
-				'P1',
-				[]
-			),
+			[],
 			$mapping->convert( Subfields::fromSingleValueMap( [] ) )
 		);
 	}
@@ -45,10 +42,12 @@ class PropertyMappingTest extends TestCase {
 		];
 
 		$this->assertEquals(
-			new PropertyWithValues(
-				'P1',
-				[ 'BBB' ]
-			),
+			[
+				new GndStatement(
+					'P1',
+					'BBB'
+				)
+			],
 			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
@@ -66,10 +65,7 @@ class PropertyMappingTest extends TestCase {
 		];
 
 		$this->assertEquals(
-			new PropertyWithValues(
-				'P1',
-				[]
-			),
+			[],
 			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
@@ -87,10 +83,12 @@ class PropertyMappingTest extends TestCase {
 		];
 
 		$this->assertEquals(
-			new PropertyWithValues(
-				'P1',
-				[ '42' ]
-			),
+			[
+				new GndStatement(
+					'P1',
+					'42'
+				)
+			],
 			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
@@ -113,10 +111,12 @@ class PropertyMappingTest extends TestCase {
 		];
 
 		$this->assertEquals(
-			new PropertyWithValues(
-				'P1',
-				[ 'BBB' ]
-			),
+			[
+				new GndStatement(
+					'P1',
+					'BBB'
+				)
+			],
 			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
@@ -137,10 +137,7 @@ class PropertyMappingTest extends TestCase {
 		];
 
 		$this->assertEquals(
-			new PropertyWithValues(
-				'P1',
-				[]
-			),
+			[],
 			$mapping->convert( Subfields::fromSingleValueMap( $subfields ) )
 		);
 	}
@@ -148,27 +145,54 @@ class PropertyMappingTest extends TestCase {
 	/**
 	 * @dataProvider positionParameterProvider
 	 */
-	public function testPositionParameter( string $value, int $position, array $expected ): void {
+	public function testPositionParameter( string $value, int $position, ?string $expected ): void {
 		$mapping = new PropertyMapping(
 			'P1',
 			new SingleSubfieldSource( 'x', $position )
 		);
 
 		$this->assertEquals(
-			new PropertyWithValues(
-				'P1',
-				$expected
-			),
+			$expected === null ? [] : [
+				new GndStatement(
+					'P1',
+					$expected
+				)
+			],
 			$mapping->convert( Subfields::fromSingleValueMap( [ 'x' => $value ] ) )
 		);
 	}
 
 	public function positionParameterProvider(): iterable {
-		yield 'value is extracted' => [ 'abc', 2, [ 'b' ] ];
-		yield 'value is extracted at start of string' => [ 'abc', 1, [ 'a' ] ];
-		yield 'value is extracted at end of string' => [ 'abc', 3, [ 'c' ] ];
-		yield 'position too low' => [ 'abc', 0, [] ];
-		yield 'position too high' => [ 'abc', 4, [] ];
+		yield 'value is extracted' => [ 'abc', 2, 'b' ];
+		yield 'value is extracted at start of string' => [ 'abc', 1, 'a' ];
+		yield 'value is extracted at end of string' => [ 'abc', 3, 'c' ];
+		yield 'position too low' => [ 'abc', 0, null ];
+		yield 'position too high' => [ 'abc', 4, null ];
+	}
+
+	public function testQualifiers(): void {
+		$mapping = new PropertyMapping(
+			'P1',
+			new SingleSubfieldSource( 'x' ),
+			null,
+			[],
+			[
+				'P50' => 'a',
+				'P51' => 'b',
+				'P52' => 'c',
+			]
+		);
+
+		// TODO: test qualifiers
+		$this->assertEquals(
+			[
+				new GndStatement(
+					'P1',
+					'foo'
+				)
+			],
+			$mapping->convert( Subfields::fromSingleValueMap( [ 'x' => 'foo' ] ) )
+		);
 	}
 
 }

@@ -5,7 +5,7 @@ declare( strict_types = 1 );
 namespace DNB\WikibaseConverter\PackagePrivate;
 
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\ValueSource;
-use DNB\WikibaseConverter\PropertyWithValues;
+use DNB\WikibaseConverter\GndStatement;
 
 /**
  * @internal
@@ -18,25 +18,31 @@ class PropertyMapping {
 
 	/** @var array<string, string> */
 	private array $valueMap;
+	/** @var array<string, string> */
+	private array $qualifiers;
 
 	/**
 	 * @param array<string, string> $valueMap
+	 * @param array<string, string> $qualifiers
 	 */
 	public function __construct(
 		string $propertyId,
 		ValueSource $valueSource,
 		?SubfieldCondition $condition = null,
-		array $valueMap = []
+		array $valueMap = [],
+		array $qualifiers = []
 	) {
 		$this->propertyId = $propertyId;
 		$this->valueSource = $valueSource;
 		$this->condition = $condition;
 		$this->valueMap = $valueMap;
+		$this->qualifiers = $qualifiers;
 	}
 
-	public function convert( Subfields $subfields ): PropertyWithValues {
-		$propertyWithValues = new PropertyWithValues( $this->propertyId );
-
+	/**
+	 * @return GndStatement[]
+	 */
+	public function convert( Subfields $subfields ): array {
 		if ( $this->conditionMatches( $subfields ) ) {
 			$valueToAddOrNull = $this->valueSource->valueFromSubfields( $subfields );
 
@@ -44,12 +50,12 @@ class PropertyMapping {
 				$mappedValueOrNull = $this->getMappedValue( $valueToAddOrNull );
 
 				if ( $mappedValueOrNull !== null ) {
-					$propertyWithValues->addValue( $mappedValueOrNull );
+					return [ new GndStatement( $this->propertyId, $mappedValueOrNull ) ];
 				}
 			}
 		}
 
-		return $propertyWithValues;
+		return [];
 	}
 
 	private function conditionMatches( Subfields $subfields ): bool {

@@ -37,7 +37,7 @@ class PicaConverter {
 	/**
 	 * @throws InvalidPica
 	 */
-	public function picaJsonToWikibaseRecord( string $json ): WikibaseRecord {
+	public function picaJsonToGndItem( string $json ): GndItem {
 		$jsonArray = json_decode( $json, true );
 
 		if ( !is_array( $jsonArray ) ) {

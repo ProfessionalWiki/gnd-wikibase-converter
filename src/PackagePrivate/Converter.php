@@ -4,7 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
-use DNB\WikibaseConverter\WikibaseRecord;
+use DNB\WikibaseConverter\GndItem;
 
 /**
  * @internal
@@ -21,8 +21,8 @@ class Converter {
 		$this->mapping = $mapping;
 	}
 
-	public function picaToWikibase( PicaRecord $pica ): WikibaseRecord {
-		$wikibaseRecord = new WikibaseRecord();
+	public function picaToWikibase( PicaRecord $pica ): GndItem {
+		$gndItem = new GndItem();
 
 		foreach ( $pica->getFields() as $field ) {
 			$propertyMappings = $this->mapping->getPropertyMappings( $field['name'] );
@@ -31,12 +31,12 @@ class Converter {
 				$subfieldsAsMap = $pica->getSubfieldsFromField( $field );
 
 				foreach ( $propertyMappings as $propertyMapping ) {
-					$wikibaseRecord->addValuesOfOneProperty( $propertyMapping->convert( $subfieldsAsMap ) );
+					$gndItem->addGndStatements( $propertyMapping->convert( $subfieldsAsMap ) );
 				}
 			}
 		}
 
-		return $wikibaseRecord;
+		return $gndItem;
 	}
 
 }
