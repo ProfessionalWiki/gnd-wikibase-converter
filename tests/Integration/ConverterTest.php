@@ -5,6 +5,8 @@ declare( strict_types = 1 );
 namespace DNB\Tests\Integration;
 
 use DNB\Tests\TestPicaRecords;
+use DNB\WikibaseConverter\GndQualifier;
+use DNB\WikibaseConverter\GndStatement;
 use DNB\WikibaseConverter\PackagePrivate\Converter;
 use DNB\WikibaseConverter\PackagePrivate\PicaRecord;
 use DNB\WikibaseConverter\GndItem;
@@ -188,6 +190,45 @@ class ConverterTest extends TestCase {
 		$this->assertSame(
 			[ 'N: N1, N: N2, Y: y1, A: A1, n: n1, ' ],
 			$converter->picaToWikibase( $pica )->getMainValuesForProperty( 'P1' )
+		);
+	}
+
+	public function testQualifiers(): void {
+		$converter = Converter::fromArrayMapping( [
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => 'x',
+				'qualifiers' => [
+					'P50' => 'a',
+					'P51' => 'b',
+					'P52' => 'c',
+				]
+			]
+		] );
+
+		$pica = PicaRecord::withFields( [
+			[
+				'name' => 'P1C4',
+				'subfields' => [
+					[ 'name' => 'x', 'value' => 'main value' ],
+					[ 'name' => 'c', 'value' => 'C1' ],
+					[ 'name' => 'a', 'value' => 'A1' ],
+					[ 'name' => 'c', 'value' => 'C2' ],
+				]
+			]
+		] );
+
+		$this->assertEquals(
+			[ new GndStatement(
+				'P1',
+				'main value',
+				[
+					new GndQualifier( 'P50', 'A1' ),
+					new GndQualifier( 'P52', 'C1' ),
+					new GndQualifier( 'P52', 'C2' ),
+				]
+			) ],
+			$converter->picaToWikibase( $pica )->getStatementsForProperty( 'P1' )
 		);
 	}
 

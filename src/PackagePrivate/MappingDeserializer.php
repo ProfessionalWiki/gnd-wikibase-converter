@@ -20,23 +20,24 @@ class MappingDeserializer {
 		foreach ( $json as $propertyId => $propertyJson ) {
 			$mapping->addPropertyMapping(
 				$propertyJson['field'],
-				$this->propertyMappingFromJsonArray( $propertyId, $propertyJson )
+				$this->buildPropertyMapping( $propertyId, $propertyJson )
 			);
 		}
 
 		return $mapping;
 	}
 
-	private function propertyMappingFromJsonArray( string $propertyId, array $propertyJson ): PropertyMapping {
+	private function buildPropertyMapping( string $propertyId, array $propertyJson ): PropertyMapping {
 		return new PropertyMapping(
 			$propertyId,
-			$this->getValueSourceFromPropertyMappingArray( $propertyJson ),
-			$this->getSubfieldConditionFromPropertyMappingArray( $propertyJson ),
-			$propertyJson['valueMap'] ?? []
+			$this->buildValueSource( $propertyJson ),
+			$this->buildSubfieldCondition( $propertyJson ),
+			$this->buildValueMap( $propertyJson ),
+			$this->buildQualifiers( $propertyJson )
 		);
 	}
 
-	private function getValueSourceFromPropertyMappingArray( array $propertyMapping ): ValueSource {
+	private function buildValueSource( array $propertyMapping ): ValueSource {
 		if ( is_array( $propertyMapping['subfield'] ) ) {
 			if ( array_key_exists( 'position', $propertyMapping ) ) {
 				throw new InvalidMapping( 'Cannot have both "position" and a "subfield concatenation map"' );
@@ -51,7 +52,7 @@ class MappingDeserializer {
 		);
 	}
 
-	private function getSubfieldConditionFromPropertyMappingArray( array $propertyMapping ): ?SubfieldCondition {
+	private function buildSubfieldCondition( array $propertyMapping ): ?SubfieldCondition {
 		if ( array_key_exists( 'condition', $propertyMapping ) ) {
 			return new SubfieldCondition(
 				$propertyMapping['condition']['subfield'],
@@ -60,6 +61,20 @@ class MappingDeserializer {
 		}
 
 		return null;
+	}
+
+	/**
+	 * @return array<string, string>
+	 */
+	private function buildValueMap( array $propertyJson ): array {
+		return $propertyJson['valueMap'] ?? [];
+	}
+
+	/**
+	 * @return array<string, string>
+	 */
+	private function buildQualifiers( array $propertyJson ): array {
+		return $propertyJson['qualifiers'] ?? [];
 	}
 
 }
