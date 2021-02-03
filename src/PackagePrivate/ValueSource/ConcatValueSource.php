@@ -8,6 +8,9 @@ use DNB\WikibaseConverter\PackagePrivate\Subfields;
 
 class ConcatValueSource implements ValueSource {
 
+	/**
+	 * @var array<string, string>
+	 */
 	private array $concatSpec;
 
 	/**
@@ -21,7 +24,9 @@ class ConcatValueSource implements ValueSource {
 		$segments = [];
 
 		foreach ( $this->concatSpec as $subfieldName => $format ) {
-			$segments[] = str_replace( '$',  $subfields->map[$subfieldName], $format );
+			if ( array_key_exists( $subfieldName, $subfields->map ) ) {
+				$segments[] = str_replace( '$',  $subfields->map[$subfieldName], $format );
+			}
 		}
 
 		return $segments === [] ? null : implode( '', $segments );

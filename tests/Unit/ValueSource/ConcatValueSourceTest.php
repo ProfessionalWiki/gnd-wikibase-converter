@@ -46,4 +46,21 @@ class ConcatValueSourceTest extends TestCase {
 		);
 	}
 
+	public function testConcatReturnsOnlyPresentValues(): void {
+		$this->assertSame(
+			'a: foo, c: baz',
+			$this->getConcatenatedValue(
+				[
+					'a' => 'a: $, ',
+					'b' => 'b: $',
+					'c' => 'c: $',
+				],
+				[
+					'a' => 'foo',
+					'c' => 'baz',
+				]
+			)
+		);
+	}
+
 }
