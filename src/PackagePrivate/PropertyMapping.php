@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\WikibaseConverter\PackagePrivate;
 
+use DNB\WikibaseConverter\GndQualifier;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\ValueSource;
 use DNB\WikibaseConverter\GndStatement;
 
@@ -43,19 +44,27 @@ class PropertyMapping {
 	 * @return GndStatement[]
 	 */
 	public function convert( Subfields $subfields ): array {
-		if ( $this->conditionMatches( $subfields ) ) {
-			$valueToAddOrNull = $this->valueSource->valueFromSubfields( $subfields );
-
-			if ( $valueToAddOrNull !== null ) {
-				$mappedValueOrNull = $this->getMappedValue( $valueToAddOrNull );
-
-				if ( $mappedValueOrNull !== null ) {
-					return [ new GndStatement( $this->propertyId, $mappedValueOrNull ) ];
-				}
-			}
+		if ( !$this->conditionMatches( $subfields ) ) {
+			return [];
 		}
 
-		return [];
+		$valueToAddOrNull = $this->valueSource->valueFromSubfields( $subfields );
+
+		if ( $valueToAddOrNull === null ) {
+			return [];
+		}
+
+		$mappedValueOrNull = $this->getMappedValue( $valueToAddOrNull );
+
+		if ( $mappedValueOrNull === null ) {
+			return [];
+		}
+
+		return [ new GndStatement(
+			$this->propertyId,
+			$mappedValueOrNull,
+			$this->extractQualifiers( $subfields )
+		) ];
 	}
 
 	private function conditionMatches( Subfields $subfields ): bool {
@@ -76,6 +85,23 @@ class PropertyMapping {
 		}
 
 		return null;
+	}
+
+	/**
+	 * @return GndQualifier[]
+	 */
+	private function extractQualifiers( Subfields $subfields ): array {
+		$qualifiers = [];
+
+		foreach ( $this->qualifiers as $propertyId => $subfieldName ) {
+			if ( array_key_exists( $subfieldName, $subfields->map ) ) {
+				foreach ( $subfields->map[$subfieldName] as $subfieldValue ) {
+					$qualifiers[] = new GndQualifier( $propertyId, $subfieldValue );
+				}
+			}
+		}
+
+		return $qualifiers;
 	}
 
 }

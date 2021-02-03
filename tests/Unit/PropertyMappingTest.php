@@ -4,6 +4,7 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
+use DNB\WikibaseConverter\GndQualifier;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PackagePrivate\Subfields;
@@ -183,15 +184,22 @@ class PropertyMappingTest extends TestCase {
 			]
 		);
 
-		// TODO: test qualifiers
 		$this->assertEquals(
 			[
 				new GndStatement(
 					'P1',
-					'foo'
+					'foo',
+					[
+						new GndQualifier( 'P50', 'AAA' ),
+						new GndQualifier( 'P52', 'CCC' ),
+					]
 				)
 			],
-			$mapping->convert( Subfields::fromSingleValueMap( [ 'x' => 'foo' ] ) )
+			$mapping->convert( Subfields::fromSingleValueMap( [
+				'x' => 'foo',
+				'c' => 'CCC',
+				'a' => 'AAA',
+			] ) )
 		);
 	}
 

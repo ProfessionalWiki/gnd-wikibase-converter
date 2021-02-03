@@ -8,12 +8,10 @@ class GndStatement {
 
 	private string $propertyId;
 	private string $value;
-
-	/** @var array<string, string> */
 	private array $qualifiers;
 
 	/**
-	 * @param array<string, string> $qualifiers
+	 * @param GndQualifier[] $qualifiers
 	 */
 	public function __construct( string $propertyId, string $value, array $qualifiers = [] ) {
 		$this->propertyId = $propertyId;
