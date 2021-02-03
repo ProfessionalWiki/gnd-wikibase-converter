@@ -118,4 +118,35 @@ class MappingDeserializerTest extends TestCase {
 		] );
 	}
 
+	public function testMultipleFieldsToOneProperty(): void {
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( json_decode(
+			<<<EOD
+{
+	"P29": [
+		{
+			"_": "Früherer Name",
+			"field": "028@",
+			"subfield": "a"
+		},
+		{
+			"field": "029@",
+			"subfield": "b"
+		}
+	]
+}
+EOD,
+			true
+		) );
+
+		$this->assertEquals(
+			new PropertyMapping('P29', new SingleSubfieldSource( 'a' ) ),
+			$mapping->getPropertyMappings( '028@' )[0]
+		);
+
+		$this->assertEquals(
+			new PropertyMapping('P29', new SingleSubfieldSource( 'b' ) ),
+			$mapping->getPropertyMappings( '029@' )[0]
+		);
+	}
+
 }

@@ -18,13 +18,24 @@ class MappingDeserializer {
 		$mapping = new Mapping();
 
 		foreach ( $json as $propertyId => $propertyJson ) {
+			$this->addPropertyMapping( $mapping, $propertyId, $propertyJson );
+		}
+
+		return $mapping;
+	}
+
+	private function addPropertyMapping( Mapping $mapping, string $propertyId, array $propertyJson ): void {
+		if ( array_key_exists( 'field', $propertyJson ) ) {
 			$mapping->addPropertyMapping(
 				$propertyJson['field'],
 				$this->buildPropertyMapping( $propertyId, $propertyJson )
 			);
 		}
-
-		return $mapping;
+		else if ( array_key_exists( 0, $propertyJson ) ) {
+			foreach ( $propertyJson as $forOneField ) {
+				$this->addPropertyMapping( $mapping, $propertyId, $forOneField );
+			}
+		}
 	}
 
 	private function buildPropertyMapping( string $propertyId, array $propertyJson ): PropertyMapping {
