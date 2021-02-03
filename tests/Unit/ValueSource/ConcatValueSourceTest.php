@@ -30,4 +30,20 @@ class ConcatValueSourceTest extends TestCase {
 		return ( new ConcatValueSource( $concatSpec ) )->valueFromSubfields( Subfields::newFromMap( $subfields ) );
 	}
 
+	public function testConcatReturnsAllValuesWhenAllArePresent(): void {
+		$this->assertSame(
+			'a: foo, b: bar',
+			$this->getConcatenatedValue(
+				[
+					'a' => 'a: $, ',
+					'b' => 'b: $'
+				],
+				[
+					'a' => 'foo',
+					'b' => 'bar',
+				]
+			)
+		);
+	}
+
 }

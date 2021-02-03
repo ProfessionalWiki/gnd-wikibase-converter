@@ -8,17 +8,23 @@ use DNB\WikibaseConverter\PackagePrivate\Subfields;
 
 class ConcatValueSource implements ValueSource {
 
-	private array $segments;
+	private array $concatSpec;
 
 	/**
-	 * @param array<string, string> $segments
+	 * @param array<string, string> $concatSpec
 	 */
-	public function __construct( array $segments ) {
-		$this->segments = $segments;
+	public function __construct( array $concatSpec ) {
+		$this->concatSpec = $concatSpec;
 	}
 
 	public function valueFromSubfields( Subfields $subfields ): ?string {
-		return null;
+		$segments = [];
+
+		foreach ( $this->concatSpec as $subfieldName => $format ) {
+			$segments[] = str_replace( '$',  $subfields->map[$subfieldName], $format );
+		}
+
+		return $segments === [] ? null : implode( '', $segments );
 	}
 
 }
