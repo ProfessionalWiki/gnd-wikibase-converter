@@ -1,10 +1,12 @@
 {
 	"P1": {
+		"_": "GND-URI",
 		"field": "003U",
 		"subfield": "a"
 	},
 
 	"P2": {
+		"_": "GND ID",
 		"field": "007K",
 		"subfield": "0",
 		"condition": {
@@ -14,6 +16,7 @@
 	},
 
 	"P4": {
+		"_": "Geschlecht",
 		"field": "032T",
 		"subfield": "a",
 		"valueMap": {
@@ -23,7 +26,8 @@
 	},
 
 	"P5": {
-		"field": "002@",
+		"_": "",
+		"field": "Entitätentyp",
 		"subfield": "0",
 		"position": 2,
 		"valueMap": {
@@ -37,7 +41,7 @@
 	},
 
 	"P6": {
-		"_": "Varianter Name",
+		"_": "Katalogisierungslevel",
 		"field": "002@",
 		"subfield": "0",
 		"position": 3,
