@@ -1,7 +1,7 @@
 .PHONY: ci cs test phpunit psalm stan
 
 ci: test cs
-cs: stan
+cs: stan psalm
 test: phpunit
 
 phpunit:
@@ -12,6 +12,9 @@ coverage-html:
 
 psalm:
 	php ./vendor/bin/psalm
+
+psalm-baseline:
+	php ./vendor/bin/psalm --set-baseline=psalm-baseline.xml
 
 stan:
 	php ./vendor/bin/phpstan analyse -c phpstan.neon --no-progress
