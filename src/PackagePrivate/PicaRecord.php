@@ -33,7 +33,7 @@ class PicaRecord {
 		}
 
 		if ( !is_array( $jsonArray['fields'] ) ) {
-			throw new InvalidPica( 'fields is nto an array' );
+			throw new InvalidPica( 'fields is not an array' );
 		}
 
 		$this->jsonArray = $jsonArray;
