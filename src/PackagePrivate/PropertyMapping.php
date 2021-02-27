@@ -88,7 +88,7 @@ class PropertyMapping {
 	}
 
 	/**
-	 * @return GndQualifier[]
+	 * @return array<int, GndQualifier>
 	 */
 	private function extractQualifiers( Subfields $subfields ): array {
 		$qualifiers = [];

@@ -10,6 +10,8 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \DNB\WikibaseConverter\GndItem
+ * @covers \DNB\WikibaseConverter\GndStatement
+ * @covers \DNB\WikibaseConverter\GndQualifier
  */
 class GndItemTest extends TestCase {
 

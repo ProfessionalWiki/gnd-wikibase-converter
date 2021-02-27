@@ -8,10 +8,14 @@ class GndStatement {
 
 	private string $propertyId;
 	private string $value;
+
+	/**
+	 * @var array<int, GndQualifier>
+	 */
 	private array $qualifiers;
 
 	/**
-	 * @param GndQualifier[] $qualifiers
+	 * @param array<int, GndQualifier>  $qualifiers
 	 */
 	public function __construct( string $propertyId, string $value, array $qualifiers = [] ) {
 		$this->propertyId = $propertyId;
@@ -25,6 +29,13 @@ class GndStatement {
 
 	public function getPropertyId(): string {
 		return $this->propertyId;
+	}
+
+	/**
+	 * @return array<int, GndQualifier>
+	 */
+	public function getQualifiers(): array {
+		return $this->qualifiers;
 	}
 
 }
