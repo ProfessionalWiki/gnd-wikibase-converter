@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers \DNB\WikibaseConverter\PackagePrivate\Converter
  * @covers \DNB\WikibaseConverter\PackagePrivate\MappingDeserializer
+ * @covers \DNB\WikibaseConverter\PackagePrivate\PicaRecord
  */
 class ConverterTest extends TestCase {
 

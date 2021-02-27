@@ -15,6 +15,7 @@ use PHPUnit\Framework\TestCase;
  * @covers \DNB\WikibaseConverter\PackagePrivate\MappingDeserializer
  * @covers \DNB\WikibaseConverter\PackagePrivate\Mapping
  * @covers \DNB\WikibaseConverter\PackagePrivate\PropertyMapping
+ * @covers \DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource
  */
 class MappingDeserializerTest extends TestCase {
 

@@ -11,6 +11,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \DNB\WikibaseConverter\PicaConverter
+ * @covers \DNB\WikibaseConverter\PackagePrivate\PicaRecord
  */
 class PicaConverterTest extends TestCase {
 
@@ -24,7 +25,7 @@ class PicaConverterTest extends TestCase {
 	}
 
 	private function newConverter(): PicaConverter {
-		return new PicaConverter();
+		return PicaConverter::newWithDefaultMapping();
 	}
 
 	public function testSmoke(): void {
