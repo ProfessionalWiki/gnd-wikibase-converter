@@ -79,4 +79,11 @@ class GndItemTest extends TestCase {
 		);
 	}
 
+	public function testGetStatementsForNonExistingProperty(): void {
+		$this->assertSame(
+			[],
+			( new GndItem() )->getStatementsForProperty( 'P404' )
+		);
+	}
+
 }
