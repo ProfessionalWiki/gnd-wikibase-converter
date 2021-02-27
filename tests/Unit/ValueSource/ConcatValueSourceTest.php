@@ -8,6 +8,9 @@ use DNB\WikibaseConverter\PackagePrivate\Subfields;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\ConcatValueSource;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @covers \DNB\WikibaseConverter\PackagePrivate\ValueSource\ConcatValueSource
+ */
 class ConcatValueSourceTest extends TestCase {
 
 	public function testWhenConcatSpecIsEmpty_returnsNull(): void {
