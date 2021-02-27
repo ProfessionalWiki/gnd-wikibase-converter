@@ -27,13 +27,11 @@ class GndStatementTest extends TestCase {
 		$this->assertSame( 'P5', $statement->getPropertyId() );
 		$this->assertSame( 'testValue', $statement->getValue() );
 
-		$this->assertEquals(
-			[
-				new GndQualifier( 'P11', 'qualifierOne' ),
-				new GndQualifier( 'P12', 'qualifierTwo' ),
-			],
-			$statement->getQualifiers()
-		);
+		$this->assertSame( 'P11', $statement->getQualifiers()[0]->getPropertyId() );
+		$this->assertSame( 'qualifierOne', $statement->getQualifiers()[0]->getValue() );
+
+		$this->assertSame( 'P12', $statement->getQualifiers()[1]->getPropertyId() );
+		$this->assertSame( 'qualifierTwo', $statement->getQualifiers()[1]->getValue() );
 	}
 
 }
