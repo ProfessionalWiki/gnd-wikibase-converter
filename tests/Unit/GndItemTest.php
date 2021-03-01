@@ -4,8 +4,8 @@ declare( strict_types = 1 );
 
 namespace DNB\Tests\Unit;
 
-use DNB\WikibaseConverter\GndStatement;
 use DNB\WikibaseConverter\GndItem;
+use DNB\WikibaseConverter\GndStatement;
 use PHPUnit\Framework\TestCase;
 
 /**

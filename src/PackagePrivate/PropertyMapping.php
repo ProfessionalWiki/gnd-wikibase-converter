@@ -5,8 +5,8 @@ declare( strict_types = 1 );
 namespace DNB\WikibaseConverter\PackagePrivate;
 
 use DNB\WikibaseConverter\GndQualifier;
-use DNB\WikibaseConverter\PackagePrivate\ValueSource\ValueSource;
 use DNB\WikibaseConverter\GndStatement;
+use DNB\WikibaseConverter\PackagePrivate\ValueSource\ValueSource;
 
 /**
  * @internal

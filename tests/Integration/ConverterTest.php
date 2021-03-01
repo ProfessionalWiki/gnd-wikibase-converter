@@ -5,11 +5,11 @@ declare( strict_types = 1 );
 namespace DNB\Tests\Integration;
 
 use DNB\Tests\TestPicaRecords;
+use DNB\WikibaseConverter\GndItem;
 use DNB\WikibaseConverter\GndQualifier;
 use DNB\WikibaseConverter\GndStatement;
 use DNB\WikibaseConverter\PackagePrivate\Converter;
 use DNB\WikibaseConverter\PackagePrivate\PicaRecord;
-use DNB\WikibaseConverter\GndItem;
 use PHPUnit\Framework\TestCase;
 
 /**

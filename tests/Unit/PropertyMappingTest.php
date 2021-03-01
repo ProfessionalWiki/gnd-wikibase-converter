@@ -5,11 +5,11 @@ declare( strict_types = 1 );
 namespace DNB\Tests\Unit;
 
 use DNB\WikibaseConverter\GndQualifier;
+use DNB\WikibaseConverter\GndStatement;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PackagePrivate\Subfields;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
-use DNB\WikibaseConverter\GndStatement;
 use PHPUnit\Framework\TestCase;
 
 /**
