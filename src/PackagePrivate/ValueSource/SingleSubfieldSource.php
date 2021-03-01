@@ -37,10 +37,6 @@ class SingleSubfieldSource implements ValueSource {
 	}
 
 	private function positionIsOutOfBounds( string $subfieldValue ): bool {
-		if ( $this->position === null ) {
-			return false;
-		}
-
 		return $this->position < 1 || $this->position > strlen( $subfieldValue );
 	}
 
