@@ -20,7 +20,7 @@ class PicaConverterTest extends TestCase {
 
 		$this->assertSame(
 			[ 'http://d-nb.info/gnd/275-6' ],
-			$wikibaseRecord->getMainValuesForProperty( 'P1' )
+			$wikibaseRecord->getMainValuesForProperty( 'P66' )
 		);
 	}
 

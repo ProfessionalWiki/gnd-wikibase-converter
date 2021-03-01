@@ -15,8 +15,8 @@ class MappingJsonTest extends TestCase {
 		$mapping = json_decode( $jsonString, true );
 
 		$this->assertIsArray( $mapping );
-		$this->assertArrayHasKey( 'P1', $mapping );
-		$this->assertIsArray( $mapping['P1'] );
+		$this->assertArrayHasKey( 'P150', $mapping );
+		$this->assertIsArray( $mapping['P150'] );
 	}
 
 	/**

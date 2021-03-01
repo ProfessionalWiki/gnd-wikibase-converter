@@ -1,11 +1,11 @@
 {
-	"P1": {
+	"P66": {
 		"_": "GND-URI",
 		"field": "003U",
 		"subfield": "a"
 	},
 
-	"P2": {
+	"P150": {
 		"_": "GND ID",
 		"field": "007K",
 		"subfield": "0",
@@ -15,50 +15,50 @@
 		}
 	},
 
-	"P4": {
-		"_": "Geschlecht",
-		"field": "032T",
-		"subfield": "a",
-		"valueMap": {
-			"f": "Q20",
-			"m": "Q21"
-		}
-	},
-
-	"P5": {
+	"P61": {
 		"_": "",
 		"field": "Entitätentyp",
 		"subfield": "0",
 		"position": 2,
 		"valueMap": {
-			"b": "Q10",
-			"f": "Q11",
-			"g": "Q12",
-			"p": "Q13",
-			"s": "Q14",
-			"u": "Q15"
+			"b": "Q151",
+			"f": "Q152",
+			"g": "Q153",
+			"p": "",
+			"s": "",
+			"u": "Q155"
 		}
 	},
 
-	"P6": {
+	"P62": {
 		"_": "Katalogisierungslevel",
 		"field": "002@",
 		"subfield": "0",
 		"position": 3,
 		"valueMap": {
-			"1": "Q1",
-			"2": "Q2",
-			"3": "Q3",
-			"4": "Q4",
-			"5": "Q5",
-			"6": "Q6",
-			"7": "Q7",
-			"z": "Q8"
+			"1": "Q250",
+			"2": "Q251",
+			"3": "Q252",
+			"4": "Q253",
+			"5": "Q254",
+			"6": "Q255",
+			"7": "Q256",
+			"z": "Q257"
 		}
 	},
 
-	"P28": {
-		"_": "Varianter Name",
+	"P69": {
+		"_": "Geschlecht",
+		"field": "032T",
+		"subfield": "a",
+		"valueMap": {
+			"f": "Q259",
+			"m": "Q258"
+		}
+	},
+
+	"P59": {
+		"_": "Abweichender Name",
 		"field": "028@",
 		"subfield": {
 			"P": "$",
@@ -70,15 +70,15 @@
 			"g": ", $"
 		},
 		"qualifiers": {
-			"P50": "a",
-			"P51": "d",
-			"P52": "c",
-			"P53": "P",
-			"P54": "v"
+			"P29": "a",
+			"P21": "d",
+			"P27": "c",
+			"P41": "P",
+			"P47": "v"
 		}
 	},
 
-	"P29": [
+	"P154": [
 		{
 			"_": "Früherer Name",
 			"field": "028@",
