@@ -10,6 +10,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \DNB\WikibaseConverter\PackagePrivate\SubfieldCondition
+ * @covers \DNB\WikibaseConverter\PackagePrivate\Subfields
  */
 class SubfieldConditionTest extends TestCase {
 
