@@ -16,8 +16,8 @@
 	},
 
 	"P61": {
-		"_": "",
-		"field": "Entitätentyp",
+		"_": "Entitätentyp",
+		"field": "002@",
 		"subfield": "0",
 		"position": 2,
 		"valueMap": {
