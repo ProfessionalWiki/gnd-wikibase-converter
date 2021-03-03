@@ -25,6 +25,18 @@ The package name is `dnb/wikibase-converter`. Minimal example of a `composer.jso
 }
 ```
 
+## Usage
+
+PICA+ JSON to Wikibase-like data structure
+
+```php
+use DNB\WikibaseConverter\PicaConverter;
+$gndItem = PicaConverter::newWithDefaultMapping()->picaJsonToGndItem( $string );
+
+$gndItem->getPropertyIds();
+$gndItem->getStatementsForProperty( 'P123' );
+```
+
 ## Development
 
 Start by installing the project dependencies by executing
