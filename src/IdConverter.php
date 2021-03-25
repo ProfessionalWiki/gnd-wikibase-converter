@@ -19,6 +19,10 @@ class IdConverter {
 			return $this->transformGndId( $gndId, 3 );
 		}
 
+		if ( preg_match( '/[1-9]\d{0,7}-[0-9X]/', $gndId ) === 1 ) {
+			return $this->transformGndId( $gndId, 4 );
+		}
+
 		return 'TODO'; // TODO
 	}
 
