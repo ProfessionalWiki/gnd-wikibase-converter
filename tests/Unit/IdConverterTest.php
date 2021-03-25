@@ -40,4 +40,9 @@ class IdConverterTest extends TestCase {
 		yield 'Format 5, 10 chars (max)' => [ '12345678-X', '1234567805' ];
 	}
 
+	public function testThrowsExceptionOnInvalidGndId(): void {
+		$this->expectException( \InvalidArgumentException::class );
+		( new IdConverter() )->gndToWikibaseId( '~=[,,_,,]:3' );
+	}
+
 }

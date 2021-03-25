@@ -38,7 +38,7 @@ class IdConverter {
 			return $this->transformGndId( $gndId, 4 );
 		}
 
-		return 'TODO'; // TODO
+		throw new \InvalidArgumentException( 'Invalid GND ID' );
 	}
 
 	private function transformGndId( string $gndId, int $caseNumber ): string {
