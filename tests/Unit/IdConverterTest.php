@@ -23,8 +23,11 @@ class IdConverterTest extends TestCase {
 	}
 
 	public function transformationProvider(): \Generator {
-		yield [ '118557513', '11855751301' ];
-		yield [ '11855751', '1185575101' ];
+		yield 'Case 1, 9 chars' => [ '118557513', '11855751301' ];
+		yield 'Case 1, 10 chars' => [ '1033476056', '103347605601' ];
+
+		yield 'Case 2, 9 chars' => [ '10111565X', '1011156502' ];
+		yield 'Case 2, 10 chars' => [ '101115658X', '10111565802' ];
 	}
 
 }

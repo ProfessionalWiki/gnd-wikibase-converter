@@ -18,7 +18,8 @@
 	],
 	"require": {
 		"php": ">=7.4",
-		"ext-json": "*"
+		"ext-json": "*",
+		"symfony/polyfill-php80": "^1.22.1"
 	},
 	"require-dev": {
 		"rector/rector": "^0.8.56",
