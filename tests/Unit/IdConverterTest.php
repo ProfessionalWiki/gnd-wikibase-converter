@@ -34,6 +34,10 @@ class IdConverterTest extends TestCase {
 		yield 'Format 4, 3 chars (min)' => [ '1-7', '1704' ];
 		yield 'Format 4, 5 chars' => [ '191-0', '191004' ];
 		yield 'Format 4, 10 chars (max)' => [ '12345678-9', '12345678904' ];
+
+		yield 'Format 5, 3 chars (min)' => [ '1-X', '105' ];
+		yield 'Format 5, 5 chars' => [ '191-X', '19105' ];
+		yield 'Format 5, 10 chars (max)' => [ '12345678-X', '1234567805' ];
 	}
 
 }

@@ -20,6 +20,10 @@ class IdConverter {
 		}
 
 		if ( preg_match( '/[1-9]\d{0,7}-[0-9X]/', $gndId ) === 1 ) {
+			if ( str_ends_with( $gndId, 'X' ) ) {
+				return $this->transformGndId( $gndId, 5 );
+			}
+
 			return $this->transformGndId( $gndId, 4 );
 		}
 
