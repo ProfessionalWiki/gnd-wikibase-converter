@@ -6,6 +6,17 @@ namespace DNB\WikibaseConverter;
 
 class IdConverter {
 
+	/**
+	 * Strips non-numeric characters from the GND ID and appends two digits.
+	 * The two digits indicate the format of the GND ID and allow reconstructing
+	 * it from the number.
+	 *
+	 * Format 01: 1[012]?\d{7}[0-9]
+	 * Format 02: 1[012]?\d{7}X
+	 * Format 03: [47]\d{6}-\d
+	 * Format 04: /[1-9]\d{0,7}-[0-9]
+	 * Format 05: /[1-9]\d{0,7}-X
+	 */
 	public function gndToWikibaseId( string $gndId ): string {
 		if ( preg_match( '/1[012]?\d{7}[0-9X]/', $gndId ) === 1 ) {
 			if ( str_ends_with( $gndId, 'X' ) ) {
