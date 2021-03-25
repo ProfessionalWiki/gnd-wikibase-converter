@@ -18,7 +18,7 @@ class IdConverterTest extends TestCase {
 	public function testFoo( string $gndId, string $transformedId ): void {
 		$this->assertSame(
 			$transformedId,
-			( new IdConverter() )->gndToWikibaseId( $gndId )
+			( new IdConverter() )->gndToNumericId( $gndId )
 		);
 	}
 
@@ -38,11 +38,15 @@ class IdConverterTest extends TestCase {
 		yield 'Format 5, 3 chars (min)' => [ '1-X', '105' ];
 		yield 'Format 5, 5 chars' => [ '191-X', '19105' ];
 		yield 'Format 5, 10 chars (max)' => [ '12345678-X', '1234567805' ];
+
+		yield 'Format 6, 9 chars' => [ '323456789', '32345678906' ];
+
+		yield 'Format 7, 9 chars' => [ '32345678X', '3234567807' ];
 	}
 
 	public function testThrowsExceptionOnInvalidGndId(): void {
 		$this->expectException( \InvalidArgumentException::class );
-		( new IdConverter() )->gndToWikibaseId( '~=[,,_,,]:3' );
+		( new IdConverter() )->gndToNumericId( '~=[,,_,,]:3' );
 	}
 
 }
