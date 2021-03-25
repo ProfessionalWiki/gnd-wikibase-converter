@@ -7,45 +7,32 @@ namespace DNB\WikibaseConverter;
 class IdConverter {
 
 	/**
-	 * Strips non-numeric characters from the GND ID and appends two digits.
-	 * The two digits indicate the format of the GND ID and allow reconstructing
-	 * it from the number.
+	 * Reversible transformation from GND-ID to numeric ID.
 	 *
-	 * Format 01: 1[012]?\d{7}[0-9]			118557513	-> 11855751301
-	 * Format 02: 1[012]?\d{7}X				10111565X	-> 1011156502
-	 * Format 03: [47]\d{6}-\d				4039025-1	-> 4039025103
-	 * Format 04: /[1-9]\d{0,7}-[0-9]		12345678-9	-> 12345678904
-	 * Format 05: /[1-9]\d{0,7}-X			12345678-X	-> 1234567805
-	 * Format 06: 3\d{7}[0-9]				323456789	-> 32345678906
-	 * Format 07: 3\d{7}[X]					32345678X	-> 3234567807
+	 * The last digit represents the GND-ID format. This allows
+	 * both stripping out non-numeric characters without collisions
+	 * and turning the number back into the original GND-ID.
+	 *
+	 * Format 0: all numeric ID: 0 is appended. ie 123 -> 1230
+	 * Format 1: numeric ID plus X: 1 is appended. ie 123X -> 1231
+	 * Format 2: numeric ID with a dash: 2 is appended. ie 12-3 -> 1232
+	 * Format 0: ID ends on -X: 3 is appended. ie 12-X -> 123
 	 */
 	public function gndToNumericId( string $gndId ): string {
-		if ( preg_match( '/1[012]?\d{7}[0-9X]/', $gndId ) === 1 ) {
-			if ( str_ends_with( $gndId, 'X' ) ) {
-				return $this->transformGndId( $gndId, 2 );
-			}
-
-			return $this->transformGndId( $gndId, 1 );
+		if ( ctype_digit( $gndId ) ) {
+			return $gndId . '0';
 		}
 
-		if ( preg_match( '/[47]\d{6}-\d/', $gndId ) === 1 ) {
-			return $this->transformGndId( $gndId, 3 );
+		if ( str_ends_with( $gndId, '-X' ) ) {
+			return preg_replace('/[^0-9]/', '', $gndId ) . '3';
 		}
 
-		if ( preg_match( '/[1-9]\d{0,7}-[0-9X]/', $gndId ) === 1 ) {
-			if ( str_ends_with( $gndId, 'X' ) ) {
-				return $this->transformGndId( $gndId, 5 );
-			}
-
-			return $this->transformGndId( $gndId, 4 );
+		if ( str_ends_with( $gndId, 'X' ) ) {
+			return preg_replace('/[^0-9]/', '', $gndId ) . '1';
 		}
 
-		if ( preg_match( '/3\d{7}[0-9X]/', $gndId ) === 1 ) {
-			if ( str_ends_with( $gndId, 'X' ) ) {
-				return $this->transformGndId( $gndId, 7 );
-			}
-
-			return $this->transformGndId( $gndId, 6 );
+		if ( substr( $gndId, -2, 1 ) === '-' ) {
+			return preg_replace('/[^0-9]/', '', $gndId ) . '2';
 		}
 
 		throw new \InvalidArgumentException( 'Invalid GND ID' );

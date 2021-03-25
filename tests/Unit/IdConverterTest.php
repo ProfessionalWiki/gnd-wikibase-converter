@@ -23,25 +23,15 @@ class IdConverterTest extends TestCase {
 	}
 
 	public function transformationProvider(): \Generator {
-		yield 'Format 1, 9 chars' => [ '118557513', '11855751301' ];
-		yield 'Format 1, 10 chars' => [ '1033476056', '103347605601' ];
+		yield 'Case 0: all numeric' => [ '123', '1230' ];
+		yield 'Case 1: ends on X' => [ '123X', '1231' ];
+		yield 'Case 2: second last is dash' => [ '12-3', '1232' ];
+		yield 'Case 3: ends on -X' => [ '12-X', '123' ];
 
-		yield 'Format 2, 9 chars' => [ '10111565X', '1011156502' ];
-		yield 'Format 2, 10 chars' => [ '101115658X', '10111565802' ];
-
-		yield 'Format 3 (8 num + dash + num)' => [ '4039025-1', '4039025103' ];
-
-		yield 'Format 4, 3 chars (min)' => [ '1-7', '1704' ];
-		yield 'Format 4, 5 chars' => [ '191-0', '191004' ];
-		yield 'Format 4, 10 chars (max)' => [ '12345678-9', '12345678904' ];
-
-		yield 'Format 5, 3 chars (min)' => [ '1-X', '105' ];
-		yield 'Format 5, 5 chars' => [ '191-X', '19105' ];
-		yield 'Format 5, 10 chars (max)' => [ '12345678-X', '1234567805' ];
-
-		yield 'Format 6, 9 chars' => [ '323456789', '32345678906' ];
-
-		yield 'Format 7, 9 chars' => [ '32345678X', '3234567807' ];
+		yield [ '110-7', '11072' ];
+		yield [ '101115658X', '1011156581' ];
+		yield [ '1033476056', '10334760560' ];
+		yield [ '1324-X', '13243' ];
 	}
 
 	public function testThrowsExceptionOnInvalidGndId(): void {
