@@ -15,7 +15,11 @@ class IdConverter {
 			return $this->transformGndId( $gndId, 1 );
 		}
 
-		return 'TODO';
+		if ( preg_match( '/[47]\d{6}-\d/', $gndId ) === 1 ) {
+			return $this->transformGndId( $gndId, 3 );
+		}
+
+		return 'TODO'; // TODO
 	}
 
 	private function transformGndId( string $gndId, int $caseNumber ): string {

@@ -28,6 +28,8 @@ class IdConverterTest extends TestCase {
 
 		yield 'Case 2, 9 chars' => [ '10111565X', '1011156502' ];
 		yield 'Case 2, 10 chars' => [ '101115658X', '10111565802' ];
+
+		yield 'Case 3 (8 num + dash + num)' => [ '4039025-1', '4039025103' ];
 	}
 
 }
