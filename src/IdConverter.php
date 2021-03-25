@@ -16,7 +16,7 @@ class IdConverter {
 	 * Format 0: all numeric ID: 0 is appended. ie 123 -> 1230
 	 * Format 1: numeric ID plus X: 1 is appended. ie 123X -> 1231
 	 * Format 2: numeric ID with a dash: 2 is appended. ie 12-3 -> 1232
-	 * Format 0: ID ends on -X: 3 is appended. ie 12-X -> 123
+	 * Format 3: ID ends on -X: 3 is appended. ie 12-X -> 123
 	 */
 	public function gndToNumericId( string $gndId ): string {
 		if ( ctype_digit( $gndId ) ) {
