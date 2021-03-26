@@ -38,9 +38,4 @@ class IdConverter {
 		throw new \InvalidArgumentException( 'Invalid GND ID' );
 	}
 
-	private function transformGndId( string $gndId, int $caseNumber ): string {
-		return preg_replace('/[^0-9]/', '', $gndId )
-			. str_pad( (string)$caseNumber, 2, '0', STR_PAD_LEFT );
-	}
-
 }
