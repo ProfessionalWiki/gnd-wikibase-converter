@@ -86,4 +86,23 @@ class GndItemTest extends TestCase {
 		);
 	}
 
+	public function testGetNumericIdReturnsNullWhenThereIsNoIdStatement(): void {
+		$item = new GndItem(
+			new GndStatement( 'P1', 'foo' ),
+			new GndStatement( 'P2', 'bar' )
+		);
+
+		$this->assertNull( $item->getNumericId() );
+	}
+
+	public function testGetNumericIdReturnsId(): void {
+		$item = new GndItem(
+			new GndStatement( 'P1', 'foo' ),
+			new GndStatement( GndItem::GND_ID, '123X' ),
+			new GndStatement( 'P2', 'bar' )
+		);
+
+		$this->assertSame( 1231, $item->getNumericId() );
+	}
+
 }

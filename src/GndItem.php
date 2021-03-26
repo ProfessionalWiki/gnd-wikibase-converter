@@ -9,6 +9,8 @@ namespace DNB\WikibaseConverter;
  */
 class GndItem {
 
+	public const GND_ID = 'P150';
+
 	/** @var array<string, array<int, GndStatement>> */
 	private array $map = [];
 
@@ -58,6 +60,14 @@ class GndItem {
 		}
 
 		return [];
+	}
+
+	public function getNumericId(): ?int {
+		foreach ( $this->getMainValuesForProperty( self::GND_ID ) as $gndId ) {
+			return ( new IdConverter() )->gndToNumericId( $gndId );
+		}
+
+		return null;
 	}
 
 }
