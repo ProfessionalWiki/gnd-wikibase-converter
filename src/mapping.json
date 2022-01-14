@@ -757,19 +757,7 @@
 	}
 	},
 		
-	"P55": {
-		"_": "Beziehung: Person",
-		"field": "028R",
-		"subfield": "mo",
-			"qualifiers": {
-			"P19": "9"
-			"P47": "v",					
-		}
-		"condition": {
-				"subfield": "4",
-				"equalTo": " "
-		}
-	},	
+		
 	"P180": {
 		"_": "Architekt Beziehung: Person",
 		"field": "028R",
@@ -924,7 +912,7 @@
 	},
 	
 	"P152": {
-		"_": "Geburtsort Beziehung: Geografikum",
+		"_": "Sterbeort Beziehung: Geografikum",
 		"field": "065R",
 		"subfield": "mo",
 			"qualifiers": {
@@ -1012,6 +1000,114 @@
 				"equalTo": "beru"
 		}
 	},
+
+	"P156": {
+		"_": "Affiliation Beziehung: Körperschaft",
+		"field": "029R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "affi"
+		}
+	},
+
+	"P153": {
+		"_": "Wirkungsort Beziehung: Geografikum",
+		"field": "065R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "ortw"
+		}
+	},
+
+"P198": {
+		"_": "Beziehung allgemein Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P21": "a",
+			"P29": "d",
+			"P27": "c",
+			"P39": "n",
+			"P34": "l",
+			"P31": "g",
+			"P41": "P",
+			"P49": "x",
+			"P47": "v",
+			"P19": "9"
+						
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "beza"
+		}
+	},		
+	
+	
+		"P183": {
+		"_": "Oberbegriff instantiell Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "obin"
+		}
+	},
+	
+	"P275": {
+		"_": "verwandter Begriff Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "vbal"
+		}
+	},
+	
+	"P275": {
+		"_": "verwandter Begriff Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "vbal"
+		}
+	},
+	
+		"P160": {
+		"_": "verwandter Begriff Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "obal"
+		}
+	},
 	
 	"P80": {
 		"_": "Redaktionelle Bemerkung",
@@ -1082,6 +1178,26 @@
 		"field": "050D",
 		"subfield": "a",
 		}
+
+	"P103": {
+		"_": "Sachbegriff – Bevorzugte Benennung anderer Datenbestand",
+		"field": "041P",
+		"subfield": "mo",
+		"qualifiers": {
+			"P20": "a",			
+			"P31": "g",
+			"P57": "u",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"
+			"P100": "S",
+			"P150": "0"
+			"P102": "2"
+			"P18": "5"
+		}
+	},
 	
 	"P360": {
 		"_": "Interne Identifikationsnummer PPN",
