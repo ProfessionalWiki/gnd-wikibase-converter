@@ -1,4 +1,13 @@
 {
+	"P110": {
+		"_": "Schema",
+		"field": "007K",
+		"subfield": "0"
+		"valueMap": {
+			"?": "Q14",
+		
+	},
+	
 	"P325": {
 		"_": "Quelle und Datum der Ersterfassung",
 		"field": "001A",
@@ -344,7 +353,7 @@
 		"_": "Sprachencode",
 		"field": "042C",
 		"subfield": "a",
-		}
+		
 	},
 	
 	"P310": {
@@ -385,7 +394,6 @@
 		"_": "Tonart",
 		"field": "032Z",
 		"subfield": "a",
-		}
 	},
 
 	"P58": {
