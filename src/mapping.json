@@ -157,7 +157,6 @@
 	"P245": {
 		"_": "Alte Normnummer",
 		"field": "007N",
-		},
 		"qualifiers": {
 			"P299": "a",
 			"P47": "v",
@@ -168,7 +167,6 @@
 	"P344": {
 		"_": "Katalogisierungsquelle",
 		"field": "010E",
-		},
 		"qualifiers": {
 			"P341": "b",
 			"P342": "e",
@@ -305,7 +303,6 @@
 	"P133": {
 		"_": "Geografische Koordinaten",
 		"field": "037H",
-		},
 		"qualifiers": {
 			"P134": "d",
 			"P136": "e",
@@ -353,7 +350,6 @@
 	"P310": {
 		"_": "Form des Werks",
 		"field": "032W",
-		},
 		"qualifiers": {
 			"P20": "a",
 			"P19": "9",
@@ -363,7 +359,6 @@
 	"P316": {
 		"_": "Besetzung",
 		"field": "032X",
-		},
 		"qualifiers": {
 			"P20": "a",
 			"P311": "e",
@@ -379,7 +374,6 @@
 	"P320": {
 		"_": "Numerische Kennzeichnung eines Musikwerks",
 		"field": "032Y",
-		},
 		"qualifiers": {
 			"P317": "a",
 			"P318": "b",
@@ -415,7 +409,7 @@
 		"_": "Person - Abweichender Name",
 		"field": "028@",
 		"subfield": "mo",
-			"qualifiers": {
+		"qualifiers": {
 			"P21": "a",
 			"P29": "d",
 			"P27": "c",
@@ -432,6 +426,7 @@
 		"condition": {
 				"subfield": "4",
 				"equalTo": " "
+		}
 	},
 	
 
@@ -441,7 +436,6 @@
 		"_": "Körperschaft – Bevorzugter Name",
 		"field": "029A",
 		"subfield": "mo",
-		
 		"qualifiers": {
 			"P22": "a",
 			"P25": "b",
@@ -605,8 +599,6 @@
 	"P349": {
 		"_": "Markierung für das Match-und-Merge-Verfahren",
 		"field": "038L",
-				
-		},
 		"qualifiers": {
 			"P345": "a",
 			"P346": "b",
@@ -619,8 +611,6 @@
 	"P351": {
 		"_": "Zu verknüpfende Schlagwörter in Hinweissätzen",
 		"field": "041O",
-				
-		},
 		"qualifiers": {
 			"P350": "a",
 			"P47": "v",
@@ -665,8 +655,7 @@
 	},
 		
 		
-	"P154": [
-		{
+	"P154": {
 			"_": "Früherer Name",
 			"field": "028@",
 			"subfield": "mo",
@@ -717,7 +706,7 @@
 			"qualifiers": {
 			"P47": "v",
 		}
-		]
+		
 
 	"P157": {
 		"_": "Späterer Name",
