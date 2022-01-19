@@ -1,22 +1,79 @@
 {
-	"P66": {
-		"_": "GND-URI",
-		"field": "003U",
-		"subfield": "a"
-	},
-
-	"P150": {
-		"_": "GND ID",
-		"field": "007K",
+	"P110": {
+		"_": "Schema",
+		"field": "002@",
 		"subfield": "0",
-		"condition": {
-			"subfield": "a",
-			"equalTo": "gnd"
+		"position": 1,
+		"valueMap": {
+			"T": "Q14",
+	},
+		
+	"Labels": {
+		"_": "Label Person - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "028A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Köperschaft - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "029A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Konferenz - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "030A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Werk - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "022A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Sachbegriff - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "041A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Geografikum - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "065A",
+		"subfield": "mo",
+	},
+	
+	"P325": {
+		"_": "Quelle und Datum der Ersterfassung",
+		"field": "001A",
+		"subfield": "0"
+	},
+	
+	"P326": {
+		"_": "Quelle und Datum der letzten Änderung",
+		"field": "001B",
+		"subfield": "0"
+	},
+	
+	"P327": {
+		"_": "Quelle und Datum der letzten Statusvergabe",
+		"field": "001D",
+		"subfield": "0"
+	},
+	
+	"P74": {
+		"_": "Satzart Position 1: Haupttyp des DatensatzesEntitätentyp",
+		"field": "002@",
+		"subfield": "0",
+		"position": 1,
+		"valueMap": {
+			"T": "Q1348",
 		}
 	},
-
+	
 	"P61": {
-		"_": "Entitätentyp",
+		"_": "Satzart Position 2: Entitätentyp",
 		"field": "002@",
 		"subfield": "0",
 		"position": 2,
@@ -24,14 +81,14 @@
 			"b": "Q151",
 			"f": "Q152",
 			"g": "Q153",
-			"p": "",
-			"s": "",
+			"p": "Q17",
+			"s": "Q154",
 			"u": "Q155"
 		}
 	},
 
 	"P62": {
-		"_": "Katalogisierungslevel",
+		"_": "Satzart Position 3: Katalogisierungslevel",
 		"field": "002@",
 		"subfield": "0",
 		"position": 3,
@@ -46,58 +103,1169 @@
 			"z": "Q257"
 		}
 	},
+	
+	"P295": {
+		"_": "GND-URI",
+		"field": "003U",
+				},
+		"qualifiers": {
+		"P66": "a"		
+		"P47": "v",
+	},
+		
+	"P63": {
+		"_": "Entitätencodierung",
+		"field": "004B",
+		"subfield": "a"
+		"valueMap": {
+			"gib": "Q156",
+			"gif": "Q157",
+			"gik": "Q212",
+			"gil": "Q159",
+			"gin": "Q160",
+			"gio": "Q213",
+			"gir": "Q162",
+			"giv": "Q163",
+			"giw": "Q214",
+			"gix": "Q215",
+			"giz": "Q166",
+			"gxz": "Q216",
+			"kif": "Q168",
+			"kim": "Q169",
+			"kio": "Q217",
+			"kip": "Q218",
+			"kiv": "Q172",
+			"kiz": "Q219",
+			"kxz": "Q220",
+			"pif": "Q221",
+			"pik": "Q222",
+			"pip": "Q223",
+			"pis": "Q224",
+			"piz": "Q225",
+			"pxg": "Q226",
+			"pxl": "Q227",
+			"pxs": "Q228",
+			"sab": "Q183",
+			"sad": "Q184",
+			"saf": "Q185",
+			"sag": "Q186",
+			"sam": "Q187",
+			"saz": "Q229",
+			"sie": "Q230",
+			"sif": "Q231",
+			"sih": "Q232",
+			"sip": "Q192",
+			"sis": "Q233",
+			"siu": "Q234",
+			"siw": "Q235",
+			"siz": "Q236",
+			"slz": "Q237",
+			"snz": "Q238",
+			"sxz": "Q239",
+			"szz": "Q240",
+			"uiz": "Q201",
+			"vie": "Q241",
+			"vif": "Q242",
+			"wid": "Q243",
+			"wie": "Q244",
+			"wif": "Q206",
+			"wim": "Q245",
+			"win": "Q246",
+			"wip": "Q247",
+			"wis": "Q248",
+			"wit": "Q249"
+		}
+	},
+		
+	"P101": {
+		"_": "GND-Nummer",
+		"field": "007K",
+		"subfield": "0",
+		"condition": {
+			"subfield": "a",
+			"equalTo": "gnd"
+		"_comment": "so würde wenn 007K $a = gnd, dann P101 mit 007K $0 besetzt'"
+		}
+	},
+	
+	"P101": {
+		"_": "GND-Nummer",
+		"field": "007K",
+		},
+		"qualifiers": {
+			"P299": "a",
+			"P47": "v",
+			"P150": "0"
+		}
+	},
 
-	"P69": {
+	"P245": {
+		"_": "Alte Normnummer",
+		"field": "007N",
+		"qualifiers": {
+			"P299": "a",
+			"P47": "v",
+			"P150": "0"
+		}
+	},
+	
+	"P344": {
+		"_": "Katalogisierungsquelle",
+		"field": "010E",
+		"qualifiers": {
+			"P341": "b",
+			"P342": "e",
+			"P343": "f"
+		}
+	},
+	
+	"P336": {
+		"_": "Ländercode",
+		"field": "042B",
+		"subfield": "a"
+	},
+	
+	"P340": {
+		"_": "GND-Systematik",
+		"field": "042A",
+		"qualifiers": {
+			"P64": "a",
+	},
+	
+	"P65": {
+		"_": "DDC-Notation",
+		"field": "037G",
+		},
+		"qualifiers": {
+			"P294": "c",
+			"P296": "d",
+				"valueMap": {
+				"1": "Q1351",
+				"2": "Q1350",
+				"3": "Q12",
+				"4": "Q1349"
+				}
+			"P297": "t",
+			"P298": "g",
+			"P47": "v"
+		},
+		
+	"P339": {
+		"_": "veraltete DDC-Notation",
+		"field": "037I",
+		},
+		"qualifiers": {
+			"P294": "c",
+			"P296": "d",
+				"valueMap": {
+				"1": "Q1351",
+				"2": "Q1350",
+				"3": "Q12",
+				"4": "Q1349"
+				}
+			"P297": "t",
+			"P298": "g",
+			"P47": "v"
+		},
+	
+	"P301": {
+		"_": "Änderungscodierung",
+		"field": "008@",
+		"subfield": "a",
+		"valueMap": {
+			"d": "Q1354",
+			"g": "Q1358",
+			"p": "Q1357",
+			"s": "Q1356",
+			"u": "Q1352",
+			"zd": "Q1355",
+			"zu": "Q1353"
+		}
+	},
+
+	"P108": {
+		"_": "Teilbestandskennzeichen",
+		"field": "008A",
+		"subfield": "a",
+		"valueMap": {
+			"a": "Q273",
+			"d": "Q274",
+			"e": "Q275",
+			"f": "Q276",
+			"g": "Q277",
+			"h": "Q278",
+			"l": "Q279",
+			"m": "Q280",
+			"n": "Q281",
+			"o": "Q282",
+			"p": "Q283",
+			"s": "Q284",
+			"t": "Q285",
+			"z": "Q286"
+		}
+	},
+	
+	"P328": {
+		"_": "Nutzungskennzeichen",
+		"field": "008B",
+		"subfield": "a",
+		"valueMap": {
+			"e": "Q1386",
+			"h": "Q1387",
+			"k": "Q1388",
+			"m": "Q1389",
+			"o": "Q1390",
+			"r": "Q1391",
+			"v": "Q1392",
+			"w": "Q1393",
+			"z": "Q1394"
+		}
+	},
+	
+	"P332": {
+		"_": "SWD-Nr. im GKD-Satz",
+		"field": "007W",
+		"subfield": "0",
+		},
+	
+	"P171": {
+		"_": "Sonstige Standardnummer",
+		"field": "006Y",
+		},
+		"qualifiers": {
+			"P47": "v",
+			"P172": "S",
+			"P150": "0"
+		}
+	},
+	
+	"P333": {
+		"_": "GKD-Nr. im SWD-Satz",
+		"field": "007R",
+		"subfield": "0",
+		},
+	
+	"P133": {
+		"_": "Geografische Koordinaten",
+		"field": "037H",
+		"qualifiers": {
+			"P134": "d",
+			"P136": "e",
+			"P137": "f",
+			"P138": "g",
+			"P139": "j",
+			"P140": "k",
+			"P141": "m",
+			"P142": "n",
+			"P143": "p",
+			"P144": "r",
+			"P57": "u",
+			"P47": "v",
+			"P145": "x",
+			"P146": "y",
+			"P147": "z",
+			"P135": "A",
+			"P100": "S",
+			"P150": "0",
+			"P102": "2",
+			"P148": "3",
+		}
+	},
+	
+	
+	
+	"P300": {
 		"_": "Geschlecht",
 		"field": "032T",
 		"subfield": "a",
 		"valueMap": {
 			"f": "Q259",
-			"m": "Q258"
+			"m": "Q258",
+			"n": "Q260"
+		}
+	},
+	
+	"P309": {
+		"_": "Sprachencode",
+		"field": "042C",
+		"subfield": "a",
+		
+	},
+	
+	"P310": {
+		"_": "Form des Werks",
+		"field": "032W",
+		"qualifiers": {
+			"P20": "a",
+			"P19": "9",
+		}
+	},
+	
+	"P316": {
+		"_": "Besetzung",
+		"field": "032X",
+		"qualifiers": {
+			"P20": "a",
+			"P311": "e",
+			"P312": "n",
+			"P313": "p",
+			"P314": "s",
+			"P315": "t",
+			"P47": "v",
+			"P19": "9",
 		}
 	},
 
+	"P320": {
+		"_": "Numerische Kennzeichnung eines Musikwerks",
+		"field": "032Y",
+		"qualifiers": {
+			"P317": "a",
+			"P318": "b",
+			"P319": "c",
+		}
+	},
+
+	"P322": {
+		"_": "Tonart",
+		"field": "032Z",
+		"subfield": "a",
+	},
+
+	"P58": {
+		"_": "Person - Bevorzugter Name",
+		"field": "028A",
+		"subfield": "mo",
+		"qualifiers": {
+			"P21": "a",
+			"P29": "d",
+			"P27": "c",
+			"P39": "n",
+			"P34": "l",
+			"P31": "g",
+			"P41": "P",
+			"P49": "x",
+			"P47": "v",
+		}
+	},
+	
 	"P59": {
-		"_": "Abweichender Name",
+		"_": "Person - Abweichender Name",
 		"field": "028@",
-		"subfield": {
-			"P": "$",
-			"a": "$",
-			"d": ", $",
-			"c": " $",
-			"n": " $",
-			"l": ", $",
-			"g": ", $"
+		"subfield": "mo",
+		"qualifiers": {
+			"P21": "a",
+			"P29": "d",
+			"P27": "c",
+			"P39": "n",
+			"P34": "l",
+			"P31": "g",
+			"P41": "P",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": " "
+		}
+	},
+	
+
+	
+	
+	"P90": {
+		"_": "Körperschaft – Bevorzugter Name",
+		"field": "029A",
+		"subfield": "mo",
+		"qualifiers": {
+			"P22": "a",
+			"P25": "b",
+			"P31": "g",
+			"P39": "n",
+			"P49": "x",
+			"P47": "v",
+		}
+	},
+
+	"P96": {
+		"_": "Körperschaft – Abweichender Name",
+		"field": "029@",
+		"subfield": "mo",
+		"qualifiers": {
+			"P22": "a",
+			"P25": "b",
+			"P31": "g",
+			"P39": "n",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"			
+		}
+	},
+	
+	"P87": {
+		"_": "Konferenz – Bevorzugter Name",
+		"field": "030A",
+		"subfield": "mo",
+		"qualifiers": {
+			"P23": "a",
+			"P26": "b",
+			"P28": "c",
+			"P32": "d",
+			"P31": "g",
+			"P39": "n",
+			"P49": "x",
+			"P47": "v",
+		}
+	},
+	
+	"P95": {
+		"_": "Konferenz – Abweichender Name",
+		"field": "030@",
+		"subfield": "mo",
+		"qualifiers": {
+			"P23": "a",
+			"P26": "b",
+			"P28": "c",
+			"P32": "d",
+			"P31": "g",
+			"P39": "n",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"
+		}
+	},
+	
+	"P91": {
+		"_": "Werk – Bevorzugter Titel",
+		"field": "022A",
+		"subfield": "mo",
+		"qualifiers": {
+			"P24": "a",
+			"P30": "f",
+			"P33": "h",
+			"P35": "l",
+			"P31": "g",
+			"P37": "m",
+			"P38": "n",
+			"P40": "o",
+			"P42": "p",
+			"P43": "r",
+			"P44": "s",
+			"P49": "x",
+			"P47": "v",
+		}
+	},
+	
+	"P97": {
+		"_": "Werk – Abweichender Titel",
+		"field": "022@",
+		"subfield": "mo",
+		"qualifiers": {
+			"P24": "a",
+			"P30": "f",
+			"P33": "h",
+			"P35": "l",
+			"P31": "g",
+			"P37": "m",
+			"P38": "n",
+			"P40": "o",
+			"P42": "p",
+			"P43": "r",
+			"P44": "s",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"
+		}
+	},
+	
+	"P93": {
+		"_": "Sachbegriff – Bevorzugte Benennung",
+		"field": "041A",
+		"subfield": "mo",
+		"qualifiers": {
+			"P20": "a",			
+			"P31": "g",
+			"P49": "x",
+			"P47": "v",
+		}
+	},
+	
+	"P99": {
+		"_": "Sachbegriff – Abweichende Benennung",
+		"field": "041@",
+		"subfield": "mo",
+		"qualifiers": {
+			"P20": "a",			
+			"P31": "g",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"
+		}
+	},
+	
+	"P94": {
+		"_": "Geografikum – Bevorzugter Name",
+		"field": "065A",
+		"subfield": "mo",
+		"qualifiers": {
+			"P20": "a",
+			"P31": "g",
+			"P49": "x",
+			"P47": "v",
+			"P52": "z",
+		}
+	},
+	
+	"P98": {
+		"_": "Geografikum – Abweichender Name",
+		"field": "065@",
+		"subfield": "mo",
+		"qualifiers": {
+			"P20": "a",
+			"P31": "g",
+			"P49": "x",
+			"P47": "v",
+			"P52": "z",
+		}
+	},
+	
+	"P349": {
+		"_": "Markierung für das Match-und-Merge-Verfahren",
+		"field": "038L",
+		"qualifiers": {
+			"P345": "a",
+			"P346": "b",
+			"P347": "c",
+			"P348": "x",
+			"P19": "9",
+		}
+	},
+	
+	"P351": {
+		"_": "Zu verknüpfende Schlagwörter in Hinweissätzen",
+		"field": "041O",
+		"qualifiers": {
+			"P350": "a",
+			"P47": "v",
+			"P19": "9",
+		}
+	},
+	
+	
+	"P68": {
+		"_": "Inhaltstyp",
+		"field": "032L",
 		},
 		"qualifiers": {
-			"P29": "a",
-			"P21": "d",
-			"P27": "c",
-			"P41": "P",
-			"P47": "v"
+		"P302": "b",
+			"valueMap": {
+			"prm": "Q1361",
+			"ntv": "Q1362",
+			"cod": "Q1363",
+			"cop": "Q1364",
+			"tdf": "Q1365",
+			"tdm": "Q1366",
+			"snd": "Q1367",
+			"spw": "Q1368",
+			"crf": "Q1369",
+			"crn": "Q1370",
+			"crd": "Q1371",
+			"crm": "Q1372",
+			"cri": "Q1373",
+			"crt": "Q1374",
+			"ntm": "Q1375",
+			"tcn": "Q1376", 
+			"tcf": "Q1377",
+			"tcm": "Q1378",
+			"tct": "Q1379",
+			"tci": "Q1380",
+			"txt": "Q1381",
+			"sti": "Q1382",
+			"tdi": "Q1383",
+			"xxx": "Q1384",
+			"zzz": "Q1385"
 		}
 	},
-
-	"P154": [
-		{
+		
+		
+	"P154": {
 			"_": "Früherer Name",
 			"field": "028@",
-			"subfield": {
-			},
-			"condition": {
+			"subfield": "mo",
+				"condition": {
 				"subfield": "4",
 				"equalTo": "nafr"
-			}
+				}
+			"qualifiers": {
+			"P47": "v",
 		},
 		{
 			"field": "029@",
-			"subfield": {
-			},
+			"subfield": "mo",
 			"condition": {
 				"subfield": "4",
 				"equalTo": "nafr"
 			}
+			"qualifiers": {
+			"P47": "v",
+		},
+		{
+			"field": "030@",
+			"subfield": "mo",
+			"condition": {
+				"subfield": "4",
+				"equalTo": "nafr"
+			}
+			"qualifiers": {
+			"P47": "v",
+		},
+		{
+			"field": "065@",
+			"subfield": "mo",
+			"condition": {
+				"subfield": "4",
+				"equalTo": "nafr"
+			}
+			"qualifiers": {
+			"P47": "v",
+		},
+		{
+			"field": "022@",
+			"subfield": "mo",
+			"condition": {
+				"subfield": "4",
+				"equalTo": "nafr"
+			}
+			"qualifiers": {
+			"P47": "v",
 		}
-	]
+		
 
-}
+	"P157": {
+		"_": "Späterer Name",
+		"field": "028@",
+		"subfield": "mo",
+			"qualifiers": {
+			"P21": "a",
+			"P29": "d",
+			"P27": "c",
+			"P39": "n",
+			"P34": "l",
+			"P31": "g",
+			"P41": "P",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "nasp"
+	}
+	},
+		
+	"P55": {
+		"_": "Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": " "
+	}
+	},
+		
+		
+	"P180": {
+		"_": "Architekt Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "arch"
+		}
+	},
+	"P180": {
+		"_": "Architekt Beziehung: Körperschaft",
+		"field": "029R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "arch"
+		}
+	},
+	
+	"P180": {
+		"_": "Architekt Beziehung: Geografikum",
+		"field": "065R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "arch"
+		}
+	},
+	
+	"P128": {
+		"_": " erste Verfasserschaft Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "aut1"
+		}
+	},
+	
+	"P276": {
+		"_": " Relation (allgemein) Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "rela"
+		}
+	},
+	
+	"P276": {
+		"_": " Relation (allgemein) Beziehung: Körperschaft",
+		"field": "029R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "rela"
+		}
+	},
+	
+	"P276": {
+		"_": " Relation (allgemein) Beziehung: Konferenz",
+		"field": "030R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "rela"
+		}
+	},
+	
+	"P276": {
+		"_": " Relation (allgemein) Beziehung: Werk",
+		"field": "022R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "rela"
+		}
+	},
+	
+	"P276": {
+		"_": " Relation (allgemein) Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "rela"
+		}
+	},
+	
+	"P276": {
+		"_": " Relation (allgemein) Beziehung: Geografikum",
+		"field": "065R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "rela"
+		}
+	},
+	
+	"P151": {
+		"_": " Geburtsort Beziehung: Geografikum",
+		"field": "065R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "ortg"
+		}
+	},
+	
+	"P152": {
+		"_": "Sterbeort Beziehung: Geografikum",
+		"field": "065R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "orts"
+		}
+	},
+	
+	"P279": {
+		"_": "Lebensdaten Beziehung: Zeit",
+		"field": "060R",
+			"qualifiers": {
+			"P75": "a"
+			"P76": "b"
+			"P77": "c"
+			"P78": "d"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "datl"
+		}
+	},
+	
+	"P166": {
+		"_": "Lebensdaten Beziehung: Zeit",
+		"field": "060R",
+			"qualifiers": {
+			"P75": "a"
+			"P76": "b"
+			"P77": "c"
+			"P78": "d"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "datx"
+		}
+	},
+	
+	"P277": {
+		"_": "Bestehen Beziehung: Zeit",
+		"field": "060R",
+			"qualifiers": {
+			"P75": "a"
+			"P76": "b"
+			"P77": "c"
+			"P78": "d"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "datb"
+		}
+	},
+	
+	"P194": {
+		"_": "charakteristischer Beruf Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "berc"
+		}
+	},
+	
+	"P195": {
+		"_": "Beruf Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "beru"
+		}
+	},
+
+	"P156": {
+		"_": "Affiliation Beziehung: Körperschaft",
+		"field": "029R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "affi"
+		}
+	},
+
+	"P153": {
+		"_": "Wirkungsort Beziehung: Geografikum",
+		"field": "065R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "ortw"
+		}
+	},
+
+"P198": {
+		"_": "Beziehung allgemein Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P21": "a",
+			"P29": "d",
+			"P27": "c",
+			"P39": "n",
+			"P34": "l",
+			"P31": "g",
+			"P41": "P",
+			"P49": "x",
+			"P47": "v",
+			"P19": "9"
+						
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "beza"
+		}
+	},		
+	
+	
+		"P183": {
+		"_": "Oberbegriff instantiell Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "obin"
+		}
+	},
+	
+	"P275": {
+		"_": "verwandter Begriff Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "vbal"
+		}
+	},
+	
+	"P275": {
+		"_": "verwandter Begriff Beziehung: Person",
+		"field": "028R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "vbal"
+		}
+	},
+	
+		"P160": {
+		"_": "verwandter Begriff Beziehung: Sachbegriff",
+		"field": "041R",
+		"subfield": "mo",
+			"qualifiers": {
+			"P19": "9"
+			"P47": "v",					
+		}
+		"condition": {
+				"subfield": "4",
+				"equalTo": "obal"
+		}
+	},
+	
+	"P80": {
+		"_": "Redaktionelle Bemerkung",
+		"field": "050C",
+						
+		},
+		"qualifiers": {
+			"P305": "a",
+			"P18": "5",
+		}
+		
+	"P81": {
+		"_": "Quellenangaben",
+		"field": "050E",
+						
+		},
+		"qualifiers": {
+			"P304": "a",
+			"P82": "b",
+			"P57": "u",
+		}
+		
+	"P358": {
+		"_": "Titelangaben",
+		"field": "046G",
+						
+		},
+		"qualifiers": {
+			"P24": "a",
+			"P356": "b",
+			"P30": "f",
+			"P357": "w",
+			"P150": "0",
+		}
+	
+	"P83": {
+		"_": "Negativ eingesehene Quelle",
+		"field": "050F",
+		"subfield": "a",
+		}
+	},
+	
+	"P84": {
+		"_": "Definition",
+		"field": "050H",
+						
+		},
+		"qualifiers": {
+			"P306": "a",
+			"P57": "u",
+			"P47": "v",
+			"P18": "5",
+		}
+	
+	"P85": {
+		"_": "Biografische, historische Angaben",
+		"field": "050G",
+						
+		},
+		"qualifiers": {
+			"P307": "a",
+			"P82": "b",
+			"P57": "u",
+		}
+		
+	"P86": {
+		"_": "Benutzungshinweise",
+		"field": "050D",
+		"subfield": "a",
+		}
+
+	"P103": {
+		"_": "Sachbegriff – Bevorzugte Benennung anderer Datenbestand",
+		"field": "041P",
+		"subfield": "mo",
+		"qualifiers": {
+			"P20": "a",			
+			"P31": "g",
+			"P57": "u",
+			"P49": "x",
+			"P47": "v",
+			"P36": "L",
+			"P45": "T",
+			"P46": "U"
+			"P100": "S",
+			"P150": "0"
+			"P102": "2"
+			"P18": "5"
+		}
+	},
+	
+	"P360": {
+		"_": "Interne Identifikationsnummer PPN",
+		"field": "003@",
+		},
+		"qualifiers": {
+			"P359": "0",
+		}
+		
+	"P364": {
+		"_": "Mailbox",
+		"field": "047A/01",
+		},
+		"qualifiers": {
+			"P363": "a",
+			"P362": "b",
+			"P361": "z",
+		}
+		
+	"P367": {
+		"_": "Katalogisierende Institution",
+		"field": "047A/03",
+		},
+		"qualifiers": {
+			"P365": "e",
+			"P366": "r",
+		}
+	"P375": {
+		"_": "Alte Ansetzungsform",
+		"field": "047C",
+		},
+		"qualifiers": {
+			"P374": "a",
+			"P373": "i",
+			"P372": "S",
+			"P150": "0",
+		}
+	},
