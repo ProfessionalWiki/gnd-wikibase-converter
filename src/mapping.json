@@ -1,11 +1,47 @@
 {
 	"P110": {
 		"_": "Schema",
-		"field": "007K",
-		"subfield": "0"
+		"field": "002@",
+		"subfield": "0",
+		"position": 1,
 		"valueMap": {
-			"?": "Q14",
+			"T": "Q14",
+	},
 		
+	"Labels": {
+		"_": "Label Person - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "028A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Köperschaft - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "029A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Konferenz - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "030A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Werk - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "022A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Sachbegriff - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "041A",
+		"subfield": "mo",
+	},
+		
+	"Labels": {
+		"_": "Label Geografikum - Bevorzugter Name, noch ohne Language Attribut",
+		"field": "065A",
+		"subfield": "mo",
 	},
 	
 	"P325": {
