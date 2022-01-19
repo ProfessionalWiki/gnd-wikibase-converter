@@ -177,25 +177,14 @@
 		}
 	},
 		
+		
 	"P101": {
 		"_": "GND-Nummer",
 		"field": "007K",
-		"subfield": "0",
-		"condition": {
-			"subfield": "a",
-			"equalTo": "gnd"
-		"_comment": "so würde wenn 007K $a = gnd, dann P101 mit 007K $0 besetzt'"
-		}
-	},
-	
-	"P101": {
-		"_": "GND-Nummer",
-		"field": "007K",
-		},
 		"qualifiers": {
 			"P299": "a",
-			"P47": "v",
 			"P150": "0"
+			"P47": "v",
 		}
 	},
 
