@@ -5,257 +5,235 @@
 		"subfield": "0",
 		"position": 1,
 		"valueMap": {
-			"T": "Q14",
-	},
-		
-	"Labels": {
-		"_": "Label Person - Bevorzugter Name, noch ohne Language Attribut",
-		"field": "028A",
-		"subfield": "mo",
-	},
-		
-	"Labels": {
-		"_": "Label Köperschaft - Bevorzugter Name, noch ohne Language Attribut",
-		"field": "029A",
-		"subfield": "mo",
-	},
-		
-	"Labels": {
-		"_": "Label Konferenz - Bevorzugter Name, noch ohne Language Attribut",
-		"field": "030A",
-		"subfield": "mo",
-	},
-		
-	"Labels": {
-		"_": "Label Werk - Bevorzugter Name, noch ohne Language Attribut",
-		"field": "022A",
-		"subfield": "mo",
-	},
-		
-	"Labels": {
-		"_": "Label Sachbegriff - Bevorzugter Name, noch ohne Language Attribut",
-		"field": "041A",
-		"subfield": "mo",
-	},
-		
-	"Labels": {
-		"_": "Label Geografikum - Bevorzugter Name, noch ohne Language Attribut",
-		"field": "065A",
-		"subfield": "mo",
-	},
-	
-	"P325": {
-		"_": "Quelle und Datum der Ersterfassung",
-		"field": "001A",
-		"subfield": "0"
-	},
-	
-	"P326": {
-		"_": "Quelle und Datum der letzten Änderung",
-		"field": "001B",
-		"subfield": "0"
-	},
-	
-	"P327": {
-		"_": "Quelle und Datum der letzten Statusvergabe",
-		"field": "001D",
-		"subfield": "0"
-	},
-	
-	"P74": {
-		"_": "Satzart Position 1: Haupttyp des DatensatzesEntitätentyp",
-		"field": "002@",
-		"subfield": "0",
-		"position": 1,
-		"valueMap": {
-			"T": "Q1348",
-		}
-	},
-	
-	"P61": {
-		"_": "Satzart Position 2: Entitätentyp",
-		"field": "002@",
-		"subfield": "0",
-		"position": 2,
-		"valueMap": {
-			"b": "Q151",
-			"f": "Q152",
-			"g": "Q153",
-			"p": "Q17",
-			"s": "Q154",
-			"u": "Q155"
-		}
-	},
-
-	"P62": {
-		"_": "Satzart Position 3: Katalogisierungslevel",
-		"field": "002@",
-		"subfield": "0",
-		"position": 3,
-		"valueMap": {
-			"1": "Q250",
-			"2": "Q251",
-			"3": "Q252",
-			"4": "Q253",
-			"5": "Q254",
-			"6": "Q255",
-			"7": "Q256",
-			"z": "Q257"
-		}
-	},
-	
-	"P295": {
-		"_": "GND-URI",
-		"field": "003U",
-				},
-		"qualifiers": {
-		"P66": "a"		
-		"P47": "v",
-	},
-		
-	"P63": {
-		"_": "Entitätencodierung",
-		"field": "004B",
-		"subfield": "a"
-		"valueMap": {
-			"gib": "Q156",
-			"gif": "Q157",
-			"gik": "Q212",
-			"gil": "Q159",
-			"gin": "Q160",
-			"gio": "Q213",
-			"gir": "Q162",
-			"giv": "Q163",
-			"giw": "Q214",
-			"gix": "Q215",
-			"giz": "Q166",
-			"gxz": "Q216",
-			"kif": "Q168",
-			"kim": "Q169",
-			"kio": "Q217",
-			"kip": "Q218",
-			"kiv": "Q172",
-			"kiz": "Q219",
-			"kxz": "Q220",
-			"pif": "Q221",
-			"pik": "Q222",
-			"pip": "Q223",
-			"pis": "Q224",
-			"piz": "Q225",
-			"pxg": "Q226",
-			"pxl": "Q227",
-			"pxs": "Q228",
-			"sab": "Q183",
-			"sad": "Q184",
-			"saf": "Q185",
-			"sag": "Q186",
-			"sam": "Q187",
-			"saz": "Q229",
-			"sie": "Q230",
-			"sif": "Q231",
-			"sih": "Q232",
-			"sip": "Q192",
-			"sis": "Q233",
-			"siu": "Q234",
-			"siw": "Q235",
-			"siz": "Q236",
-			"slz": "Q237",
-			"snz": "Q238",
-			"sxz": "Q239",
-			"szz": "Q240",
-			"uiz": "Q201",
-			"vie": "Q241",
-			"vif": "Q242",
-			"wid": "Q243",
-			"wie": "Q244",
-			"wif": "Q206",
-			"wim": "Q245",
-			"win": "Q246",
-			"wip": "Q247",
-			"wis": "Q248",
-			"wit": "Q249"
-		}
-	},
-		
-		
-	"P101": {
-		"_": "GND-Nummer",
-		"field": "007K",
-		"qualifiers": {
-			"P299": "a",
-			"P150": "0"
-			"P47": "v",
-		}
-	},
-
-	"P245": {
-		"_": "Alte Normnummer",
-		"field": "007N",
-		"qualifiers": {
-			"P299": "a",
-			"P47": "v",
-			"P150": "0"
-		}
-	},
-	
-	"P344": {
-		"_": "Katalogisierungsquelle",
-		"field": "010E",
-		"qualifiers": {
-			"P341": "b",
-			"P342": "e",
-			"P343": "f"
-		}
-	},
-	
-	"P336": {
-		"_": "Ländercode",
-		"field": "042B",
-		"subfield": "a"
-	},
-	
-	"P340": {
-		"_": "GND-Systematik",
-		"field": "042A",
-		"qualifiers": {
-			"P64": "a",
-	},
-	
-	"P65": {
-		"_": "DDC-Notation",
-		"field": "037G",
+			"T": "Q14"
+		},
+		"Labels": {
+			"_": "Label Person - Bevorzugter Name, noch ohne Language Attribut",
+			"field": "028A",
+			"subfield": "mo"
+		},
+		"Labels": {
+			"_": "Label Köperschaft - Bevorzugter Name, noch ohne Language Attribut",
+			"field": "029A",
+			"subfield": "mo"
+		},
+		"Labels": {
+			"_": "Label Konferenz - Bevorzugter Name, noch ohne Language Attribut",
+			"field": "030A",
+			"subfield": "mo"
+		},
+		"Labels": {
+			"_": "Label Werk - Bevorzugter Name, noch ohne Language Attribut",
+			"field": "022A",
+			"subfield": "mo"
+		},
+		"Labels": {
+			"_": "Label Sachbegriff - Bevorzugter Name, noch ohne Language Attribut",
+			"field": "041A",
+			"subfield": "mo"
+		},
+		"Labels": {
+			"_": "Label Geografikum - Bevorzugter Name, noch ohne Language Attribut",
+			"field": "065A",
+			"subfield": "mo"
+		},
+		"P325": {
+			"_": "Quelle und Datum der Ersterfassung",
+			"field": "001A",
+			"subfield": "0"
+		},
+		"P326": {
+			"_": "Quelle und Datum der letzten Änderung",
+			"field": "001B",
+			"subfield": "0"
+		},
+		"P327": {
+			"_": "Quelle und Datum der letzten Statusvergabe",
+			"field": "001D",
+			"subfield": "0"
+		},
+		"P74": {
+			"_": "Satzart Position 1: Haupttyp des DatensatzesEntitätentyp",
+			"field": "002@",
+			"subfield": "0",
+			"position": 1,
+			"valueMap": {
+				"T": "Q1348"
+			}
+		},
+		"P61": {
+			"_": "Satzart Position 2: Entitätentyp",
+			"field": "002@",
+			"subfield": "0",
+			"position": 2,
+			"valueMap": {
+				"b": "Q151",
+				"f": "Q152",
+				"g": "Q153",
+				"p": "Q17",
+				"s": "Q154",
+				"u": "Q155"
+			}
+		},
+		"P62": {
+			"_": "Satzart Position 3: Katalogisierungslevel",
+			"field": "002@",
+			"subfield": "0",
+			"position": 3,
+			"valueMap": {
+				"1": "Q250",
+				"2": "Q251",
+				"3": "Q252",
+				"4": "Q253",
+				"5": "Q254",
+				"6": "Q255",
+				"7": "Q256",
+				"z": "Q257"
+			}
+		},
+		"P295": {
+			"_": "GND-URI",
+			"field": "003U",
+			"P66": "a",
+			"P47": "v"
+		},
+		"P63": {
+			"_": "Entitätencodierung",
+			"field": "004B",
+			"subfield": "a",
+			"valueMap": {
+				"gib": "Q156",
+				"gif": "Q157",
+				"gik": "Q212",
+				"gil": "Q159",
+				"gin": "Q160",
+				"gio": "Q213",
+				"gir": "Q162",
+				"giv": "Q163",
+				"giw": "Q214",
+				"gix": "Q215",
+				"giz": "Q166",
+				"gxz": "Q216",
+				"kif": "Q168",
+				"kim": "Q169",
+				"kio": "Q217",
+				"kip": "Q218",
+				"kiv": "Q172",
+				"kiz": "Q219",
+				"kxz": "Q220",
+				"pif": "Q221",
+				"pik": "Q222",
+				"pip": "Q223",
+				"pis": "Q224",
+				"piz": "Q225",
+				"pxg": "Q226",
+				"pxl": "Q227",
+				"pxs": "Q228",
+				"sab": "Q183",
+				"sad": "Q184",
+				"saf": "Q185",
+				"sag": "Q186",
+				"sam": "Q187",
+				"saz": "Q229",
+				"sie": "Q230",
+				"sif": "Q231",
+				"sih": "Q232",
+				"sip": "Q192",
+				"sis": "Q233",
+				"siu": "Q234",
+				"siw": "Q235",
+				"siz": "Q236",
+				"slz": "Q237",
+				"snz": "Q238",
+				"sxz": "Q239",
+				"szz": "Q240",
+				"uiz": "Q201",
+				"vie": "Q241",
+				"vif": "Q242",
+				"wid": "Q243",
+				"wie": "Q244",
+				"wif": "Q206",
+				"wim": "Q245",
+				"win": "Q246",
+				"wip": "Q247",
+				"wis": "Q248",
+				"wit": "Q249"
+			}
+		},
+		"P101": {
+			"_": "GND-Nummer",
+			"field": "007K",
+			"qualifiers": {
+				"P299": "a",
+				"P150": "0",
+				"P47": "v"
+			}
+		},
+		"P245": {
+			"_": "Alte Normnummer",
+			"field": "007N",
+			"qualifiers": {
+				"P299": "a",
+				"P47": "v",
+				"P150": "0"
+			}
+		},
+		"P344": {
+			"_": "Katalogisierungsquelle",
+			"field": "010E",
+			"qualifiers": {
+				"P341": "b",
+				"P342": "e",
+				"P343": "f"
+			}
+		},
+		"P336": {
+			"_": "Ländercode",
+			"field": "042B",
+			"subfield": "a"
+		},
+		"P340": {
+			"_": "GND-Systematik",
+			"field": "042A",
+			"qualifiers": {
+				"P64": "a"
+			}
+		},
+		"P65": {
+			"_": "DDC-Notation",
+			"field": "037G"
 		},
 		"qualifiers": {
 			"P294": "c",
 			"P296": "d",
-				"valueMap": {
+			"valueMap": {
 				"1": "Q1351",
 				"2": "Q1350",
 				"3": "Q12",
 				"4": "Q1349"
-				}
+			},
 			"P297": "t",
 			"P298": "g",
 			"P47": "v"
-		},
-		
+		}
+	},
 	"P339": {
 		"_": "veraltete DDC-Notation",
 		"field": "037I",
-		},
 		"qualifiers": {
 			"P294": "c",
 			"P296": "d",
-				"valueMap": {
-				"1": "Q1351",
-				"2": "Q1350",
-				"3": "Q12",
-				"4": "Q1349"
-				}
 			"P297": "t",
 			"P298": "g",
 			"P47": "v"
 		},
+		"valueMap": {
+			"1": "Q1351",
+			"2": "Q1350",
+			"3": "Q12",
+			"4": "Q1349"
+		}
+	},
 	
 	"P301": {
 		"_": "Änderungscodierung",
@@ -314,13 +292,12 @@
 	"P332": {
 		"_": "SWD-Nr. im GKD-Satz",
 		"field": "007W",
-		"subfield": "0",
+		"subfield": "0"
 		},
 	
 	"P171": {
 		"_": "Sonstige Standardnummer",
-		"field": "006Y",
-		},
+		"field": "006Y"
 		"qualifiers": {
 			"P47": "v",
 			"P172": "S",
@@ -331,7 +308,7 @@
 	"P333": {
 		"_": "GKD-Nr. im SWD-Satz",
 		"field": "007R",
-		"subfield": "0",
+		"subfield": "0"
 		},
 	
 	"P133": {
@@ -357,7 +334,7 @@
 			"P100": "S",
 			"P150": "0",
 			"P102": "2",
-			"P148": "3",
+			"P148": "3"
 		}
 	},
 	
@@ -377,7 +354,7 @@
 	"P309": {
 		"_": "Sprachencode",
 		"field": "042C",
-		"subfield": "a",
+		"subfield": "a"
 		
 	},
 	
@@ -386,7 +363,7 @@
 		"field": "032W",
 		"qualifiers": {
 			"P20": "a",
-			"P19": "9",
+			"P19": "9"
 		}
 	},
 	
@@ -401,7 +378,7 @@
 			"P314": "s",
 			"P315": "t",
 			"P47": "v",
-			"P19": "9",
+			"P19": "9"
 		}
 	},
 
@@ -411,14 +388,14 @@
 		"qualifiers": {
 			"P317": "a",
 			"P318": "b",
-			"P319": "c",
+			"P319": "c"
 		}
 	},
 
 	"P322": {
 		"_": "Tonart",
 		"field": "032Z",
-		"subfield": "a",
+		"subfield": "a"
 	},
 
 	"P58": {
@@ -434,7 +411,7 @@
 			"P31": "g",
 			"P41": "P",
 			"P49": "x",
-			"P47": "v",
+			"P47": "v"
 		}
 	},
 	
@@ -475,7 +452,7 @@
 			"P31": "g",
 			"P39": "n",
 			"P49": "x",
-			"P47": "v",
+			"P47": "v"
 		}
 	},
 
@@ -508,7 +485,7 @@
 			"P31": "g",
 			"P39": "n",
 			"P49": "x",
-			"P47": "v",
+			"P47": "v"
 		}
 	},
 	
@@ -548,7 +525,7 @@
 			"P43": "r",
 			"P44": "s",
 			"P49": "x",
-			"P47": "v",
+			"P47": "v"
 		}
 	},
 	
@@ -584,7 +561,7 @@
 			"P20": "a",			
 			"P31": "g",
 			"P49": "x",
-			"P47": "v",
+			"P47": "v"
 		}
 	},
 	
@@ -612,7 +589,7 @@
 			"P31": "g",
 			"P49": "x",
 			"P47": "v",
-			"P52": "z",
+			"P52": "z"
 		}
 	},
 	
@@ -625,7 +602,7 @@
 			"P31": "g",
 			"P49": "x",
 			"P47": "v",
-			"P52": "z",
+			"P52": "z"
 		}
 	},
 	
@@ -637,7 +614,7 @@
 			"P346": "b",
 			"P347": "c",
 			"P348": "x",
-			"P19": "9",
+			"P19": "9"
 		}
 	},
 	
@@ -647,14 +624,14 @@
 		"qualifiers": {
 			"P350": "a",
 			"P47": "v",
-			"P19": "9",
+			"P19": "9"
 		}
 	},
 	
 	
 	"P68": {
 		"_": "Inhaltstyp",
-		"field": "032L",
+		"field": "032L"
 		},
 		"qualifiers": {
 		"P302": "b",
@@ -697,7 +674,7 @@
 				"equalTo": "nafr"
 				}
 			"qualifiers": {
-			"P47": "v",
+			"P47": "v"
 		},
 		{
 			"field": "029@",
@@ -707,7 +684,7 @@
 				"equalTo": "nafr"
 			}
 			"qualifiers": {
-			"P47": "v",
+			"P47": "v"
 		},
 		{
 			"field": "030@",
@@ -717,7 +694,7 @@
 				"equalTo": "nafr"
 			}
 			"qualifiers": {
-			"P47": "v",
+			"P47": "v"
 		},
 		{
 			"field": "065@",
@@ -727,7 +704,7 @@
 				"equalTo": "nafr"
 			}
 			"qualifiers": {
-			"P47": "v",
+			"P47": "v"
 		},
 		{
 			"field": "022@",
@@ -737,7 +714,7 @@
 				"equalTo": "nafr"
 			}
 			"qualifiers": {
-			"P47": "v",
+			"P47": "v"
 		}
 		
 
@@ -771,7 +748,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -786,7 +763,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -799,7 +776,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -813,7 +790,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -827,7 +804,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -841,7 +818,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -855,7 +832,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -869,7 +846,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -883,7 +860,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -897,7 +874,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -911,7 +888,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -925,7 +902,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -939,7 +916,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -955,7 +932,7 @@
 			"P76": "b"
 			"P77": "c"
 			"P78": "d"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -971,7 +948,7 @@
 			"P76": "b"
 			"P77": "c"
 			"P78": "d"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -987,7 +964,7 @@
 			"P76": "b"
 			"P77": "c"
 			"P78": "d"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1001,7 +978,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1015,7 +992,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1029,7 +1006,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1043,7 +1020,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1081,7 +1058,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1095,7 +1072,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1109,7 +1086,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1123,7 +1100,7 @@
 		"subfield": "mo",
 			"qualifiers": {
 			"P19": "9"
-			"P47": "v",					
+			"P47": "v"
 		}
 		"condition": {
 				"subfield": "4",
@@ -1133,28 +1110,28 @@
 	
 	"P80": {
 		"_": "Redaktionelle Bemerkung",
-		"field": "050C",
+		"field": "050C"
 						
 		},
 		"qualifiers": {
 			"P305": "a",
-			"P18": "5",
+			"P18": "5"
 		}
 		
 	"P81": {
 		"_": "Quellenangaben",
-		"field": "050E",
+		"field": "050E"
 						
 		},
 		"qualifiers": {
 			"P304": "a",
 			"P82": "b",
-			"P57": "u",
+			"P57": "u"
 		}
 		
 	"P358": {
 		"_": "Titelangaben",
-		"field": "046G",
+		"field": "046G"
 						
 		},
 		"qualifiers": {
@@ -1162,13 +1139,13 @@
 			"P356": "b",
 			"P30": "f",
 			"P357": "w",
-			"P150": "0",
+			"P150": "0"
 		}
 	
 	"P83": {
 		"_": "Negativ eingesehene Quelle",
 		"field": "050F",
-		"subfield": "a",
+		"subfield": "a"
 		}
 	},
 	
