@@ -1,43 +1,4 @@
 {
-  "P110": {
-    "_": "Schema",
-    "field": "002@",
-    "subfield": "0",
-    "position": 1,
-    "valueMap": {
-      "T": "Q14"
-    }
-  },
-  "Labels": {
-    "_": "Label Person - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "028A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Köperschaft - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "029A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Konferenz - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "030A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Werk - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "022A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Sachbegriff - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "041A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Geografikum - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "065A",
-    "subfield": "mo"
-  },
   "P325": {
     "_": "Quelle und Datum der Ersterfassung",
     "field": "001A",
@@ -48,10 +9,14 @@
     "field": "001B",
     "subfield": "0"
   },
-  "P327": {
-    "_": "Quelle und Datum der letzten Statusvergabe",
-    "field": "001D",
-    "subfield": "0"
+  "P53": {
+    "_": "Satzart",
+    "field": "002@",
+    "subfield": "0",
+    "position": 1,
+    "valueMap": {
+      "T": "Q14"
+    }
   },
   "P74": {
     "_": "Satzart Position 1: Haupttyp des DatensatzesEntitätentyp",
@@ -91,6 +56,41 @@
       "7": "Q256",
       "z": "Q257"
     }
+  },
+  "Labels": {
+    "_": "Label Person - Bevorzugter Name, noch ohne Language Attribut",
+    "field": "028A",
+    "subfield": "mo"
+  },
+  "Labels": {
+    "_": "Label Köperschaft - Bevorzugter Name, noch ohne Language Attribut",
+    "field": "029A",
+    "subfield": "mo"
+  },
+  "Labels": {
+    "_": "Label Konferenz - Bevorzugter Name, noch ohne Language Attribut",
+    "field": "030A",
+    "subfield": "mo"
+  },
+  "Labels": {
+    "_": "Label Werk - Bevorzugter Name, noch ohne Language Attribut",
+    "field": "022A",
+    "subfield": "mo"
+  },
+  "Labels": {
+    "_": "Label Sachbegriff - Bevorzugter Name, noch ohne Language Attribut",
+    "field": "041A",
+    "subfield": "mo"
+  },
+  "Labels": {
+    "_": "Label Geografikum - Bevorzugter Name, noch ohne Language Attribut",
+    "field": "065A",
+    "subfield": "mo"
+  },
+  "P327": {
+    "_": "Quelle und Datum der letzten Statusvergabe",
+    "field": "001D",
+    "subfield": "0"
   },
   "P295": {
     "_": "GND-URI",
@@ -401,35 +401,51 @@
     "field": "028A",
     "subfield": "mo",
     "qualifiers": {
+      "P41": "P",
       "P21": "a",
       "P29": "d",
       "P27": "c",
       "P39": "n",
       "P34": "l",
       "P31": "g",
-      "P41": "P",
       "P49": "x",
       "P47": "v"
     }
   },
-
   "P59": {
-    "_": "Person - Abweichender Name",
+    "_": "Person oder Familie - Abweichender Name",
     "field": "028@",
-    "subfield": "mo",
+    "subfield": {
+      "T": "$",
+      "U": "$",
+      "L": "$",
+			"P": "$",
+			"a": "$",
+			"d": ", $",
+			"c": " $",
+			"n": " $",
+			"l": ", $",
+			"g": ", $",
+      "x": "$",
+      "4": " $",
+      "5": "$",
+      "v": "$"
+		},
     "qualifiers": {
+      "P45": "T",
+      "P46": "U",
+      "P36": "L",
+      "P41": "P",
       "P21": "a",
       "P29": "d",
       "P27": "c",
       "P39": "n",
       "P34": "l",
       "P31": "g",
-      "P41": "P",
       "P49": "x",
-      "P47": "v",
-      "P36": "L",
-      "P45": "T",
-      "P46": "U"
+      "P169": "4",
+      "P18": "5",
+      "P47": "v"      
     },
     "condition": {
       "subfield": "4",
