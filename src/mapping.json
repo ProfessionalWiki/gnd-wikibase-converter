@@ -8,36 +8,6 @@
       "T": "Q14"
     }
   },
-  "Labels": {
-    "_": "Label Person - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "028A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Köperschaft - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "029A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Konferenz - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "030A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Werk - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "022A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Sachbegriff - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "041A",
-    "subfield": "mo"
-  },
-  "Labels": {
-    "_": "Label Geografikum - Bevorzugter Name, noch ohne Language Attribut",
-    "field": "065A",
-    "subfield": "mo"
-  },
   "P325": {
     "_": "Quelle und Datum der Ersterfassung",
     "field": "001A",
@@ -234,7 +204,6 @@
       "4": "Q1349"
     }
   },
-
   "P301": {
     "_": "Änderungscodierung",
     "field": "008@",
@@ -249,7 +218,6 @@
       "zu": "Q1353"
     }
   },
-
   "P108": {
     "_": "Teilbestandskennzeichen",
     "field": "008A",
@@ -271,7 +239,6 @@
       "z": "Q286"
     }
   },
-
   "P328": {
     "_": "Nutzungskennzeichen",
     "field": "008B",
@@ -288,13 +255,11 @@
       "z": "Q1394"
     }
   },
-
   "P332": {
     "_": "SWD-Nr. im GKD-Satz",
     "field": "007W",
     "subfield": "0"
   },
-
   "P171": {
     "_": "Sonstige Standardnummer",
     "field": "006Y",
@@ -304,13 +269,11 @@
       "P150": "0"
     }
   },
-
   "P333": {
     "_": "GKD-Nr. im SWD-Satz",
     "field": "007R",
     "subfield": "0"
   },
-
   "P133": {
     "_": "Geografische Koordinaten",
     "field": "037H",
@@ -337,7 +300,6 @@
       "P148": "3"
     }
   },
-
   "P300": {
     "_": "Geschlecht",
     "field": "032T",
@@ -348,14 +310,11 @@
       "n": "Q260"
     }
   },
-
   "P309": {
     "_": "Sprachencode",
     "field": "042C",
     "subfield": "a"
-
   },
-
   "P310": {
     "_": "Form des Werks",
     "field": "032W",
@@ -364,7 +323,6 @@
       "P19": "9"
     }
   },
-
   "P316": {
     "_": "Besetzung",
     "field": "032X",
@@ -379,7 +337,6 @@
       "P19": "9"
     }
   },
-
   "P320": {
     "_": "Numerische Kennzeichnung eines Musikwerks",
     "field": "032Y",
@@ -389,13 +346,11 @@
       "P319": "c"
     }
   },
-
   "P322": {
     "_": "Tonart",
     "field": "032Z",
     "subfield": "a"
   },
-
   "P58": {
     "_": "Person - Bevorzugter Name",
     "field": "028A",
@@ -412,7 +367,6 @@
       "P47": "v"
     }
   },
-
   "P59": {
     "_": "Person - Abweichender Name",
     "field": "028@",
@@ -436,7 +390,6 @@
       "equalTo": " "
     }
   },
-
   "P90": {
     "_": "Körperschaft – Bevorzugter Name",
     "field": "029A",
@@ -450,7 +403,6 @@
       "P47": "v"
     }
   },
-
   "P96": {
     "_": "Körperschaft – Abweichender Name",
     "field": "029@",
@@ -467,7 +419,6 @@
       "P46": "U"			
     }
   },
-
   "P87": {
     "_": "Konferenz – Bevorzugter Name",
     "field": "030A",
@@ -483,7 +434,6 @@
       "P47": "v"
     }
   },
-
   "P95": {
     "_": "Konferenz – Abweichender Name",
     "field": "030@",
@@ -502,7 +452,6 @@
       "P46": "U"
     }
   },
-
   "P91": {
     "_": "Werk – Bevorzugter Titel",
     "field": "022A",
@@ -523,7 +472,6 @@
       "P47": "v"
     }
   },
-
   "P97": {
     "_": "Werk – Abweichender Titel",
     "field": "022@",
@@ -547,7 +495,6 @@
       "P46": "U"
     }
   },
-
   "P93": {
     "_": "Sachbegriff – Bevorzugte Benennung",
     "field": "041A",
@@ -559,7 +506,6 @@
       "P47": "v"
     }
   },
-
   "P99": {
     "_": "Sachbegriff – Abweichende Benennung",
     "field": "041@",
@@ -574,7 +520,6 @@
       "P46": "U"
     }
   },
-
   "P94": {
     "_": "Geografikum – Bevorzugter Name",
     "field": "065A",
@@ -587,7 +532,6 @@
       "P52": "z"
     }
   },
-
   "P98": {
     "_": "Geografikum – Abweichender Name",
     "field": "065@",
@@ -600,7 +544,6 @@
       "P52": "z"
     }
   },
-
   "P349": {
     "_": "Markierung für das Match-und-Merge-Verfahren",
     "field": "038L",
@@ -612,7 +555,6 @@
       "P19": "9"
     }
   },
-
   "P351": {
     "_": "Zu verknüpfende Schlagwörter in Hinweissätzen",
     "field": "041O",
@@ -622,7 +564,6 @@
       "P19": "9"
     }
   },
-
   "P68": {
     "_": "Inhaltstyp",
     "field": "032L",
@@ -657,7 +598,6 @@
       }
     }
   },
-
   "P154": {
     "_": "Früherer Name",
     "field": "028@",
@@ -667,7 +607,6 @@
       "equalTo": "nafr"
     }
   },
-
   "P154": {
     "_": "Früherer Name",
     "field": "029@",
@@ -677,7 +616,6 @@
       "equalTo": "nafr"
     }
   },
-
   "P157": {
     "_": "Späterer Name",
     "field": "028@",
@@ -701,7 +639,6 @@
       "equalTo": "nasp"
     }
   },
-
   "P55": {
     "_": "Beziehung: Person",
     "field": "028R",
@@ -715,7 +652,6 @@
       "equalTo": " "
     }
   },
-
   "P180": {
     "_": "Architekt Beziehung: Person",
     "field": "028R",
@@ -742,7 +678,6 @@
       "equalTo": "arch"
     }
   },
-
   "P180": {
     "_": "Architekt Beziehung: Geografikum",
     "field": "065R",
@@ -756,7 +691,6 @@
       "equalTo": "arch"
     }
   },
-
   "P128": {
     "_": " erste Verfasserschaft Beziehung: Person",
     "field": "028R",
@@ -770,7 +704,6 @@
       "equalTo": "aut1"
     }
   },
-
   "P276": {
     "_": " Relation (allgemein) Beziehung: Person",
     "field": "028R",
@@ -784,7 +717,6 @@
       "equalTo": "rela"
     }
   },
-
   "P276": {
     "_": " Relation (allgemein) Beziehung: Körperschaft",
     "field": "029R",
@@ -798,7 +730,6 @@
       "equalTo": "rela"
     }
   },
-
   "P276": {
     "_": " Relation (allgemein) Beziehung: Konferenz",
     "field": "030R",
@@ -812,7 +743,6 @@
       "equalTo": "rela"
     }
   },
-
   "P276": {
     "_": " Relation (allgemein) Beziehung: Werk",
     "field": "022R",
@@ -826,7 +756,6 @@
       "equalTo": "rela"
     }
   },
-
   "P276": {
     "_": " Relation (allgemein) Beziehung: Sachbegriff",
     "field": "041R",
@@ -840,7 +769,6 @@
       "equalTo": "rela"
     }
   },
-
   "P276": {
     "_": " Relation (allgemein) Beziehung: Geografikum",
     "field": "065R",
@@ -854,7 +782,6 @@
       "equalTo": "rela"
     }
   },
-
   "P151": {
     "_": " Geburtsort Beziehung: Geografikum",
     "field": "065R",
@@ -868,7 +795,6 @@
       "equalTo": "ortg"
     }
   },
-
   "P152": {
     "_": "Sterbeort Beziehung: Geografikum",
     "field": "065R",
@@ -882,7 +808,6 @@
       "equalTo": "orts"
     }
   },
-
   "P279": {
     "_": "Lebensdaten Beziehung: Zeit",
     "field": "060R",
@@ -898,7 +823,6 @@
       "equalTo": "datl"
     }
   },
-
   "P166": {
     "_": "Lebensdaten Beziehung: Zeit",
     "field": "060R",
@@ -914,7 +838,6 @@
       "equalTo": "datx"
     }
   },
-
   "P277": {
     "_": "Bestehen Beziehung: Zeit",
     "field": "060R",
@@ -930,7 +853,6 @@
       "equalTo": "datb"
     }
   },
-
   "P194": {
     "_": "charakteristischer Beruf Beziehung: Sachbegriff",
     "field": "041R",
@@ -944,7 +866,6 @@
       "equalTo": "berc"
     }
   },
-
   "P195": {
     "_": "Beruf Beziehung: Sachbegriff",
     "field": "041R",
@@ -958,7 +879,6 @@
       "equalTo": "beru"
     }
   },
-
   "P156": {
     "_": "Affiliation Beziehung: Körperschaft",
     "field": "029R",
@@ -972,7 +892,6 @@
       "equalTo": "affi"
     }
   },
-
   "P153": {
     "_": "Wirkungsort Beziehung: Geografikum",
     "field": "065R",
@@ -986,7 +905,6 @@
       "equalTo": "ortw"
     }
   },
-
   "P198": {
     "_": "Beziehung allgemein Beziehung: Person",
     "field": "028R",
@@ -1008,7 +926,6 @@
       "equalTo": "beza"
     }
   },		
-
   "P183": {
     "_": "Oberbegriff instantiell Beziehung: Sachbegriff",
     "field": "041R",
@@ -1022,7 +939,6 @@
       "equalTo": "obin"
     }
   },
-
   "P275": {
     "_": "verwandter Begriff Beziehung: Sachbegriff",
     "field": "041R",
@@ -1036,7 +952,6 @@
       "equalTo": "vbal"
     }
   },
-
   "P275": {
     "_": "verwandter Begriff Beziehung: Person",
     "field": "028R",
@@ -1050,7 +965,6 @@
       "equalTo": "vbal"
     }
   },
-
   "P160": {
     "_": "verwandter Begriff Beziehung: Sachbegriff",
     "field": "041R",
@@ -1064,7 +978,6 @@
       "equalTo": "obal"
     }
   },
-
   "P80": {
     "_": "Redaktionelle Bemerkung",
     "field": "050C",
@@ -1073,7 +986,6 @@
       "P18": "5"
     }
   },
-
   "P81": {
     "_": "Quellenangaben",
     "field": "050E",
@@ -1083,7 +995,6 @@
       "P57": "u"
     }
   },
-
   "P358": {
     "_": "Titelangaben",
     "field": "046G",
@@ -1095,13 +1006,11 @@
       "P150": "0"
     }
   },
-
   "P83": {
     "_": "Negativ eingesehene Quelle",
     "field": "050F",
     "subfield": "a"
   },
-
   "P84": {
     "_": "Definition",
     "field": "050H",
@@ -1112,7 +1021,6 @@
       "P18": "5"
     }
   },
-
   "P85": {
     "_": "Biografische, historische Angaben",
     "field": "050G",
@@ -1122,13 +1030,11 @@
       "P57": "u"
     }
   },
-
   "P86": {
     "_": "Benutzungshinweise",
     "field": "050D",
     "subfield": "a"
   },
-
   "P103": {
     "_": "Sachbegriff – Bevorzugte Benennung anderer Datenbestand",
     "field": "041P",
@@ -1148,7 +1054,6 @@
       "P18": "5"
     }
   },
-
   "P360": {
     "_": "Interne Identifikationsnummer PPN",
     "field": "003@",
@@ -1157,7 +1062,6 @@
       "P359": "0"
     }
   },
-
   "P364": {
     "_": "Mailbox",
     "field": "047A/01",
@@ -1167,7 +1071,6 @@
       "P361": "z"
     }
   },
-
   "P367": {
     "_": "Katalogisierende Institution",
     "field": "047A/03",
