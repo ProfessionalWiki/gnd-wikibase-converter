@@ -370,7 +370,7 @@
   "P59": {
     "_": "Person - Abweichender Name",
     "field": "028@",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P21": "a",
       "P29": "d",
@@ -602,7 +602,7 @@
     {
       "_": "Früherer Name",
       "field": "028@",
-      "subfield": "mo",
+      "subfield": "4",
       "condition": {
         "subfield": "4",
         "equalTo": "nafr"
@@ -611,7 +611,7 @@
     {
       "_": "Früherer Name",
       "field": "029@",
-      "subfield": "mo",
+      "subfield": "4",
       "condition": {
         "subfield": "4",
         "equalTo": "nafr"
@@ -621,7 +621,7 @@
   "P157": {
     "_": "Späterer Name",
     "field": "028@",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P21": "a",
       "P29": "d",
@@ -644,7 +644,7 @@
   "P55": {
     "_": "Beziehung: Person",
     "field": "028R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -658,7 +658,7 @@
     {
       "_": "Architekt Beziehung: Person",
       "field": "028R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -671,7 +671,7 @@
     {
       "_": "Architekt Beziehung: Körperschaft",
       "field": "029R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -684,7 +684,7 @@
     {
       "_": "Architekt Beziehung: Geografikum",
       "field": "065R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -698,7 +698,7 @@
   "P128": {
     "_": " erste Verfasserschaft Beziehung: Person",
     "field": "028R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -712,7 +712,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Person",
       "field": "028R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -725,7 +725,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Körperschaft",
       "field": "029R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -738,7 +738,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Konferenz",
       "field": "030R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -751,7 +751,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Werk",
       "field": "022R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -764,7 +764,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Sachbegriff",
       "field": "041R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -777,7 +777,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Geografikum",
       "field": "065R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -791,7 +791,7 @@
   "P151": {
     "_": " Geburtsort Beziehung: Geografikum",
     "field": "065R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -804,7 +804,7 @@
   "P152": {
     "_": "Sterbeort Beziehung: Geografikum",
     "field": "065R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -817,6 +817,7 @@
   "P279": {
     "_": "Lebensdaten Beziehung: Zeit",
     "field": "060R",
+    "subfield": "4",
     "qualifiers": {
       "P75": "a",
       "P76": "b",
@@ -832,6 +833,7 @@
   "P166": {
     "_": "Lebensdaten Beziehung: Zeit",
     "field": "060R",
+    "subfield": "4",
     "qualifiers": {
       "P75": "a",
       "P76": "b",
@@ -847,6 +849,7 @@
   "P277": {
     "_": "Bestehen Beziehung: Zeit",
     "field": "060R",
+    "subfield": "4",
     "qualifiers": {
       "P75": "a",
       "P76": "b",
@@ -862,7 +865,7 @@
   "P194": {
     "_": "charakteristischer Beruf Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -875,7 +878,7 @@
   "P195": {
     "_": "Beruf Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -888,7 +891,7 @@
   "P156": {
     "_": "Affiliation Beziehung: Körperschaft",
     "field": "029R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -901,7 +904,7 @@
   "P153": {
     "_": "Wirkungsort Beziehung: Geografikum",
     "field": "065R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -914,7 +917,7 @@
   "P198": {
     "_": "Beziehung allgemein Beziehung: Person",
     "field": "028R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P21": "a",
       "P29": "d",
@@ -935,7 +938,7 @@
   "P183": {
     "_": "Oberbegriff instantiell Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -949,7 +952,7 @@
     {
       "_": "verwandter Begriff Beziehung: Sachbegriff",
       "field": "041R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -962,7 +965,7 @@
     {
       "_": "verwandter Begriff Beziehung: Person",
       "field": "028R",
-      "subfield": "mo",
+      "subfield": "4",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -976,7 +979,7 @@
   "P160": {
     "_": "verwandter Begriff Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "mo",
+    "subfield": "4",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
