@@ -134,6 +134,7 @@
   "P101": {
     "_": "GND-Nummer",
     "field": "007K",
+    "subfield": "a",
     "qualifiers": {
       "P299": "a",
       "P501": "0",
@@ -143,6 +144,7 @@
   "P245": {
     "_": "Alte Normnummer",
     "field": "007N",
+    "subfield": "a",
     "qualifiers": {
       "P299": "a",
       "P47": "v",
@@ -152,6 +154,7 @@
   "P344": {
     "_": "Katalogisierungsquelle",
     "field": "010E",
+    "subfield": "b",
     "qualifiers": {
       "P341": "b",
       "P342": "e",
@@ -166,6 +169,7 @@
   "P340": {
     "_": "GND-Systematik",
     "field": "042A",
+    "subfield": "a",
     "qualifiers": {
       "P64": "a"
     }
@@ -173,6 +177,7 @@
   "P65": {
     "_": "DDC-Notation",
     "field": "037G",
+    "subfield": "a",
     "qualifiers": {
       "P294": "c",
       "P296": "d",
@@ -190,6 +195,7 @@
   "P339": {
     "_": "veraltete DDC-Notation",
     "field": "037I",
+    "subfield": "c",
     "qualifiers": {
       "P294": "c",
       "P296": "d",
@@ -263,6 +269,7 @@
   "P171": {
     "_": "Sonstige Standardnummer",
     "field": "006Y",
+    "subfield": "v",
     "qualifiers": {
       "P47": "v",
       "P172": "S",
@@ -277,6 +284,7 @@
   "P133": {
     "_": "Geografische Koordinaten",
     "field": "037H",
+    "subfield": "d",
     "qualifiers": {
       "P134": "d",
       "P136": "e",
@@ -318,6 +326,7 @@
   "P310": {
     "_": "Form des Werks",
     "field": "032W",
+    "subfield": "a",
     "qualifiers": {
       "P20": "a",
       "P19": "9"
@@ -326,6 +335,7 @@
   "P316": {
     "_": "Besetzung",
     "field": "032X",
+    "subfield": "a",
     "qualifiers": {
       "P20": "a",
       "P311": "e",
@@ -340,6 +350,7 @@
   "P320": {
     "_": "Numerische Kennzeichnung eines Musikwerks",
     "field": "032Y",
+    "subfield": "a",
     "qualifiers": {
       "P317": "a",
       "P318": "b",
@@ -370,7 +381,7 @@
   "P59": {
     "_": "Person - Abweichender Name",
     "field": "028@",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P21": "a",
       "P29": "d",
@@ -547,6 +558,7 @@
   "P349": {
     "_": "Markierung für das Match-und-Merge-Verfahren",
     "field": "038L",
+    "subfield": "a",
     "qualifiers": {
       "P345": "a",
       "P346": "b",
@@ -558,6 +570,7 @@
   "P351": {
     "_": "Zu verknüpfende Schlagwörter in Hinweissätzen",
     "field": "041O",
+    "subfield": "a",
     "qualifiers": {
       "P350": "a",
       "P47": "v",
@@ -567,6 +580,7 @@
   "P68": {
     "_": "Inhaltstyp",
     "field": "032L",
+    "subfield": "b",
     "qualifiers": {
       "P302": "b",
       "valueMap": {
@@ -602,7 +616,7 @@
     {
       "_": "Früherer Name",
       "field": "028@",
-      "subfield": "4",
+      "subfield": "mo",
       "condition": {
         "subfield": "4",
         "equalTo": "nafr"
@@ -611,7 +625,7 @@
     {
       "_": "Früherer Name",
       "field": "029@",
-      "subfield": "4",
+      "subfield": "mo",
       "condition": {
         "subfield": "4",
         "equalTo": "nafr"
@@ -621,7 +635,7 @@
   "P157": {
     "_": "Späterer Name",
     "field": "028@",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P21": "a",
       "P29": "d",
@@ -644,7 +658,7 @@
   "P55": {
     "_": "Beziehung: Person",
     "field": "028R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -658,7 +672,7 @@
     {
       "_": "Architekt Beziehung: Person",
       "field": "028R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -671,7 +685,7 @@
     {
       "_": "Architekt Beziehung: Körperschaft",
       "field": "029R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -684,7 +698,7 @@
     {
       "_": "Architekt Beziehung: Geografikum",
       "field": "065R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -698,7 +712,7 @@
   "P128": {
     "_": " erste Verfasserschaft Beziehung: Person",
     "field": "028R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -712,7 +726,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Person",
       "field": "028R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -725,7 +739,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Körperschaft",
       "field": "029R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -738,7 +752,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Konferenz",
       "field": "030R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -751,7 +765,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Werk",
       "field": "022R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -764,7 +778,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Sachbegriff",
       "field": "041R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -777,7 +791,7 @@
     {
       "_": " Relation (allgemein) Beziehung: Geografikum",
       "field": "065R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -791,7 +805,7 @@
   "P151": {
     "_": " Geburtsort Beziehung: Geografikum",
     "field": "065R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -804,7 +818,7 @@
   "P152": {
     "_": "Sterbeort Beziehung: Geografikum",
     "field": "065R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -817,7 +831,7 @@
   "P279": {
     "_": "Lebensdaten Beziehung: Zeit",
     "field": "060R",
-    "subfield": "4",
+    "subfield": "a",
     "qualifiers": {
       "P75": "a",
       "P76": "b",
@@ -833,7 +847,7 @@
   "P166": {
     "_": "Lebensdaten Beziehung: Zeit",
     "field": "060R",
-    "subfield": "4",
+    "subfield": "a",
     "qualifiers": {
       "P75": "a",
       "P76": "b",
@@ -849,7 +863,7 @@
   "P277": {
     "_": "Bestehen Beziehung: Zeit",
     "field": "060R",
-    "subfield": "4",
+    "subfield": "a",
     "qualifiers": {
       "P75": "a",
       "P76": "b",
@@ -865,7 +879,7 @@
   "P194": {
     "_": "charakteristischer Beruf Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -878,7 +892,7 @@
   "P195": {
     "_": "Beruf Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -891,7 +905,7 @@
   "P156": {
     "_": "Affiliation Beziehung: Körperschaft",
     "field": "029R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -904,7 +918,7 @@
   "P153": {
     "_": "Wirkungsort Beziehung: Geografikum",
     "field": "065R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -917,7 +931,7 @@
   "P198": {
     "_": "Beziehung allgemein Beziehung: Person",
     "field": "028R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P21": "a",
       "P29": "d",
@@ -938,7 +952,7 @@
   "P183": {
     "_": "Oberbegriff instantiell Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -952,7 +966,7 @@
     {
       "_": "verwandter Begriff Beziehung: Sachbegriff",
       "field": "041R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -965,7 +979,7 @@
     {
       "_": "verwandter Begriff Beziehung: Person",
       "field": "028R",
-      "subfield": "4",
+      "subfield": "mo",
       "qualifiers": {
         "P19": "9",
         "P47": "v"
@@ -979,7 +993,7 @@
   "P160": {
     "_": "verwandter Begriff Beziehung: Sachbegriff",
     "field": "041R",
-    "subfield": "4",
+    "subfield": "mo",
     "qualifiers": {
       "P19": "9",
       "P47": "v"
@@ -992,6 +1006,7 @@
   "P80": {
     "_": "Redaktionelle Bemerkung",
     "field": "050C",
+    "subfield": "a",
     "qualifiers": {
       "P305": "a",
       "P18": "5"
@@ -1000,6 +1015,7 @@
   "P81": {
     "_": "Quellenangaben",
     "field": "050E",
+    "subfield": "a",
     "qualifiers": {
       "P304": "a",
       "P82": "b",
@@ -1009,6 +1025,7 @@
   "P358": {
     "_": "Titelangaben",
     "field": "046G",
+    "subfield": "a",
     "qualifiers": {
       "P24": "a",
       "P356": "b",
@@ -1025,6 +1042,7 @@
   "P84": {
     "_": "Definition",
     "field": "050H",
+    "subfield": "a",
     "qualifiers": {
       "P306": "a",
       "P57": "u",
@@ -1035,6 +1053,7 @@
   "P85": {
     "_": "Biografische, historische Angaben",
     "field": "050G",
+    "subfield": "a",
     "qualifiers": {
       "P307": "a",
       "P82": "b",
@@ -1068,6 +1087,7 @@
   "P360": {
     "_": "Interne Identifikationsnummer PPN",
     "field": "003@",
+    "subfield": "0",
     "qualifiers": {
       "P359": "0"
     }
@@ -1075,6 +1095,7 @@
   "P364": {
     "_": "Mailbox",
     "field": "047A/01",
+    "subfield": "a",
     "qualifiers": {
       "P363": "a",
       "P362": "b",
@@ -1084,6 +1105,7 @@
   "P367": {
     "_": "Katalogisierende Institution",
     "field": "047A/03",
+    "subfield": "e",
     "qualifiers": {
       "P365": "e",
       "P366": "r"
@@ -1092,6 +1114,7 @@
   "P375": {
     "_": "Alte Ansetzungsform",
     "field": "047C",
+    "subfield": "a",
     "qualifiers": {
       "P374": "a",
       "P373": "i",
