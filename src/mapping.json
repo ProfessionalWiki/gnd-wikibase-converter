@@ -62,11 +62,14 @@
       "z": "Q257"
     }
   },
-  "P295": {
+  "P66": {
     "_": "GND-URI",
     "field": "003U",
-    "P66": "a",
-    "P47": "v"
+    "subfield": "a",
+    "qualifiers": {
+      "P295": "a",
+      "P47": "v"
+    }
   },
   "P63": {
     "_": "Entitätencodierung",
@@ -131,14 +134,21 @@
       "wit": "Q249"
     }
   },
-  "P101": {
+  "P150": {
     "_": "GND-Nummer",
     "field": "007K",
-    "subfield": "a",
+    "subfield": {
+      "a": "$/",
+      "0": "$"
+    },
     "qualifiers": {
       "P299": "a",
-      "P501": "0",
+      "P101": "0",
       "P47": "v"
+    },
+    "condition": {
+      "subfield": "a",
+      "equalTo": "gnd"
     }
   },
   "P245": {
@@ -147,14 +157,16 @@
     "subfield": "a",
     "qualifiers": {
       "P299": "a",
-      "P47": "v",
-      "P501": "0"
+      "P101": "0",
+      "P47": "v"
     }
   },
   "P344": {
     "_": "Katalogisierungsquelle",
     "field": "010E",
-    "subfield": "b",
+    "subfield": {
+      "b": "$"
+    },
     "qualifiers": {
       "P341": "b",
       "P342": "e",
@@ -164,7 +176,10 @@
   "P336": {
     "_": "Ländercode",
     "field": "042B",
-    "subfield": "a"
+    "subfield": "a",
+    "qualifiers": {
+      "P64": "a"
+    }
   },
   "P340": {
     "_": "GND-Systematik",
@@ -179,6 +194,7 @@
     "field": "037G",
     "subfield": "a",
     "qualifiers": {
+      "P64": "a",
       "P294": "c",
       "P296": "d",
       "P297": "t",
@@ -264,22 +280,28 @@
   "P332": {
     "_": "SWD-Nr. im GKD-Satz",
     "field": "007W",
-    "subfield": "0"
+    "subfield": "0",
+    "qualifiers": {
+      "P101": "0"
+    }
   },
   "P171": {
-    "_": "Sonstige Standardnummer",
+    "_": "Sonstige Standardnummern",
     "field": "006Y",
     "subfield": "v",
     "qualifiers": {
       "P47": "v",
       "P172": "S",
-      "P501": "0"
+      "P101": "0"
     }
   },
   "P333": {
     "_": "GKD-Nr. im SWD-Satz",
     "field": "007R",
-    "subfield": "0"
+    "subfield": "0",
+    "qualifiers": {
+      "P101": "0"
+    }
   },
   "P133": {
     "_": "Geografische Koordinaten",
@@ -303,7 +325,7 @@
       "P147": "z",
       "P135": "A",
       "P100": "S",
-      "P501": "0",
+      "P101": "0",
       "P102": "2",
       "P148": "3"
     }
@@ -312,6 +334,9 @@
     "_": "Geschlecht",
     "field": "032T",
     "subfield": "a",
+    "qualifiers": {
+      "P20": "a"
+    },
     "valueMap": {
       "f": "Q259",
       "m": "Q258",
@@ -321,7 +346,10 @@
   "P309": {
     "_": "Sprachencode",
     "field": "042C",
-    "subfield": "a"
+    "subfield": "a",
+    "qualifiers": {
+      "P20": "a"
+    }
   },
   "P310": {
     "_": "Form des Werks",
@@ -360,20 +388,31 @@
   "P322": {
     "_": "Tonart",
     "field": "032Z",
-    "subfield": "a"
+    "subfield": "a",
+    "qualifiers": {
+      "P20": "a"
+    }
   },
   "P58": {
     "_": "Person - Bevorzugter Name",
     "field": "028A",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "P": "$",
+      "d": ", $",
+      "c": " $",
+      "g": " $",
+      "l": ", $",
+      "n": " $"
+    },
     "qualifiers": {
       "P21": "a",
+      "P41": "P",
       "P29": "d",
       "P27": "c",
-      "P39": "n",
-      "P34": "l",
       "P31": "g",
-      "P41": "P",
+      "P34": "l",
+      "P39": "n",
       "P49": "x",
       "P47": "v"
     }
@@ -381,7 +420,15 @@
   "P59": {
     "_": "Person - Abweichender Name",
     "field": "028@",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "P": "$",
+      "d": ", $",
+      "c": " $",
+      "g": " $",
+      "l": ", $",
+      "n": " $"
+    },
     "qualifiers": {
       "P21": "a",
       "P29": "d",
@@ -394,46 +441,63 @@
       "P47": "v",
       "P36": "L",
       "P45": "T",
-      "P46": "U"
-    },
-    "condition": {
-      "subfield": "4",
-      "equalTo": " "
+      "P46": "U",
+      "P169": "4",
+      "P18": "5"
     }
   },
   "P90": {
     "_": "Körperschaft – Bevorzugter Name",
     "field": "029A",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "b": ", $",
+      "g": " $",
+      "n": " $"
+    },
     "qualifiers": {
       "P22": "a",
       "P25": "b",
       "P31": "g",
       "P39": "n",
-      "P49": "x",
-      "P47": "v"
+      "P47": "v",
+      "P49": "x"
     }
   },
   "P96": {
     "_": "Körperschaft – Abweichender Name",
     "field": "029@",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "b": ", $",
+      "g": " $",
+      "n": " $"
+    },
     "qualifiers": {
       "P22": "a",
       "P25": "b",
       "P31": "g",
       "P39": "n",
-      "P49": "x",
       "P47": "v",
+      "P49": "x",
       "P36": "L",
       "P45": "T",
-      "P46": "U"
+      "P46": "U",
+      "P169": "4",
+      "P18": "5"
     }
   },
   "P87": {
     "_": "Konferenz – Bevorzugter Name",
     "field": "030A",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "b": ", $",
+      "c": " $",
+      "d": " $",
+      "g": " $",
+      "n": " $"
+    },
     "qualifiers": {
       "P23": "a",
       "P26": "b",
@@ -441,14 +505,21 @@
       "P32": "d",
       "P31": "g",
       "P39": "n",
-      "P49": "x",
-      "P47": "v"
+      "P47": "v",
+      "P49": "x"
     }
   },
   "P95": {
     "_": "Konferenz – Abweichender Name",
     "field": "030@",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "b": ", $",
+      "c": " $",
+      "d": " $",
+      "g": " $",
+      "n": " $"
+    },
     "qualifiers": {
       "P23": "a",
       "P26": "b",
@@ -456,17 +527,26 @@
       "P32": "d",
       "P31": "g",
       "P39": "n",
-      "P49": "x",
       "P47": "v",
+      "P49": "x",
       "P36": "L",
       "P45": "T",
-      "P46": "U"
+      "P46": "U",
+      "P169": "4",
+      "P18": "5"
     }
   },
   "P91": {
     "_": "Werk – Bevorzugter Titel",
     "field": "022A",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "f": ", $",
+      "g": " $",
+      "h": " $",
+      "l": " $",
+      "n": " $"
+    },
     "qualifiers": {
       "P24": "a",
       "P30": "f",
@@ -479,14 +559,21 @@
       "P42": "p",
       "P43": "r",
       "P44": "s",
-      "P49": "x",
-      "P47": "v"
+      "P47": "v",
+      "P49": "x"
     }
   },
   "P97": {
     "_": "Werk – Abweichender Titel",
     "field": "022@",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "f": ", $",
+      "g": " $",
+      "h": " $",
+      "l": " $",
+      "n": " $"
+    },
     "qualifiers": {
       "P24": "a",
       "P30": "f",
@@ -509,56 +596,78 @@
   "P93": {
     "_": "Sachbegriff – Bevorzugte Benennung",
     "field": "041A",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "g": ", $"
+    },
     "qualifiers": {
       "P20": "a",
       "P31": "g",
-      "P49": "x",
-      "P47": "v"
+      "P47": "v",
+      "P49": "x"
     }
   },
   "P99": {
     "_": "Sachbegriff – Abweichende Benennung",
     "field": "041@",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "g": ", $"
+    },
     "qualifiers": {
       "P20": "a",
       "P31": "g",
-      "P49": "x",
       "P47": "v",
+      "P49": "x",
       "P36": "L",
       "P45": "T",
-      "P46": "U"
+      "P46": "U",
+      "P169": "4",
+      "P18": "5"
     }
   },
   "P94": {
     "_": "Geografikum – Bevorzugter Name",
     "field": "065A",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "g": ", $"
+    },
     "qualifiers": {
       "P20": "a",
       "P31": "g",
-      "P49": "x",
       "P47": "v",
+      "P49": "x",
       "P52": "z"
     }
   },
   "P98": {
     "_": "Geografikum – Abweichender Name",
     "field": "065@",
-    "subfield": "mo",
+    "subfield": {
+      "a": "$",
+      "g": ", $"
+    },
     "qualifiers": {
       "P20": "a",
       "P31": "g",
-      "P49": "x",
       "P47": "v",
-      "P52": "z"
+      "P49": "x",
+      "P52": "z",
+      "P36": "L",
+      "P45": "T",
+      "P46": "U",
+      "P169": "4",
+      "P18": "5"
     }
   },
   "P349": {
     "_": "Markierung für das Match-und-Merge-Verfahren",
     "field": "038L",
-    "subfield": "a",
+    "subfield": {
+      "a": "$",
+      "b": ", $"
+    },
     "qualifiers": {
       "P345": "a",
       "P346": "b",
@@ -582,6 +691,7 @@
     "field": "032L",
     "subfield": "b",
     "qualifiers": {
+      "P350": "a",
       "P302": "b",
       "valueMap": {
         "prm": "Q1361",
@@ -1031,7 +1141,7 @@
       "P356": "b",
       "P30": "f",
       "P357": "w",
-      "P501": "0"
+      "P101": "0"
     }
   },
   "P83": {
@@ -1079,7 +1189,7 @@
       "P45": "T",
       "P46": "U",
       "P100": "S",
-      "P501": "0",
+      "P101": "0",
       "P102": "2",
       "P18": "5"
     }
@@ -1119,7 +1229,7 @@
       "P374": "a",
       "P373": "i",
       "P372": "S",
-      "P501": "0"
+      "P101": "0"
     }
   }
 }
