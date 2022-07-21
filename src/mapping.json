@@ -138,7 +138,6 @@
     "_": "GND-Nummer",
     "field": "007K",
     "subfield": {
-      "a": "$/",
       "0": "$"
     },
     "qualifiers": {
