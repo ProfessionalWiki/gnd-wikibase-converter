@@ -1,6 +1,5 @@
 {
 	"type": "object",
-	"minProperties": 1,
 	"propertyNames": {
 		"pattern": "^[pP][1-9]\\d{0,9}$"
 	},
