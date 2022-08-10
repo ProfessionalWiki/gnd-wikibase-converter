@@ -21,6 +21,3 @@ stan:
 
 stan-baseline:
 	php ./vendor/bin/phpstan analyse -c phpstan.neon --generate-baseline
-
-rector-dry-run:
-	php ./vendor/bin/rector process --dry-run

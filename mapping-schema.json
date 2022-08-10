@@ -5,51 +5,78 @@
 		"pattern": "^[pP][1-9]\\d{0,9}$"
 	},
 	"additionalProperties": {
-		"type": "object",
-		"required": ["field", "subfield"],
-		"additionalProperties": false,
-		"properties": {
-			"_": {
-				"type": "string"
+		"anyOf": [
+			{
+				"$ref": "#/$defs/propertyMapping"
 			},
-			"field": {
-				"type": "string"
-			},
-			"subfield": {
-				"type": "string"
-			},
-			"condition": {
-				"type": "object",
-				"properties": {
-					"subfield": {
-						"type": "string"
+			{
+				"type": "array",
+				"items": {
+					"$ref": "#/$defs/propertyMapping"
+				}
+			}
+		]
+	},
+
+	"$defs": {
+		"propertyMapping": {
+			"type": "object",
+			"required": ["field", "subfield"],
+			"additionalProperties": false,
+			"properties": {
+				"_": {
+					"type": "string"
+				},
+				"field": {
+					"type": "string"
+				},
+				"subfield": {
+					"anyOf": [
+						{
+							"type": "string"
+						},
+						{
+							"type": "object",
+							"minProperties": 1,
+							"additionalProperties": {
+								"type": "string"
+							}
+						}
+					]
+				},
+				"condition": {
+					"type": "object",
+					"properties": {
+						"subfield": {
+							"type": "string"
+						},
+						"equalTo": {
+							"type": ["string", "null"]
+						}
 					},
-					"equalTo": {
+					"required": ["subfield", "equalTo"],
+					"additionalProperties": false
+				},
+				"position": {
+					"type": "integer",
+					"minimum": 1
+				},
+				"valueMap": {
+					"type": "object",
+					"minProperties": 1,
+					"additionalProperties": {
 						"type": "string"
 					}
 				},
-				"required": ["subfield", "equalTo"],
-				"additionalProperties": false
-			},
-			"position": {
-				"type": "integer",
-				"minimum": 1
-			},
-			"valueMap": {
-				"type": "object",
-				"minProperties": 1,
-				"additionalProperties": {
-					"type": "string"
-				}
-			},
-			"qualifiers": {
-				"type": "object",
-				"minProperties": 1,
-				"propertyNames": {
-					"pattern": "^[pP][1-9]\\d{0,9}$"
-				},
-				"additionalProperties": {
-					"type": "string"
+				"qualifiers": {
+					"type": "object",
+					"minProperties": 1,
+					"propertyNames": {
+						"pattern": "^[pP][1-9]\\d{0,9}$"
+					},
+					"additionalProperties": {
+						"type": "string"
+					}
 				}
 			}
 		}
