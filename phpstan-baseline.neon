@@ -1,7 +1,7 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Parameter \\#1 \\$jsonArray of class DNB\\\\WikibaseConverter\\\\PackagePrivate\\\\PicaRecord constructor expects array\\('fields' \\=\\> array\\(array\\('name' \\=\\> string, 'subfields' \\=\\> array\\(array\\('name' \\=\\> string, 'value' \\=\\> string\\)\\)\\)\\)\\), array\\('fields' \\=\\> array\\(\\)\\) given\\.$#"
+			message: "#^Parameter \\#1 \\$jsonArray of class DNB\\\\WikibaseConverter\\\\PackagePrivate\\\\PicaRecord constructor expects array\\{fields\\: array\\{array\\{name\\: string, subfields\\: array\\{array\\{name\\: string, value\\: string\\}\\}\\}\\}\\}, array\\{fields\\: array\\{\\}\\} given\\.$#"
 			count: 1
 			path: src/PackagePrivate/PicaRecord.php
 
