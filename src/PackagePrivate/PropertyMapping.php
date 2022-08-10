@@ -16,27 +16,25 @@ class PropertyMapping {
 	private string $propertyId;
 	private ValueSource $valueSource;
 	private ?SubfieldCondition $condition;
+	private ValueMap $valueMap;
 
-	/** @var array<string, string> */
-	private array $valueMap;
 	/** @var array<string, string> */
 	private array $qualifiers;
 
 	/**
-	 * @param array<string, string> $valueMap
 	 * @param array<string, string> $qualifiers
 	 */
 	public function __construct(
 		string $propertyId,
 		ValueSource $valueSource,
 		?SubfieldCondition $condition = null,
-		array $valueMap = [],
+		?ValueMap $valueMap = null,
 		array $qualifiers = []
 	) {
 		$this->propertyId = $propertyId;
 		$this->valueSource = $valueSource;
 		$this->condition = $condition;
-		$this->valueMap = $valueMap;
+		$this->valueMap = $valueMap ?? new ValueMap( [] );
 		$this->qualifiers = $qualifiers;
 	}
 
@@ -54,7 +52,7 @@ class PropertyMapping {
 			return [];
 		}
 
-		$mappedValueOrNull = $this->getMappedValue( $valueToAddOrNull );
+		$mappedValueOrNull = $this->valueMap->map( $valueToAddOrNull );
 
 		if ( $mappedValueOrNull === null ) {
 			return [];
@@ -73,18 +71,6 @@ class PropertyMapping {
 		}
 
 		return true;
-	}
-
-	private function getMappedValue( string $subfieldValue ): ?string {
-		if ( $this->valueMap === [] ) {
-			return $subfieldValue;
-		}
-
-		if ( array_key_exists( $subfieldValue, $this->valueMap ) ) {
-			return $this->valueMap[$subfieldValue];
-		}
-
-		return null;
 	}
 
 	/**

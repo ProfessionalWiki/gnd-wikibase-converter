@@ -8,6 +8,7 @@ use DNB\WikibaseConverter\InvalidMapping;
 use DNB\WikibaseConverter\PackagePrivate\MappingDeserializer;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
+use DNB\WikibaseConverter\PackagePrivate\ValueMap;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
 use PHPUnit\Framework\TestCase;
 
@@ -81,7 +82,7 @@ class MappingDeserializerTest extends TestCase {
 				'P1',
 				new SingleSubfieldSource( '0' ),
 				null,
-				[ 'a' => 'Q1', 'b' => 'Q2' ]
+				new ValueMap( [ 'a' => 'Q1', 'b' => 'Q2' ] )
 			),
 			$mapping->getPropertyMappings( 'P1C4' )[0]
 		);

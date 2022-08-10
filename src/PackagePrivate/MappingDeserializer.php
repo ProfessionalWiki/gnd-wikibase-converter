@@ -74,11 +74,8 @@ class MappingDeserializer {
 		return null;
 	}
 
-	/**
-	 * @return array<string, string>
-	 */
-	private function buildValueMap( array $propertyJson ): array {
-		return $propertyJson['valueMap'] ?? [];
+	private function buildValueMap( array $propertyJson ): ValueMap {
+		return new ValueMap( $propertyJson['valueMap'] ?? [] );
 	}
 
 	/**

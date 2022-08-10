@@ -9,6 +9,7 @@ use DNB\WikibaseConverter\GndStatement;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PackagePrivate\Subfields;
+use DNB\WikibaseConverter\PackagePrivate\ValueMap;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
 use PHPUnit\Framework\TestCase;
 
@@ -101,11 +102,13 @@ class PropertyMappingTest extends TestCase {
 			'P1',
 			new SingleSubfieldSource( 'x' ),
 			null,
-			[
-				'a' => 'AAA',
-				'b' => 'BBB',
-				'c' => 'CCC',
-			]
+			new ValueMap(
+				[
+					'a' => 'AAA',
+					'b' => 'BBB',
+					'c' => 'CCC',
+				]
+			)
 		);
 
 		$subfields = [
@@ -129,9 +132,11 @@ class PropertyMappingTest extends TestCase {
 			'P1',
 			new SingleSubfieldSource( 'x' ),
 			null,
-			[
-				'foo' => 'bar'
-			]
+			new ValueMap(
+				[
+					'foo' => 'bar'
+				]
+			)
 		);
 
 		$subfields = [
@@ -178,7 +183,7 @@ class PropertyMappingTest extends TestCase {
 			'P1',
 			new SingleSubfieldSource( 'x' ),
 			null,
-			[],
+			null,
 			[
 				'P50' => 'a',
 				'P51' => 'b',
