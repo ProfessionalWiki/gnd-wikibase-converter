@@ -74,18 +74,37 @@ class MappingDeserializer {
 		return null;
 	}
 
-	/**
-	 * @return array<string, string>
-	 */
-	private function buildValueMap( array $propertyJson ): array {
-		return $propertyJson['valueMap'] ?? [];
+	private function buildValueMap( array $propertyJson ): ValueMap {
+		return new ValueMap( $propertyJson['valueMap'] ?? [] );
 	}
 
 	/**
-	 * @return array<string, string>
+	 * @return QualifierMapping[]
 	 */
 	private function buildQualifiers( array $propertyJson ): array {
-		return $propertyJson['qualifiers'] ?? [];
+		$qualifiers = [];
+
+		foreach ( $propertyJson['qualifiers'] ?? [] as $propertyId => $qualifierJson ) {
+			if ( is_string( $qualifierJson ) || array_key_exists( 'subfield', $qualifierJson ) ) {
+				$qualifiers[] = new QualifierMapping(
+					$propertyId,
+					new SingleSubfieldSource(
+						is_string( $qualifierJson ) ? $qualifierJson : $qualifierJson['subfield'],
+						$this->hasKey( $qualifierJson, 'position' ) ? (int)$qualifierJson['position'] : null,
+					),
+					new ValueMap( $this->hasKey( $qualifierJson, 'valueMap' ) ? $qualifierJson['valueMap'] : [] )
+				);
+			}
+		}
+
+		return $qualifiers;
+	}
+
+	/**
+	 * @param mixed $value
+	 */
+	private function hasKey( $value, string $key ): bool {
+		return is_array( $value ) && array_key_exists( $key, $value );
 	}
 
 }

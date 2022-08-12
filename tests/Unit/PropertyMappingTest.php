@@ -7,8 +7,10 @@ namespace DNB\Tests\Unit;
 use DNB\WikibaseConverter\GndQualifier;
 use DNB\WikibaseConverter\GndStatement;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
+use DNB\WikibaseConverter\PackagePrivate\QualifierMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PackagePrivate\Subfields;
+use DNB\WikibaseConverter\PackagePrivate\ValueMap;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
 use PHPUnit\Framework\TestCase;
 
@@ -101,11 +103,13 @@ class PropertyMappingTest extends TestCase {
 			'P1',
 			new SingleSubfieldSource( 'x' ),
 			null,
-			[
-				'a' => 'AAA',
-				'b' => 'BBB',
-				'c' => 'CCC',
-			]
+			new ValueMap(
+				[
+					'a' => 'AAA',
+					'b' => 'BBB',
+					'c' => 'CCC',
+				]
+			)
 		);
 
 		$subfields = [
@@ -129,9 +133,11 @@ class PropertyMappingTest extends TestCase {
 			'P1',
 			new SingleSubfieldSource( 'x' ),
 			null,
-			[
-				'foo' => 'bar'
-			]
+			new ValueMap(
+				[
+					'foo' => 'bar'
+				]
+			)
 		);
 
 		$subfields = [
@@ -171,38 +177,6 @@ class PropertyMappingTest extends TestCase {
 		yield 'value is extracted at end of string' => [ 'abc', 3, 'c' ];
 		yield 'position too low' => [ 'abc', 0, null ];
 		yield 'position too high' => [ 'abc', 4, null ];
-	}
-
-	public function testQualifiers(): void {
-		$mapping = new PropertyMapping(
-			'P1',
-			new SingleSubfieldSource( 'x' ),
-			null,
-			[],
-			[
-				'P50' => 'a',
-				'P51' => 'b',
-				'P52' => 'c',
-			]
-		);
-
-		$this->assertEquals(
-			[
-				new GndStatement(
-					'P1',
-					'foo',
-					[
-						new GndQualifier( 'P50', 'AAA' ),
-						new GndQualifier( 'P52', 'CCC' ),
-					]
-				)
-			],
-			$mapping->convert( Subfields::fromSingleValueMap( [
-				'x' => 'foo',
-				'c' => 'CCC',
-				'a' => 'AAA',
-			] ) )
-		);
 	}
 
 }

@@ -13,16 +13,52 @@ use PHPUnit\Framework\TestCase;
  */
 class SingleSubfieldSourceTest extends TestCase {
 
-	public function testWhenPositionIsOutOfBounds_nullIsReturned(): void {
+	public function testWhenNoSubfieldNoValuesAreReturned(): void {
 		$subfieldSource = new SingleSubfieldSource(
-			'a',
-			4
+			'a'
 		);
 
-		$this->assertNull(
+		$this->assertSame(
+			[],
 			$subfieldSource->valueFromSubfields(
-				Subfields::fromSingleValueMap( [
-					'a' => 'abc'
+				new Subfields( [
+					'b' => [ 'wrong' ],
+					'c' => [ 'maw' ],
+				] )
+			)
+		);
+	}
+	public function testAllValuesOfTheSubfieldAreReturned(): void {
+		$subfieldSource = new SingleSubfieldSource(
+			'a',
+			2
+		);
+
+		$this->assertSame(
+			[ 'b', 'e', 'h' ],
+			$subfieldSource->valueFromSubfields(
+				new Subfields( [
+					'b' => [ 'wrong' ],
+					'a' => [ 'abc', 'def', 'ghi' ],
+					'c' => [ 'maw' ],
+				] )
+			)
+		);
+	}
+
+	public function testAllOutOfBoundValuesAreIgnored(): void {
+		$subfieldSource = new SingleSubfieldSource(
+			'a',
+			2
+		);
+
+		$this->assertSame(
+			[ 'e' ],
+			$subfieldSource->valueFromSubfields(
+				new Subfields( [
+					'b' => [ 'wrong' ],
+					'a' => [ 'a', 'def', 'g' ],
+					'c' => [ 'maw' ],
 				] )
 			)
 		);

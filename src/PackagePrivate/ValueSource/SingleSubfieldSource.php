@@ -16,12 +16,18 @@ class SingleSubfieldSource implements ValueSource {
 		$this->position = $position;
 	}
 
-	public function valueFromSubfields( Subfields $subfields ): ?string {
-		if ( !array_key_exists( $this->subfieldName, $subfields->map ) ) {
-			return null;
+	public function valueFromSubfields( Subfields $subfields ): array {
+		$values = [];
+
+		foreach ( $subfields->map[$this->subfieldName] ?? [] as $subfieldValue ) {
+			$value = $this->extractFromSubfieldValue( $subfieldValue );
+
+			if ( $value !== null ) {
+				$values[] = $value;
+			}
 		}
 
-		return $this->extractFromSubfieldValue( $subfields->map[$this->subfieldName][0] );
+		return $values;
 	}
 
 	private function extractFromSubfieldValue( string $subfieldValue ): ?string {

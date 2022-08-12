@@ -8,6 +8,9 @@ use DNB\WikibaseConverter\PackagePrivate\Subfields;
 
 interface ValueSource {
 
-	public function valueFromSubfields( Subfields $subfields ): ?string;
+	/**
+	 * @return array<int, string>
+	 */
+	public function valueFromSubfields( Subfields $subfields ): array;
 
 }

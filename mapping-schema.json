@@ -61,11 +61,7 @@
 					"minimum": 1
 				},
 				"valueMap": {
-					"type": "object",
-					"minProperties": 1,
-					"additionalProperties": {
-						"type": "string"
-					}
+					"$ref": "#/$defs/valueMap"
 				},
 				"qualifiers": {
 					"type": "object",
@@ -74,9 +70,37 @@
 						"pattern": "^[pP][1-9]\\d{0,9}$"
 					},
 					"additionalProperties": {
-						"type": "string"
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{
+								"type": "object",
+								"required": ["subfield"],
+								"additionalProperties": false,
+								"properties": {
+									"subfield": {
+										"type": "string"
+									},
+									"valueMap": {
+										"$ref": "#/$defs/valueMap"
+									},
+									"position": {
+										"type": "integer",
+										"minimum": 1
+									}
+								}
+							}
+						]
 					}
 				}
+			}
+		},
+		"valueMap": {
+			"type": "object",
+			"minProperties": 1,
+			"additionalProperties": {
+				"type": "string"
 			}
 		}
 	}
