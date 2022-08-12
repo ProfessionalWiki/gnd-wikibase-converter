@@ -37,7 +37,8 @@
 			"P50": "b",
 			"P51": "c",
 			"P52": {
-				"subfield": "d",
+				"subfield": "z",
+				"position": 2,
 				"valueMap": {
 					"x": "Q42",
 					"y": "Q43"

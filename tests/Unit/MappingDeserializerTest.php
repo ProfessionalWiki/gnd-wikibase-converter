@@ -7,6 +7,7 @@ namespace DNB\Tests\Unit;
 use DNB\WikibaseConverter\InvalidMapping;
 use DNB\WikibaseConverter\PackagePrivate\MappingDeserializer;
 use DNB\WikibaseConverter\PackagePrivate\PropertyMapping;
+use DNB\WikibaseConverter\PackagePrivate\QualifierMapping;
 use DNB\WikibaseConverter\PackagePrivate\SubfieldCondition;
 use DNB\WikibaseConverter\PackagePrivate\ValueMap;
 use DNB\WikibaseConverter\PackagePrivate\ValueSource\SingleSubfieldSource;
@@ -148,6 +149,48 @@ EOD,
 		$this->assertEquals(
 			new PropertyMapping('P29', new SingleSubfieldSource( 'b' ) ),
 			$mapping->getPropertyMappings( '029@' )[0]
+		);
+	}
+
+	public function testQualifiers(): void {
+		$mapping = ( new MappingDeserializer() )->jsonArrayToObject( [
+			'P1' => [
+				'field' => 'P1C4',
+				'subfield' => '0',
+				'qualifiers' => [
+					'P50' => 'b',
+					'P51' => [
+						'subfield' => 'x'
+					],
+					'P52' => [
+						'subfield' => 'y',
+						'position' => 2,
+					],
+					'P53' => [
+						'subfield' => 'z',
+						'valueMap' => [
+							'foo' => 'Q1',
+							'bar' => 'Q2',
+						],
+					]
+				]
+			],
+		] );
+
+		$this->assertEquals(
+			new PropertyMapping(
+				'P1',
+				new SingleSubfieldSource( '0' ),
+				null,
+				null,
+				[
+					new QualifierMapping( 'P50', new SingleSubfieldSource( 'b' ) ),
+					new QualifierMapping( 'P51', new SingleSubfieldSource( 'x' ) ),
+					new QualifierMapping( 'P52', new SingleSubfieldSource( 'y', 2 ) ),
+					new QualifierMapping( 'P53', new SingleSubfieldSource( 'z' ), new ValueMap( [ 'foo' => 'Q1', 'bar' => 'Q2' ] ) ),
+				]
+			),
+			$mapping->getPropertyMappings( 'P1C4' )[0]
 		);
 	}
 

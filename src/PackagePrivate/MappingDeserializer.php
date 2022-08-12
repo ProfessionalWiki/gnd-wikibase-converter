@@ -89,14 +89,22 @@ class MappingDeserializer {
 				$qualifiers[] = new QualifierMapping(
 					$propertyId,
 					new SingleSubfieldSource(
-						is_string( $qualifierJson ) ? $qualifierJson : $qualifierJson['subfield']
+						is_string( $qualifierJson ) ? $qualifierJson : $qualifierJson['subfield'],
+						$this->hasKey( $qualifierJson, 'position' ) ? (int)$qualifierJson['position'] : null,
 					),
-					new ValueMap( is_string( $qualifierJson ) ? [] : ( $qualifierJson['valueMap'] ?? [] ) )
+					new ValueMap( $this->hasKey( $qualifierJson, 'valueMap' ) ? $qualifierJson['valueMap'] : [] )
 				);
 			}
 		}
 
 		return $qualifiers;
+	}
+
+	/**
+	 * @param mixed $value
+	 */
+	private function hasKey( $value, string $key ): bool {
+		return is_array( $value ) && array_key_exists( $key, $value );
 	}
 
 }
