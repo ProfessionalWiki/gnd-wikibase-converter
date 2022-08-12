@@ -20,7 +20,7 @@ class ConcatValueSource implements ValueSource {
 		$this->concatSpec = $concatSpec;
 	}
 
-	public function valueFromSubfields( Subfields $subfields ): ?string {
+	public function valueFromSubfields( Subfields $subfields ): array {
 		$segments = [];
 
 		foreach ( $this->concatSpec as $subfieldName => $format ) {
@@ -31,7 +31,7 @@ class ConcatValueSource implements ValueSource {
 			}
 		}
 
-		return $segments === [] ? null : implode( '', $segments );
+		return $segments === [] ? [] : [ implode( '', $segments ) ];
 	}
 
 }

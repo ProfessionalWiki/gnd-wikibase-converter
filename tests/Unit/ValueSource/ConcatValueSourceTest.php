@@ -13,8 +13,9 @@ use PHPUnit\Framework\TestCase;
  */
 class ConcatValueSourceTest extends TestCase {
 
-	public function testWhenConcatSpecIsEmpty_returnsNull(): void {
-		$this->assertNull(
+	public function testWhenConcatSpecIsEmpty_returnsEmptyArray(): void {
+		$this->assertSame(
+			[],
 			$this->getConcatenatedValue(
 				[],
 				[
@@ -28,14 +29,15 @@ class ConcatValueSourceTest extends TestCase {
 	/**
 	 * @param array<string, string> $concatSpec
 	 * @param array<string, string> $subfields
+	 * @return string[]
 	 */
-	private function getConcatenatedValue( array $concatSpec, array $subfields ): ?string {
+	private function getConcatenatedValue( array $concatSpec, array $subfields ): array {
 		return ( new ConcatValueSource( $concatSpec ) )->valueFromSubfields( Subfields::fromSingleValueMap( $subfields ) );
 	}
 
 	public function testConcatReturnsAllValuesWhenAllArePresent(): void {
 		$this->assertSame(
-			'a: foo, b: bar',
+			[ 'a: foo, b: bar' ],
 			$this->getConcatenatedValue(
 				[
 					'a' => 'a: $, ',
@@ -51,7 +53,7 @@ class ConcatValueSourceTest extends TestCase {
 
 	public function testConcatReturnsOnlyPresentValues(): void {
 		$this->assertSame(
-			'a: foo, c: baz',
+			[ 'a: foo, c: baz' ],
 			$this->getConcatenatedValue(
 				[
 					'a' => 'a: $, ',
@@ -78,7 +80,7 @@ class ConcatValueSourceTest extends TestCase {
 		];
 
 		$this->assertSame(
-			'a: one, a: two, b: tree, b: four, ',
+			[ 'a: one, a: two, b: tree, b: four, ' ],
 			( new ConcatValueSource( $concatSpec ) )->valueFromSubfields( new Subfields( $subfields ) )
 		);
 	}
