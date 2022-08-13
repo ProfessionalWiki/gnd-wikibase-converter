@@ -9,6 +9,8 @@ use DNB\WikibaseConverter\PackagePrivate\ValueSource\ValueSource;
 
 class QualifierMapping {
 
+	public const INVALID_VALUE_PROPERTY_ID = 'P645';
+
 	private string $propertyId;
 	private ValueSource $valueSource;
 	private ValueMap $valueMap;
@@ -32,9 +34,14 @@ class QualifierMapping {
 		foreach ( $this->valueSource->valueFromSubfields( $subfields ) as $value ) {
 			$mappedValue = $this->valueMap->map( $value );
 
-			// TODO: https://github.com/ProfessionalWiki/gnd-wikibase-converter/issues/8
 			if ( is_string( $mappedValue ) ) {
 				$qualifiers[] = new GndQualifier( $this->propertyId, $mappedValue );
+			}
+			else {
+				$qualifiers[] = new GndQualifier(
+					self::INVALID_VALUE_PROPERTY_ID,
+					$this->propertyId . ' (qualifier): ' . $value
+				);
 			}
 		}
 

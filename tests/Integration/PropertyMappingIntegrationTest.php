@@ -74,6 +74,7 @@ class PropertyMappingIntegrationTest extends TestCase {
 					'foo',
 					[
 						new GndQualifier( 'P50', 'one' ),
+						new GndQualifier( 'P645', 'P50 (qualifier): |2' ),
 						new GndQualifier( 'P50', 'tree' ),
 					]
 				)
