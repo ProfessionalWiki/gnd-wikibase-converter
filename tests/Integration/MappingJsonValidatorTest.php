@@ -15,12 +15,11 @@ class MappingJsonValidatorTest extends TestCase {
 		) );
 	}
 
-	// TODO: uncomment test if and when mapping.json file gets fixed
-//	public function testMappingIsValid(): void {
-//		$this->assertTrue( MappingJsonValidator::newInstance()->validate(
-//			file_get_contents( __DIR__ . '/../../src/mapping.json' )
-//		) );
-//	}
+	public function testMappingIsValid(): void {
+		$this->assertTrue( MappingJsonValidator::newInstance()->validate(
+			file_get_contents( __DIR__ . '/../../src/mapping.json' )
+		) );
+	}
 
 	public function testEmptyConfigIsValid(): void {
 		$this->assertTrue( MappingJsonValidator::newInstance()->validate(
