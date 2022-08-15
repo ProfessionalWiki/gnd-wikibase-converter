@@ -98,7 +98,7 @@ class GndItemTest extends TestCase {
 	public function testGetNumericIdReturnsId(): void {
 		$item = new GndItem(
 			new GndStatement( 'P1', 'foo' ),
-			new GndStatement( GndItem::GND_ID, '123X' ),
+			new GndStatement( GndItem::GND_IDN_PID, '123X' ),
 			new GndStatement( 'P2', 'bar' )
 		);
 

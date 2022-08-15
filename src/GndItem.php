@@ -9,8 +9,8 @@ namespace DNB\WikibaseConverter;
  */
 class GndItem {
 
-	public const GND_ID = 'P150';
-	public const GND_ID_PID = self::GND_ID;
+	public const GND_ID = 'P360';
+	public const GND_IDN_PID = self::GND_ID;
 	public const INTERNAL_ID_PID = 'P360';
 	private const NAME_PID_LIST = [ 'P58', 'P87', 'P90', 'P91', 'P94' ];
 
@@ -66,7 +66,7 @@ class GndItem {
 	}
 
 	public function getNumericId(): ?int {
-		foreach ( $this->getMainValuesForProperty( self::GND_ID ) as $gndId ) {
+		foreach ( $this->getMainValuesForProperty( self::GND_IDN_PID ) as $gndId ) {
 			return ( new IdConverter() )->gndToNumericId( $gndId );
 		}
 
