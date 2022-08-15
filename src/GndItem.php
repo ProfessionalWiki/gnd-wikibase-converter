@@ -10,6 +10,9 @@ namespace DNB\WikibaseConverter;
 class GndItem {
 
 	public const GND_ID = 'P150';
+	public const GND_ID_PID = self::GND_ID;
+	public const INTERNAL_ID_PID = 'P360';
+	private const NAME_PID_LIST = [ 'P58', 'P87', 'P90', 'P91', 'P94' ];
 
 	/** @var array<string, array<int, GndStatement>> */
 	private array $map = [];
@@ -68,6 +71,23 @@ class GndItem {
 		}
 
 		return null;
+	}
+
+	public function getGermanLabel(): ?string {
+		foreach ( self::NAME_PID_LIST as $pId ) {
+			foreach ( $this->getMainValuesForProperty( $pId ) as $label ) {
+				return $label;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * @return array<int, string>
+	 */
+	public function getGermanAliases(): array {
+		return $this->getMainValuesForProperty( self::INTERNAL_ID_PID );
 	}
 
 }

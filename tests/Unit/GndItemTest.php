@@ -105,4 +105,39 @@ class GndItemTest extends TestCase {
 		$this->assertSame( 1231, $item->getNumericId() );
 	}
 
+	public function testGetGermanLabelReturnsNullWhenPropertiesAreMissing(): void {
+		$item = new GndItem();
+
+		$this->assertNull( $item->getGermanLabel() );
+	}
+
+	public function testGetGermanLabelReturnsFirstValueOfAnyNameProperty(): void {
+		$item = new GndItem(
+			new GndStatement( 'P1', 'foo' ),
+			new GndStatement( 'P90', 'CorrectValue' ),
+			new GndStatement( 'P2', 'bar' ),
+			new GndStatement( 'P90', 'SecondValue' ),
+		);
+
+		$this->assertSame( 'CorrectValue', $item->getGermanLabel() );
+	}
+
+	public function testGetGermanAliasesReturnsNullWhenPropertyIsMissing(): void {
+		$item = new GndItem();
+
+		$this->assertSame( [], $item->getGermanAliases() );
+	}
+
+	public function testGetGermanAliasesReturnsAllInternalIds(): void {
+		$item = new GndItem(
+			new GndStatement( 'P1', 'foo' ),
+			new GndStatement( GndItem::INTERNAL_ID_PID, '12345' ),
+			new GndStatement( 'P2', 'bar' ),
+			new GndStatement( GndItem::INTERNAL_ID_PID, '67890' ),
+			new GndStatement( 'P2', 'baz' ),
+		);
+
+		$this->assertSame( [ '12345', '67890' ], $item->getGermanAliases() );
+	}
+
 }
