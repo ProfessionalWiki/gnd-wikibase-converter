@@ -5,7 +5,7 @@ a structure ready for import into [Wikibase].
 
 GND Wikibase Converter was created by [Professional.Wiki] for the [German National Library].
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ProfessionalWiki/gnd-wikibase-converter/CI)](https://github.com/ProfessionalWiki/gnd-wikibase-converter/actions?query=workflow%3ACI)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ProfessionalWiki/gnd-wikibase-converter/ci.yml?branch=master)](https://github.com/ProfessionalWiki/gnd-wikibase-converter/actions?query=workflow%3ACI)
 [![Type Coverage](https://shepherd.dev/github/ProfessionalWiki/gnd-wikibase-converter/coverage.svg)](https://shepherd.dev/github/ProfessionalWiki/gnd-wikibase-converter)
 [![codecov](https://codecov.io/gh/ProfessionalWiki/gnd-wikibase-converter/branch/master/graph/badge.svg?token=GnOG3FF16Z)](https://codecov.io/gh/ProfessionalWiki/gnd-wikibase-converter)
 [![Latest Stable Version](https://poser.pugx.org/dnb/wikibase-converter/version.png)](https://packagist.org/packages/dnb/wikibase-converter)
